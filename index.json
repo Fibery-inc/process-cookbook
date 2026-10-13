@@ -1,0 +1,197 @@
+{
+  "recipes": [
+    {
+      "id": "cs2-team-practice",
+      "title": "CS2 team practice",
+      "summary": "How a professional Counter-Strike 2 team practises: a strat book, scrims with a focus, reviews by the next morning, review points, map pool and match prep.",
+      "domain": "esports",
+      "for": "team",
+      "keywords": [
+        "counter strike",
+        "cs2",
+        "esports",
+        "scrims",
+        "strat book",
+        "demo review",
+        "map pool",
+        "veto",
+        "match prep"
+      ],
+      "version": 1,
+      "path": "recipes/esports/cs2-team-practice.md",
+      "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/esports/cs2-team-practice.md"
+    },
+    {
+      "id": "purchase-requests",
+      "title": "Purchase requests",
+      "summary": "Purchase requests for a company of about 200: more signatures as the amount grows, vendors checked by finance, each department's quarter at a glance.",
+      "domain": "finance",
+      "for": "company",
+      "keywords": [
+        "purchase requests",
+        "purchasing",
+        "procurement",
+        "approvals",
+        "purchase order",
+        "budget",
+        "spend",
+        "vendor verification",
+        "payment run",
+        "invoices"
+      ],
+      "version": 1,
+      "path": "recipes/finance/purchase-requests.md",
+      "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/finance/purchase-requests.md"
+    },
+    {
+      "id": "okrs",
+      "title": "OKRs",
+      "summary": "Quarterly OKRs for a company of several teams: objectives on one tree, key results that compute their progress, a weekly check in, a scored quarter.",
+      "domain": "management",
+      "for": "company",
+      "keywords": [
+        "okrs",
+        "objectives and key results",
+        "john doerr",
+        "measure what matters",
+        "goals",
+        "key results",
+        "quarterly goals",
+        "check in",
+        "scoring",
+        "alignment"
+      ],
+      "version": 1,
+      "path": "recipes/management/okrs.md",
+      "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/management/okrs.md"
+    },
+    {
+      "id": "custom-guitar-shop",
+      "title": "Custom guitar shop",
+      "summary": "A small custom guitar shop's order book and floor board: inquiry, locked spec, a queue with promised months, parts counted before assembly, the shipped case.",
+      "domain": "manufacturing",
+      "for": "team",
+      "keywords": [
+        "custom guitar",
+        "luthier",
+        "guitar shop",
+        "made to order",
+        "spec sheet",
+        "order book",
+        "shop floor",
+        "build queue",
+        "parts",
+        "workshop"
+      ],
+      "version": 1,
+      "path": "recipes/manufacturing/custom-guitar-shop.md",
+      "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/manufacturing/custom-guitar-shop.md"
+    },
+    {
+      "id": "content-calendar",
+      "title": "Content calendar",
+      "summary": "A content calendar for a marketing team: every blog post, newsletter and social post on one board from idea to published link, with campaigns to watch.",
+      "domain": "marketing",
+      "for": "team",
+      "keywords": [
+        "content calendar",
+        "editorial calendar",
+        "blog posts",
+        "newsletter",
+        "social media",
+        "campaigns",
+        "publishing schedule",
+        "marketing content"
+      ],
+      "version": 2,
+      "path": "recipes/marketing/content-calendar.md",
+      "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/marketing/content-calendar.md"
+    },
+    {
+      "id": "phone-repair-shop",
+      "title": "Phone repair shop",
+      "summary": "A walk-in phone repair shop of three to six: every phone from counter to bench and back, an agreed price, parts stock that counts itself, warranty comebacks.",
+      "domain": "retail",
+      "for": "team",
+      "keywords": [
+        "phone repair",
+        "repair shop",
+        "phone repair point",
+        "mobile repair",
+        "screen replacement",
+        "battery replacement",
+        "walk in repairs",
+        "repair tags",
+        "parts stock",
+        "warranty returns"
+      ],
+      "version": 1,
+      "path": "recipes/retail/phone-repair-shop.md",
+      "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/retail/phone-repair-shop.md"
+    },
+    {
+      "id": "sales-pipeline",
+      "title": "Sales pipeline",
+      "summary": "A B2B sales pipeline for a small SaaS team: deals from lead to won or lost, a dated next step on every open one, a weighted forecast and a Monday review.",
+      "domain": "sales",
+      "for": "team",
+      "keywords": [
+        "sales pipeline",
+        "crm",
+        "deals",
+        "leads",
+        "b2b sales",
+        "saas sales",
+        "forecast",
+        "win rate",
+        "lost reasons",
+        "weekly pipeline review"
+      ],
+      "version": 1,
+      "path": "recipes/sales/sales-pipeline.md",
+      "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/sales/sales-pipeline.md"
+    },
+    {
+      "id": "incident-management",
+      "title": "Incident management",
+      "summary": "Incident response for a SaaS engineering team: severities, one commander, customer updates on a clock, blameless postmortems, action items chased to done.",
+      "domain": "software",
+      "for": "team",
+      "keywords": [
+        "incident management",
+        "incident response",
+        "outage",
+        "on call",
+        "severity",
+        "incident commander",
+        "postmortem",
+        "status page",
+        "action items",
+        "pagerduty"
+      ],
+      "version": 1,
+      "path": "recipes/software/incident-management.md",
+      "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/software/incident-management.md"
+    },
+    {
+      "id": "shape-up",
+      "title": "Shape Up",
+      "summary": "Basecamp's Shape Up for a product team: pitches with an appetite, a betting table, six-week cycles, scopes on a hill chart, a circuit breaker.",
+      "domain": "software",
+      "for": "team",
+      "keywords": [
+        "shape up",
+        "basecamp",
+        "betting",
+        "appetite",
+        "hill chart",
+        "six week cycles",
+        "bets",
+        "cool down"
+      ],
+      "version": 2,
+      "path": "recipes/software/shape-up.md",
+      "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/software/shape-up.md"
+    }
+  ]
+}

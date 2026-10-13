@@ -30,7 +30,7 @@ BUILD = re.compile(
     r"You'll see a one-screen design first; nothing is created until you say yes, and the build takes about ten minutes\.\n\n"
     r"Anywhere else, give this recipe to your AI assistant and name your tool, or build it by hand from Details for building\."
 )
-CREDIT = "From the Fibery Process Cookbook, licensed CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/): copy, adapt and build it anywhere, crediting the cookbook.*"
+CREDIT = "From the Fibery Process Cookbook (https://github.com/Fibery-inc/process-cookbook), licensed CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/): copy, adapt and build it anywhere, crediting the cookbook.*"
 TOOL_WORDS = re.compile(r"\bFibery\b|\b[Ww]orkspaces?\b|\bSpaces?\b")
 ID = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 

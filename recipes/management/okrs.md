@@ -197,4 +197,4 @@ Anywhere else, give this recipe to your AI assistant and name your tool, or buil
 
 ---
 
-*OKRs come from Andy Grove at Intel; John Doerr's book* Measure What Matters *(2018) and whatmatters.com describe them. This recipe describes them in its own words and isn't affiliated with Intel, John Doerr or What Matters. From the Fibery Process Cookbook, licensed CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/): copy, adapt and build it anywhere, crediting the cookbook.*
+*OKRs come from Andy Grove at Intel; John Doerr's book* Measure What Matters *(2018) and whatmatters.com describe them. This recipe describes them in its own words and isn't affiliated with Intel, John Doerr or What Matters. From the Fibery Process Cookbook (https://github.com/Fibery-inc/process-cookbook), licensed CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/): copy, adapt and build it anywhere, crediting the cookbook.*

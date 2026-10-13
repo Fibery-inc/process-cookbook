@@ -4,7 +4,7 @@ Open recipes for how teams, companies and communities run their work, from Shape
 
 ## Use a recipe
 
-- **In Fibery:** add the Fibery plugin from [Fibery-inc/skills](https://github.com/Fibery-inc/skills) to your AI agent, attach a recipe or paste its link, and say "set up <the process>". You see a one-screen design first, and nothing is created until you say yes.
+- **In Fibery:** add the Fibery plugin from [Fibery-inc/skills](https://github.com/Fibery-inc/skills) to your AI agent and name the process ("set up OKRs"): it finds the recipe here by itself, or uses one you attach or link. You see a one-screen design first, and nothing is created until you say yes.
 - **Anywhere else:** give the recipe to your AI assistant and name your tool, or build it by hand from its Details for building.
 
 ## Recipes
@@ -36,4 +36,4 @@ New recipes and fixes are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-[CC BY 4.0](LICENSE). When you reuse a recipe, keep its footer: the credit line names the cookbook.
+[CC BY 4.0](LICENSE). When you reuse a recipe, keep its footer: the credit line names and links the cookbook.

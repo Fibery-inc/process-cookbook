@@ -44,7 +44,7 @@ Follow one team objective, *Stop churn before it starts*, through a quarter.
 - **While planning** — **Next quarter**: the coming quarter's objectives and their key results, blank Supports and blank targets visible, so alignment is checked before it starts.
 - **At the end of the quarter** — the **Scorecard**: every objective with its score and kind, highest first.
 - **At the leadership meeting** — the **Progress over time** report: do the numbers climb, or jump in the last week? **Scores by quarter**: do aspirational objectives land near 70 and committed ones at 100?
-- **How to run OKRs** — this story, kept where the team works.
+- **How to run OKRs** — this process on one screen, kept where the team works.
 
 ## The rules
 
@@ -173,7 +173,7 @@ Only when the company doesn't track its teams already: Name, Description off. It
 | My key results | list | Key Result | | Objective, Progress, Health, Last check in; red when Stale | Owner is me; Objective is Active | Last check in asc |
 | Next quarter | grid | Objective | Key Results nested: Owner, Start value, Target value | Level, Team, Supports, Owner, Kind | Quarter is Planning | Level, Company first |
 | Scorecard | grid | Objective | Key Results nested: Progress, Score; red when Score is empty | Quarter, Level, Team, Owner, Kind, Average score | Quarter is Scoring or Closed; State is not Dropped | Quarter desc, then Average score desc |
-| How to run OKRs | document | | | the story, through What must stay true | | |
+| How to run OKRs | document | | | the process on one screen, linking to this recipe | | |
 
 ### App
 

@@ -40,7 +40,7 @@ Follow one request, *Booth at SaaS Summit*, from the ask to the paid invoice.
 - **Every Thursday** — **Payment run**: approved and invoiced requests, due dates first, red when the vendor isn't *Verified*. What do we pay this week. Then **Vendors to verify**: new vendors and the requests waiting on them.
 - **Every Monday** — **This quarter**: each department's quarter: allocated, committed, pending, left. Who is running out of room.
 - **Any time** — **My requests**, your own asks; **Open requests**, every unfinished one by state; **Paid requests**, newest first; **New request**, the form; and the **Committed by department** and **Paid by vendor** reports.
-- **How to run purchase requests** — this story, kept where the team works.
+- **How to run purchase requests** — this process on one screen, kept where the team works.
 
 ## The rules
 
@@ -180,7 +180,7 @@ One record: the thresholds and the people above the budget owner. Description of
 | Open requests | board | Request | columns State | Requester, Department, Amount, Tier, Approver, Days waiting; red when Days waiting above 3 | State is not Paid, Rejected or Cancelled | |
 | Paid requests | grid | Request | | Vendor, Department, Amount, Approved on, Paid on | State is Paid | Paid on desc |
 | New request | form | Request | | Name (required), Requester (required), Department (required), Budget (required), Vendor, Amount (required), Tier (required), Needed by, Description | | |
-| How to run purchase requests | document | | | the story, through What must stay true | | |
+| How to run purchase requests | document | | | the process on one screen, linking to this recipe | | |
 
 ### App
 

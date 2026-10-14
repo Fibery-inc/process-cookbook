@@ -44,7 +44,7 @@ Follow one strat, *Palace split*, from an idea to an official.
 - **Every Monday** — **Map pool**: which maps are we ready for, with each map's stance, lights and scrim win rate side by side. **Strat book**: every strat by stage, map by map, proven ones green; what can we call. **Week plan**: who we play, and when.
 - **Before an official** — **Match prep**: is the prep done, match by match. **Opponents**: what we know about each team, and whether its scrims are worth booking.
 - **Any time** — **My review points**: a player's own open points, most seen first. **Points board**: where the mistakes cluster, recurring ones red. The **Strat success** report: which strats win when called. The **Map form** report: results by map over eight weeks.
-- **How to run team practice** — this story, kept where the team works.
+- **How to run team practice** — this process on one screen, kept where the team works.
 
 ## The rules
 
@@ -201,7 +201,7 @@ Nine views, one past the usual eight, because Review queue stands in for Round r
 | Opponents | grid | Opponent | | Scrim rating, Matches | | Name |
 | My review points | list | Review point | | Area, Strat, Times seen, State | Players is me; State is Open or Working on | Times seen desc |
 | Points board | board | Review point | columns State, rows Area | Players, Strat, Times seen; red when Times seen is 3 or more | State is not Dropped | |
-| How to run team practice | document | | | the story, through What must stay true | | |
+| How to run team practice | document | | | the process on one screen, linking to this recipe | | |
 
 ### App
 

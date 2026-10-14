@@ -43,7 +43,7 @@ Follow one incident, *Logins failing in EU*, from the page to the closed postmor
 - **Every week, at the Postmortem review** — **Postmortems to review**: what's drafting or in review, with due dates and open actions. What needs reading this week? **Open action items**: every unfinished action by postmortem, overdue ones red. Who owes what, and what's late?
 - **Every month** — the **Incident log**, every resolved incident with its duration and postmortem: what happened, and how long did it take? The **Incidents by month** report: fewer and shorter, or not? The **Postmortem debt** report: who carries overdue action items?
 - **Any time** — **My action items** for your own follow-ups; **Service history**, each service with its incidents: which parts keep breaking? **Declare incident**, the form.
-- **How to run incident management** — this story, kept where the team works.
+- **How to run incident management** — this process on one screen, kept where the team works.
 
 ## The rules
 
@@ -181,7 +181,7 @@ A part of the product that can break on its own. The Description holds what it i
 | My action items | list | Action item | | Postmortem, Due on, State; red when Overdue | Owner is me; State is Open or In progress | Due on asc |
 | Service history | grid | Service | Incidents nested: Severity, State, Declared at, Duration | | | Name |
 | Declare incident | form | Incident | | Name, Severity (required), Customer facing, Services, Summary, Started at | | |
-| How to run incident management | document | | | the story, through What must stay true | | |
+| How to run incident management | document | | | the process on one screen, linking to this recipe | | |
 
 ### App
 

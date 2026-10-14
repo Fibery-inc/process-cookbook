@@ -44,7 +44,7 @@ Follow one repair, *1042 iPhone 13*, from the counter to the bench and back, and
 - **Through the day** — **My calls**, for each counter person: whose yes is needed, and who to tell their phone is ready.
 - **Every Monday** — **Stock**, for the owner: what's on the shelf and what to reorder, red when low. **Parts on order**: what's coming, from whom, for which repairs, red when overdue.
 - **Every month** — the **Takings** report, what the shop earned month by month, by repair type; and **Comebacks**, warranty returns month by month, by technician.
-- **How to run the phone repair shop** — this story, kept where the team works.
+- **How to run the phone repair shop** — this process on one screen, kept where the team works.
 
 ## The rules
 
@@ -202,7 +202,7 @@ Formulas:
 | My calls | list | Repair | | State, Customer, the customer's Phone and Contact by, Price, Promised by | Counter person is me; State is Awaiting approval, or State is Ready and Customer told is unticked | Promised by asc |
 | Stock | grid | Part | | Kind, In stock, Reorder at, On order; red when Low stock | | Kind, then Name |
 | Parts on order | board | Part order | columns State, rows Supplier | Part, Quantity, Expected on, For repairs; red when Overdue | State is To order or Ordered | Expected on asc |
-| How to run the phone repair shop | document | | | the story, through What must stay true | | |
+| How to run the phone repair shop | document | | | the process on one screen, linking to this recipe | | |
 
 ### App
 

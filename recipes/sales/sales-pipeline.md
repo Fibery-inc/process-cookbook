@@ -40,7 +40,7 @@ Follow one deal, *Kestrel Logistics*, from the first reply to the signature.
 - **Every morning** — **Pipeline**: every open deal by stage, red when Stale. Where is every deal. **New leads**: every deal still in *Lead*, oldest first. Who is waiting for a reply. **My deals**: your own open deals, by next step date. What do I do today.
 - **Every Monday** — this week's Pipeline review, with the numbers and To challenge; **Pipeline by owner**, the board the meeting walks, open deals by stage with a row per owner; **Review history**: the numbers week by week.
 - **Any time** — **Won and lost**: every closed deal with its reason; **Companies**: each with its contacts and deals, customers marked by Won deals; **New inbound lead**, the form on the website; the **Forecast** report, weighted amount by close month; **Win rate**, won against lost by month; **Wins by source**, what inbound and outbound each bring.
-- **How to run the sales pipeline** — this story, kept where the team works.
+- **How to run the sales pipeline** — this process on one screen, kept where the team works.
 
 ## The rules
 
@@ -156,7 +156,7 @@ One record per weekly meeting, named by its week ("Week of 5 October"). The Desc
 | Won and lost | grid | Deal | | Company, Owner, Source, Amount, Close date, Lost reason | State is Won or Lost | Close date desc |
 | Companies | grid | Company | Deals nested: State, Amount, Owner | Website, Size, Contacts, Won deals | | Name asc |
 | New inbound lead | form | Deal | | Name, Description; Source preset to Inbound | | |
-| How to run the sales pipeline | document | | | the story, through What must stay true | | |
+| How to run the sales pipeline | document | | | the process on one screen, linking to this recipe | | |
 
 ### App
 

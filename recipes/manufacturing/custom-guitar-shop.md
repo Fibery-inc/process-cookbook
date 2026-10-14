@@ -40,7 +40,7 @@ Follow one guitar, *Heron 0142*, from the first email to the courier.
 - **Every morning** — **Shop floor**: every guitar on the bench by stage, with its days in stage and missing parts; late ones red. Where is everything, today.
 - **Every Monday** — **Order book**: inquiries and queued builds by promised month. Who's next, and which promise is in trouble. **Parts to chase**: the builds waiting on parts, soonest promise first, with each part's state. What to call the supplier about.
 - **Any time** — **My builds**, a builder's own guitars; **Ready to ship**, the guitars in setup waiting on a balance or a box; **Shipped guitars**, every guitar made, with its tracking; **Customers**, each with their builds; **New inquiry**, a form for the first email; and the **Shipping pace** report, how many left the shop each month.
-- **How to run the custom guitar shop** — this story, kept where the team works.
+- **How to run the custom guitar shop** — this process on one screen, kept where the team works.
 
 ## The rules
 
@@ -149,7 +149,7 @@ Who the guitar is for. The description holds notes from the conversation. Commen
 | Shipped guitars | grid | Build | | Customer, Model, Shipped on, Promised on, Carrier, Tracking | State is Shipped | Shipped on desc |
 | Customers | grid | Customer | Builds nested: Model, State, Promised on | Email, Country | | Name |
 | New inquiry | form | Build | | Name, Customer, Model, Description | | |
-| How to run the custom guitar shop | document | | | the story, through What must stay true | | |
+| How to run the custom guitar shop | document | | | the process on one screen, linking to this recipe | | |
 
 ### App
 

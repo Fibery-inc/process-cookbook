@@ -2,8 +2,9 @@
 
 # Manufacturing
 
-1 recipe.
+2 recipes.
 
 | Recipe | For | What it is |
 |---|---|---|
+| [Custom fiber mill](fiber-mill.md) | team | A small custom fiber mill: farms' fleeces tagged on arrival, a first come first served line in pounds, batches through the machines, an honest start month. |
 | [Custom guitar shop](custom-guitar-shop.md) | team | A small custom guitar shop's order book and floor board: inquiry, locked spec, a queue with promised months, parts counted before assembly, the shipped case. |

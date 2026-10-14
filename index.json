@@ -66,6 +66,30 @@
       "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/management/okrs.md"
     },
     {
+      "id": "fiber-mill",
+      "title": "Custom fiber mill",
+      "summary": "A small custom fiber mill: farms' fleeces tagged on arrival, a first come first served line in pounds, batches through the machines, an honest start month.",
+      "domain": "manufacturing",
+      "for": "team",
+      "keywords": [
+        "fiber mill",
+        "mini mill",
+        "custom processing",
+        "fiber processing",
+        "wool",
+        "alpaca",
+        "fleece",
+        "roving",
+        "batts",
+        "yarn",
+        "wait list",
+        "turnaround"
+      ],
+      "version": 1,
+      "path": "recipes/manufacturing/fiber-mill.md",
+      "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/manufacturing/fiber-mill.md"
+    },
+    {
       "id": "custom-guitar-shop",
       "title": "Custom guitar shop",
       "summary": "A small custom guitar shop's order book and floor board: inquiry, locked spec, a queue with promised months, parts counted before assembly, the shipped case.",
@@ -106,6 +130,30 @@
       "version": 3,
       "path": "recipes/marketing/content-calendar.md",
       "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/marketing/content-calendar.md"
+    },
+    {
+      "id": "tnr-program",
+      "title": "TNR program",
+      "summary": "Trap, neuter, return for a volunteer group: colonies on a map, trappings booked onto clinic days, every cat counted once and returned home.",
+      "domain": "nonprofit",
+      "for": "community",
+      "keywords": [
+        "tnr",
+        "trap neuter return",
+        "community cats",
+        "feral cats",
+        "colony",
+        "colony caretaker",
+        "eartip",
+        "spay neuter",
+        "trapping",
+        "clinic day",
+        "trap bank",
+        "cat rescue"
+      ],
+      "version": 1,
+      "path": "recipes/nonprofit/tnr-program.md",
+      "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/nonprofit/tnr-program.md"
     },
     {
       "id": "phone-repair-shop",

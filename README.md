@@ -10,15 +10,16 @@ Open recipes for how teams, companies and communities run their work, from Shape
 ## Recipes
 
 <!-- recipes:start -->
-9 recipes in 8 domains.
+11 recipes in 9 domains.
 
 | Domain | Recipes |
 |---|---|
 | [Esports](recipes/esports/) | [CS2 team practice](recipes/esports/cs2-team-practice.md) |
 | [Finance](recipes/finance/) | [Purchase requests](recipes/finance/purchase-requests.md) |
 | [Management](recipes/management/) | [OKRs](recipes/management/okrs.md) |
-| [Manufacturing](recipes/manufacturing/) | [Custom guitar shop](recipes/manufacturing/custom-guitar-shop.md) |
+| [Manufacturing](recipes/manufacturing/) | [Custom fiber mill](recipes/manufacturing/fiber-mill.md), [Custom guitar shop](recipes/manufacturing/custom-guitar-shop.md) |
 | [Marketing](recipes/marketing/) | [Content calendar](recipes/marketing/content-calendar.md) |
+| [Nonprofit](recipes/nonprofit/) | [TNR program](recipes/nonprofit/tnr-program.md) |
 | [Retail](recipes/retail/) | [Phone repair shop](recipes/retail/phone-repair-shop.md) |
 | [Sales](recipes/sales/) | [Sales pipeline](recipes/sales/sales-pipeline.md) |
 | [Software](recipes/software/) | [Incident management](recipes/software/incident-management.md), [Shape Up](recipes/software/shape-up.md) |

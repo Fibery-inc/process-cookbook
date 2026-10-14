@@ -4,7 +4,7 @@ summary: "Incident response for a SaaS engineering team: severities, one command
 domain: software
 for: team
 keywords: [incident management, incident response, outage, on call, severity, incident commander, postmortem, status page, action items, pagerduty]
-version: 1
+version: 2
 license: CC-BY-4.0
 ---
 
@@ -53,7 +53,7 @@ These are all the automations; everything else in the story is done by people.
 - **On resolution**: when an incident moves to *Resolved*, Resolved at is set to now.
 - **Postmortem needed**: when a *SEV1* or *SEV2* incident with no postmortem yet moves to *Resolved*, a postmortem is created and linked, with the commander as its Owner, and a comment on the incident says so.
 - **Action chase**: every Monday at 09:00, the owner of every action item that is past its Due on and neither *Done* nor *Dropped* is notified, one message per action item.
-- **Actions done**: when an action item moves to *Done* or *Dropped* and its postmortem is *Reviewed* with no other action item left unfinished, the postmortem moves to *Closed* with a comment.
+- **Actions done**: when an action item moves to *Done* or *Dropped* and its postmortem is *Reviewed* with no other action item left unfinished, the postmortem moves to *Closed*.
 
 No automations in your tool? Then a person does each of these at the same moment, and the promises they keep below become practices.
 
@@ -122,7 +122,7 @@ One record per incident, named by what customers would notice ("Logins failing i
 | Summary | text | One line for the Active incidents cards, written at declaration |
 | Started at | date-time | When the impact began; entered on the Declare incident form when it's known, or by the commander once it is; Duration counts from it, and from Declared at while it's empty |
 | Declared at | date-time | Set by On declaration; Incidents by month groups by it, Last customer update falls back to it, the Incident log sorts by it |
-| Resolved at | date-time | Set by On resolution, again on a second resolution; Duration |
+| Resolved at | date-time | Set by On resolution, again on a second resolution; Duration and the postmortem's Due on count from it |
 
 States: Investigating → Identified → Monitoring → Resolved (finished) · Not an incident (finished). Default: Investigating. The four working states are the words status pages use, so a status update carries the same word customers see. Source of truth for when the impact began: **Started at**, which the on call or the commander sets; while it's empty, Declared at stands in. Declared at never changes.
 
@@ -147,7 +147,7 @@ One per incident that needs one; Postmortem needed creates it for a *SEV1* or *S
 States: Drafting → In review → Reviewed → Closed (finished) · Skipped (finished). Default: Drafting. *Closed* is set by Actions done; *Skipped* by a person, with a comment.
 
 Formulas:
-- **Due on** — the date the review must have happened by: three days after the postmortem was created when its incident is a *SEV1*, seven days otherwise, a date; on Postmortems to review, red once past.
+- **Due on** — the date the review must have happened by: three days after its incident's Resolved at when the incident is a *SEV1*, seven days otherwise, a date; the year 2100 while the incident has no Resolved at, far enough away that Postmortems to review never shows it red; on Postmortems to review, red once past.
 - **Open actions** — how many of the postmortem's action items are neither *Done* nor *Dropped*, a whole number; 0 with no action items; on Postmortems to review, and Actions done checks it before closing.
 
 ### Action item
@@ -195,7 +195,7 @@ None needed. The central moments are the live incident and the weekly review, an
 
 ### Sample story
 
-Logins failing in EU resolved two days ago, with a status update at every state and a comment timeline from 02:10 to 03:05; its postmortem, written under the seven headings, is in review, due tomorrow, with three action items. Three incidents are open: a customer facing SEV2, investigating for ninety minutes with one update, so its next is overdue; a SEV3 identified, not customer facing; and a SEV1 monitoring, updated ten minutes ago. The log goes back two months, one false alarm included. Of older postmortems, one is closed, one reviewed with action items under way, two of them overdue, one drafting past its due date, and one skipped after a downgrade. One action item was dropped.
+Logins failing in EU resolved two days ago, with a status update at every state and a comment timeline from 02:10 to 03:05; its postmortem, written under the seven headings, is in review, due tomorrow, with three action items. Three incidents are open: a customer facing SEV2, investigating for ninety minutes without a single update, so its first is overdue; a SEV3 identified, not customer facing; and a SEV1 monitoring, updated ten minutes ago. The log goes back two months, one false alarm included. Of older postmortems, one is closed, one reviewed with action items under way, two of them overdue, one drafting past its due date, and one skipped after a downgrade. One action item was dropped.
 
 ## Build it
 

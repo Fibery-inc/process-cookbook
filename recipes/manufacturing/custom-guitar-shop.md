@@ -4,7 +4,7 @@ summary: "A small custom guitar shop's order book and floor board: inquiry, lock
 domain: manufacturing
 for: team
 keywords: [custom guitar, luthier, guitar shop, made to order, spec sheet, order book, shop floor, build queue, parts, workshop]
-version: 1
+version: 2
 license: CC-BY-4.0
 ---
 
@@ -49,7 +49,7 @@ These are all the automations; everything else in the story is done by people.
 - **Lock the spec** (a button on a build): moves the build to *Queued* and adds a comment with the lock date and the promise. It checks nothing: a queued build with no deposit date or promised month shows a blank on the Order book. The lock comment is the baseline for any later change.
 - **Stage dates**: when a build moves to another state, Stage changed on is set to today.
 - **On shipping**: when a build moves to *Shipped*, Shipped on is set to today and a comment holds the carrier and the tracking link, ready for the customer email.
-- **All parts in**: when a part moves to *Received* and every part of its build is now received, the build gets a comment saying assembly is clear and its builder is notified.
+- **All parts in**: when a build's Parts missing drops to 0, the build gets a comment saying assembly is clear, and its builder is notified.
 
 No automations in your tool? Then a person does each of these at the same moment, and the promises they keep below become practices.
 
@@ -59,7 +59,7 @@ Whatever anyone edits, adapts or corrects, these hold; each says what keeps it s
 
 - ★ Nothing is cut before the spec is locked: a build is *Queued* only with a deposit date and a promised month, and *Woodwork* comes after *Queued*. Shown on the **Order book**, where a *Queued* build missing either date has a blank beside its name. A build moved along by hand gets no lock comment, so locking means pressing **Lock the spec**; that part is a practice.
 - ★ After the lock, a change to the sheet or the promised month is a new agreement: the builder edits the sheet or Promised on and writes the change and the new promise in a comment, never a silent edit. A practice; the lock comment is the baseline, and nothing enforces it.
-- ★ Assembly starts only when every part is in. Shown by **Parts missing**, red on the Shop floor for a build in *Assembly* with a part still *Needed* or *Ordered*; the **All parts in** comment says when the way is clear, and a part moved to another build changes the count without a comment.
+- ★ Assembly starts only when every part is in. Shown by **Parts missing**, red on the Shop floor for a build in *Assembly* with a part still *Needed* or *Ordered*; the **All parts in** comment says when the way is clear.
 - A promise in trouble is seen before the customer asks. Shown by **Late**, which turns a build red on the Shop floor and the Order book once its promised month has passed unshipped.
 - Days in stage counts from the last real move. Kept by **Stage dates**; a move entered late is corrected by editing Stage changed on, and Days in stage follows it.
 - ★ The customer hears from the builder at every stage move. A practice; Days in stage on the Shop floor shows how long since the last move, and nothing enforces the sending.
@@ -126,7 +126,7 @@ States: Inquiry → Queued → Woodwork → Finish → Assembly → Setup → Sh
 Formulas:
 - **Days in stage** — days since Stage changed on, a whole number, 0 with no date; on Shop floor cards and My builds.
 - **Days to promised** — days from today to Promised on, a whole number, negative once past, 0 with no date; on the Order book.
-- **Parts missing** — how many of the build's parts are not *Received*, a whole number, 0 when the build has no parts; on Shop floor cards, red in *Assembly*, and on Parts to chase; All parts in reads it.
+- **Parts missing** — how many of the build's parts are not *Received*, a whole number, 0 when the build has no parts; on Shop floor cards, red in *Assembly*, and on Parts to chase; All parts in fires when it drops to 0.
 - **Late** — yes when Promised on has passed and the build is neither *Shipped* nor *Cancelled*, no with no date; colors the Shop floor and the Order book.
 
 ### Part

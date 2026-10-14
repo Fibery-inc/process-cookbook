@@ -4,7 +4,7 @@ summary: "A walk-in phone repair shop of three to six: every phone from counter 
 domain: retail
 for: team
 keywords: [phone repair, repair shop, phone repair point, mobile repair, screen replacement, battery replacement, walk in repairs, repair tags, parts stock, warranty returns]
-version: 1
+version: 2
 license: CC-BY-4.0
 ---
 
@@ -31,7 +31,7 @@ Follow one repair, *1042 iPhone 13*, from the counter to the bench and back, and
 3. **The price changes.** Under the screen the technician finds a swollen battery that has to go too. They raise the Price to 175, write why in a comment and move the repair to *Awaiting approval*. It appears on **My calls**, the counter person's list of customers to call.
 4. **The customer says yes.** The counter person texts Maya, she agrees, and they write her yes in a comment. A screen is on the shelf, but **Stock**, the list of every part the shop keeps, shows the iPhone 13 battery at 0 **In stock**. Nobody types that number: it's the part's **Base count**, how many were on the shelf when it was first counted, plus every piece that has arrived since, less every piece fitted. So the technician adds a part order for one battery, *To order*, linked to 1042, and moves the repair to *Waiting for parts*. The counter person moves Promised by to three days out and texts Maya the new time.
 5. **The owner orders.** The owner opens **Parts on order**, every part order by state with a row per **Supplier**, places the battery order and moves it to *Ordered*, typing its **Expected on**, the day the supplier promises: two days out. An order past that day turns red there, **Overdue**, and the owner chases it; one the supplier can't fill is *Cancelled* and ordered elsewhere. It's Monday, so the owner also goes down Stock: a part whose In stock has fallen to its **Reorder at**, the count at which to buy more, is **Low stock** and red, and **On order** says how many are already coming. The iPhone 13 screens are down to two, so a second part order goes to the same supplier, its **Quantity** five.
-6. **The part arrives.** Two days later the counter person unpacks the delivery and moves both part orders to *Received*. In stock goes up by what arrived, and the **Part arrived** rule moves 1042 back to *Queued* and tells its technician the battery is in.
+6. **The part arrives.** Two days later the counter person unpacks the delivery and moves both part orders to *Received*. In stock goes up by what arrived, and the **Part arrived** rule moves 1042 back to *Queued*, where its technician finds it on My repairs.
 7. **The repair is done.** The technician fits the screen and the battery and adds both to the repair's **Parts used**, which takes them off In stock. They test the phone against the checklist in its description: touch, display, cameras, speakers, charging, buttons and unlock. Then they move it to *Ready*. The **On ready** rule sets **Ready on** to today, clears **Customer told**, the tick that says the customer knows, and asks the counter person to call.
 8. **The customer collects.** The counter person texts Maya and ticks Customer told. When she comes in, **Ready to collect**, the phones waiting for their customers, shows 1042 and its **To pay**, 155: the price less the deposit. She pays at the till and gets her phone back, and the counter person moves the repair to *Collected*. The **On collection** rule sets **Collected on** to today, and **Forget the passcode** empties the passcode. The phone is **Under warranty** for 90 days from that day.
 9. **It comes back.** Five weeks later the new screen stops answering along one edge. On Check in the counter person finds Maya by her number and sees 1042 among her repairs, still Under warranty. They take the phone in as a new repair, *1107 iPhone 13*, linked to the first through **Warranty for**, and the **Warranty return** rule sets its Price to 0 and gives it to the technician who did 1042. The first repair stays *Collected*: a comeback is never a reopened repair, and **Comebacks**, a report of warranty returns month by month, shows from whose bench they come.
@@ -50,7 +50,7 @@ Follow one repair, *1042 iPhone 13*, from the counter to the bench and back, and
 
 These are all the automations; everything else in the story is done by people.
 
-- **Part arrived**: when a part order moves to *Received*, every repair it was ordered for that is *Waiting for parts* moves to *Queued*, and its technician is notified that the part is in.
+- **Part arrived**: when a part order moves to *Received*, every repair it was ordered for that is *Waiting for parts* moves to *Queued*.
 - **On ready**: when a repair moves to *Ready*, its Ready on is set to today, its Customer told is cleared, and its counter person is notified to tell the customer. A phone that goes back to the bench and comes out again gets a second call.
 - **On collection**: when a repair moves to *Collected*, its Collected on is set to today, the day its warranty starts.
 - **Forget the passcode**: when a repair moves to *Collected* or *Unclaimed*, its Passcode is emptied.
@@ -81,7 +81,7 @@ Decide these before you set it up; each has a default if you shrug.
 | Do you want the margin on each repair? | No | Every repair shows what it earned: a Cost field on Part, a Parts cost formula on Repair, the cost of its parts used, a Margin formula, Price less Parts cost, and a Margin report by repair type |
 | Do you already keep customers in your tool? | — | Repairs point at the customers you already have: Repair links to that database, Check in searches it by phone, and no Customer database is created |
 
-- **A shop of two or three:** one person is often both the counter person and the technician of a repair. Keep both fields anyway: On ready, Part arrived and Comebacks each read one of them, and My calls and My repairs become your two lists.
+- **A shop of two or three:** one person is often both the counter person and the technician of a repair. Keep both fields anyway: On ready, Warranty return and Comebacks each read one of them, and My calls and My repairs become your two lists.
 - **Your own terms:** a 90-day warranty, a second call at 30 days and *Unclaimed* at 90 are common choices, and local consumer law may set its own. Whatever yours are, change them together: on the claim slip, in Under warranty and on Ready to collect.
 - **Free diagnosis:** a phone that isn't repaired goes back with a Price of 0; nothing else changes.
 - **Tablets, watches, laptops, consoles:** the same flow, since each repair is named by its device; add the faults they bring, a hinge or a keyboard, to the Repair type options.
@@ -116,18 +116,19 @@ erDiagram
 
 ### Repair
 
-One phone brought in for one job, from the counter back to the customer, named by its tag number and the device: "1042 iPhone 13". The description holds five headings: Fault, in the customer's words; Device, the IMEI or serial number and the color; Condition, the marks found at check-in, with photos; Left with us, the SIM, case, charger or memory card; Test, the checklist the technician goes through before *Ready*. Comments on; every new price and the customer's answer go there.
+One phone brought in for one job, from the counter back to the customer, named by its tag number and the device: "1042 iPhone 13". The description holds five headings: Fault, in the customer's words; Device, the IMEI or serial number and the color; Condition, the marks found at check-in, each with a picture in Photos; Left with us, the SIM, case, charger or memory card; Test, the checklist the technician goes through before *Ready*. Comments on; every new price and the customer's answer go there. Its fifteen fields are one more than a main database usually needs: the check-in photos get a field of their own, so a form can ask for them.
 
 | Field | Type | Why |
 |---|---|---|
 | Customer | relation, many-to-one → Customer; inverse **Repairs** | Whose phone it is; Check in and Customers show the repairs through it |
+| Photos | files | The marks found at check-in, photographed with the customer; Check in asks for them before it prints the claim slip |
 | Repair type | single select: Screen, Battery, Charging port, Back glass, Camera, Water damage, Software, Other; no default | Set at check-in; on Bench cards, and what Takings colors by |
 | Price | money | The agreed price: set at check-in, changed only with the customer's yes, the diagnostic fee for a phone not repaired, 0 for a warranty return; To pay and Takings read it |
 | Deposit | money | Taken at check-in, empty when none; To pay subtracts it |
 | Promised by | date-time | When the counter person promised the phone; Late reads it, and Bench and My repairs sort by it |
 | Passcode | text | So the phone can be tested; emptied by Forget the passcode |
 | Counter person | person; inverse **Counter repairs** | Talks to the customer about this repair; set by Check in to whoever takes the phone in; My calls and On ready go to them |
-| Technician | person; inverse **Bench repairs** | Diagnoses and fixes it; set by whoever takes it from the shelf, or by Warranty return; the Bench rows, My repairs, Part arrived and Comebacks run on it |
+| Technician | person; inverse **Bench repairs** | Diagnoses and fixes it; set by whoever takes it from the shelf, or by Warranty return; the Bench rows, My repairs and Comebacks run on it |
 | Not repaired | checkbox | Ticked when the customer said no or the phone can't be saved; Under warranty reads it |
 | Customer told | checkbox | Ticked by the counter person once the customer knows the phone is ready; cleared by On ready; My calls reads it |
 | Ready on | date | Set by On ready; Days waiting counts from it |
@@ -195,7 +196,7 @@ Formulas:
 |---|---|---|---|---|---|---|
 | Bench | board | Repair | columns State, rows Technician | Customer, Repair type, Promised by, Price; red when Late | State is not Collected or Unclaimed | Promised by asc |
 | My repairs | list | Repair | | State, Repair type, Promised by, Customer; red when Late | Technician is me; State is Queued, In repair, Awaiting approval or Waiting for parts | Promised by asc |
-| New repair | form | Repair | | Name (required), Customer (required), Repair type (required), Price (required), Deposit, Promised by (required), Passcode, Counter person (required), Warranty for, Description | | |
+| New repair | form | Repair | | Name (required), Customer (required), Repair type (required), Price (required), Deposit, Promised by (required), Passcode, Counter person (required), Warranty for, Photos, Description | | |
 | Customers | grid | Customer | Repairs nested: State, Collected on, Under warranty, Technician | Phone, Contact by, Email | | Name asc |
 | Ready to collect | grid | Repair | | Customer, To pay, Not repaired, Customer told, Ready on, Days waiting; red when Days waiting is 30 or more | State is Ready | Ready on asc |
 | My calls | list | Repair | | State, Customer, the customer's Phone and Contact by, Price, Promised by | Counter person is me; State is Awaiting approval, or State is Ready and Customer told is unticked | Promised by asc |
@@ -205,7 +206,7 @@ Formulas:
 
 ### App
 
-**Check in**, a page of its own, for the counter. Most tools can't draw it out of the box: build it as a custom app or view where the tool allows one, or use its fallback. The counter person types a phone number and sees whose it is, or adds a new customer with Name, Phone and Contact by. Below, that customer's repairs with State, Collected on and Under warranty; picking one as the reason for this visit fills Warranty for. Then the new repair: its name from the tag number and the device, Repair type, Price, Deposit, Promised by, Passcode, and the description's first four headings with photos. It creates the repair only with a tag, a fault, a price and a promise, sets Counter person to whoever is signed in, and shows the claim slip to print: tag, customer, device, fault, price, deposit, promise and the shop's terms. Reads: Customer Name, Phone, Contact by; Repair Name, Customer, State, Collected on, Under warranty. Writes: Customer Name, Phone, Contact by; Repair Name, Customer, Repair type, Price, Deposit, Promised by, Passcode, Counter person, Warranty for, Description. Fallback: the New repair form, with the Customers grid for the lookup.
+**Check in**, a page of its own, for the counter. Most tools can't draw it out of the box: build it as a custom app or view where the tool allows one, or use its fallback. The counter person types a phone number and sees whose it is, or adds a new customer with Name, Phone and Contact by. Below, that customer's repairs with State, Collected on and Under warranty; picking one as the reason for this visit fills Warranty for. Then the new repair: its name from the tag number and the device, Repair type, Price, Deposit, Promised by, Passcode, Photos, and the description's first four headings. It creates the repair only with a tag, a fault, a price and a promise, sets Counter person to whoever is signed in, and shows the claim slip to print: tag, customer, device, fault, price, deposit, promise and the shop's terms. Reads: Customer Name, Phone, Contact by; Repair Name, Customer, State, Collected on, Under warranty. Writes: Customer Name, Phone, Contact by; Repair Name, Customer, Repair type, Price, Deposit, Promised by, Passcode, Counter person, Warranty for, Photos, Description. Fallback: the New repair form, with the Customers grid for the lookup.
 
 ### Reports
 

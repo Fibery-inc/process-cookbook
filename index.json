@@ -83,7 +83,7 @@
         "parts",
         "workshop"
       ],
-      "version": 1,
+      "version": 2,
       "path": "recipes/manufacturing/custom-guitar-shop.md",
       "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/manufacturing/custom-guitar-shop.md"
     },
@@ -103,7 +103,7 @@
         "publishing schedule",
         "marketing content"
       ],
-      "version": 2,
+      "version": 3,
       "path": "recipes/marketing/content-calendar.md",
       "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/marketing/content-calendar.md"
     },
@@ -125,7 +125,7 @@
         "parts stock",
         "warranty returns"
       ],
-      "version": 1,
+      "version": 2,
       "path": "recipes/retail/phone-repair-shop.md",
       "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/retail/phone-repair-shop.md"
     },
@@ -169,7 +169,7 @@
         "action items",
         "pagerduty"
       ],
-      "version": 1,
+      "version": 2,
       "path": "recipes/software/incident-management.md",
       "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/software/incident-management.md"
     },

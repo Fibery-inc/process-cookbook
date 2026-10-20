@@ -155,6 +155,12 @@ None needed. The central moments are the morning look at the bench and the Monda
 
 Heron 0142 is in finish with a full spec sheet, its lock comment and its customer's notes, beside another guitar three weeks into curing. A Wren is in woodwork, a Custom in assembly shows red with its pickups still ordered, and a Heron in setup waits on its balance. Three builds are queued, one already late and two promised within half a year. Two inquiries are open, one with a half-written spec sheet. A guitar shipped last month with its tracking, and one build was cancelled after the lock, the deposit decision in a comment. Most parts are in, a few on order, two still needed. Customers live in three countries; one has two builds.
 
+## Sources
+
+- [Build Timeline](https://store.rsguitarworks.net/pages/build-timeline), RS Guitarworks: the stages from woodwork through finish, assembly and setup, parts ordered early, the balance before shipping.
+- [How to buy a Ruokangas guitar?](https://ruokangas.com/support/how-to-buy-a-ruokangas-guitar/), Ruokangas Guitars: the deposit that makes an order binding, and a lead time set per order.
+- [Ordering Information for Custom Instruments from John Walker Guitars](https://johnwalkerguitars.com/JWG1/Orderinformation.html), John Walker Guitars: the signed-off spec as the baseline, and every change agreed in writing.
+
 ## Build it
 
 In Fibery, open Claude with the Fibery plugin, attach this recipe and say "set up the custom guitar shop". You'll see a one-screen design first; nothing is created until you say yes, and the build takes about ten minutes.

@@ -210,6 +210,12 @@ Formulas:
 
 Laundromat lot's clinic day was yesterday: four cats fixed and recovering, the two males going home today and the two females tomorrow, and one cat already eartipped released at the trap. Its second trapping is booked for the clinic day in nine days, with three cats left to fix; that day has twelve slots and thirteen planned, so it shows red. Two other colonies are being trapped, a managed colony just reported a newcomer, and three new reports wait, one of them a duplicate. A kitten went to a rescue last month. Traps 7 and 12 are out, and 12 is three days overdue. Last month's clinic days fixed 31 cats, more females than males.
 
+## Sources
+
+- [Guide to Trap-Neuter-Return (TNR) and Colony Care](https://aspcapro.org/sites/default/files/TNR_workshop_handbook.3.pdf), Alley Cat Allies, ASPCA and the Mayor's Alliance for NYC's Animals, 2016: the whole practice, from holding back food to the clinic's daily limit, recovery times and release where each cat was trapped.
+- [How You Can Help Community Cats: A Step-by-Step Guide to Trap-Neuter Return](https://www.alleycat.org/resources/how-to-help-community-cats-a-step-by-step-guide-to-trap-neuter-return/), Alley Cat Allies: trapping step by step, the eartip and keeping track of a colony.
+- [Trap, Neuter, Return (TNR) Program for Feral Cats](https://www.toronto.ca/community-people/animals-pets/spay-neuter-services/trap-neuter-return-program-for-feral-cats/), City of Toronto, 2026: clinic appointments booked before trapping, and the minimum recovery before release.
+
 ## Build it
 
 In Fibery, open Claude with the Fibery plugin, attach this recipe and say "set up the TNR program". You'll see a one-screen design first; nothing is created until you say yes, and the build takes about ten minutes.

@@ -210,6 +210,12 @@ Formulas:
 
 1042 iPhone 13, collected five weeks ago, is back as 1107 iPhone 13, in repair under warranty with the same technician. Other phones are queued, awaiting approval or on the bench, one a day late. Two wait for parts from two suppliers, one order overdue. A third is queued again since its Pixel 7 back glass arrived. Two phones became ready today, one customer not yet told. 1060 Galaxy S21, not repaired, has been ready for 35 days, and another phone went unclaimed. Collected repairs span four months and several types, one an earlier comeback. The iPhone 13 battery is out, none on order; iPhone 12 screens are low, three on order; a charging port order was cancelled.
 
+## Sources
+
+- [Write it Right!](https://bhgs.dca.ca.gov/forms_pubs/write_it_right_flyer.pdf), Bureau of Household Goods and Services, California Department of Consumer Affairs, 2019: a claim slip at drop-off, a written price, and the customer's yes before anything costs more.
+- [How to Find a Good Local Repair Shop](https://www.ifixit.com/News/117445/does-ifixit-have-stores), Elizabeth Chamberlain, iFixit, 2026: an organized intake and pickup, approval before going over the estimate, and a clear warranty.
+- [Uncollected goods](https://www.nsw.gov.au/legal-and-justice/consumer-rights-and-protection/repairs-replacements-and-refunds/uncollected-goods), NSW Fair Trading, 2025: what a shop does with a repaired phone nobody collects.
+
 ## Build it
 
 In Fibery, open Claude with the Fibery plugin, attach this recipe and say "set up the phone repair shop". You'll see a one-screen design first; nothing is created until you say yes, and the build takes about ten minutes.

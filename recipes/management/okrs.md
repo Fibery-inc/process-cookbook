@@ -12,7 +12,7 @@ license: CC-BY-4.0
 
 *A recipe from the Fibery Process Cookbook: the process in plain words, and the model to build it in any tool.*
 
-**Everyone knows the few things that matter this quarter, and whether they're moving.** For a company of twenty to two hundred people in several teams. John Doerr's Objectives and Key Results, set up so every team objective shows under the company objective it serves and the weekly check in is a record, not a memory. Source: https://www.whatmatters.com/resources/a-typical-okr-cycle
+**Everyone knows the few things that matter this quarter, and whether they're moving.** For a company of twenty to two hundred people in several teams. John Doerr's Objectives and Key Results, set up so every team objective shows under the company objective it serves and the weekly check in is a record, not a memory.
 
 ## The idea
 
@@ -180,6 +180,12 @@ Only when the company doesn't track its teams already: Name, Description off. It
 ### Sample story
 
 Q4 is six weeks in, seven to go. Product, Engineering, Sales and Customer Success each have an active objective under one of its two company objectives. Customer Success's, Stop churn before it starts, supports Grow by keeping customers and says why it matters in its description; its Monthly churn from 3.0% to 1.5% has five weekly check ins with notes, the latest at 2.8%, at risk. Some key results aim to fall, every health is in use, and two, never checked in, show stale. Another team objective was dropped, with a comment saying why. Q3 closed six weeks ago, its company and team objectives scored and reflected on, one committed. Q1, in planning, holds a draft company objective.
+
+## Sources
+
+- [Measure What Matters](https://www.whatmatters.com/the-book), John Doerr, 2018: objectives proven by measurable key results.
+- [A Typical OKR Cycle](https://www.whatmatters.com/resources/a-typical-okr-cycle), What Matters: the quarter's rhythm, from drafting the company's objectives to scoring them.
+- [Google's OKR Playbook](https://www.whatmatters.com/resources/google-okr-playbook), Google, on What Matters: committed and aspirational key results, and how each is scored.
 
 ## Build it
 

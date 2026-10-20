@@ -9,7 +9,7 @@ RECIPES = ROOT / "recipes"
 KEYS = ["title", "summary", "domain", "for", "keywords", "version", "license"]
 FOR = {"solo", "team", "company", "community"}
 SECTIONS = ["The idea", "How it runs", "What people look at", "The rules", "What must stay true",
-            "Making it yours", "Details for building", "Build it"]
+            "Making it yours", "Details for building", "Sources", "Build it"]
 ITALIC = "*A recipe from the Fibery Process Cookbook: the process in plain words, and the model to build it in any tool.*"
 OPENERS = {
     "The rules": "These are all the automations; everything else in the story is done by people.",
@@ -132,9 +132,18 @@ def check(path, known, errors, warnings):
             warnings.append(f"{rel}: the sample story has {len(story.split())} words; the format asks for under 120")
     if "Build it" in secs and not BUILD.search(secs["Build it"]):
         err("Build it lacks its two fixed paragraphs")
+    if "Sources" in secs:
+        items = [line for line in secs["Sources"].split("\n") if line.startswith("- ")]
+        if not 1 <= len(items) <= 3:
+            err(f"Sources lists {len(items)} sources; the format asks for one to three")
+        for item in items:
+            if not re.search(r"\]\(https?://", item):
+                err(f"a source has no link: {item[:60]}")
+    if re.search(r"\bSource: ", preamble):
+        err("the promise line names a source; sources go in Sources")
     if not text.rstrip().endswith(CREDIT):
         err("the file must end with the cookbook's credit line")
-    neutral = "\n".join([head, preamble.replace(ITALIC, "")] + [secs[n] for n in order if n != "Build it"])
+    neutral = "\n".join([head, preamble.replace(ITALIC, "")] + [secs[n] for n in order if n not in ("Build it", "Sources")])
     for word in sorted(set(TOOL_WORDS.findall(neutral))):
         err(f"names {word!r} outside the fixed texts; a recipe names no tool")
 

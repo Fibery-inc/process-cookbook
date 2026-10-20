@@ -12,7 +12,7 @@ license: CC-BY-4.0
 
 *A recipe from the Fibery Process Cookbook: the process in plain words, and the model to build it in any tool.*
 
-**Every scrim has a purpose, every game is reviewed by the next morning, and every strat earns its place in officials.** For a professional Counter-Strike 2 team: coach, in-game leader, analyst and five players. How such a team practises, from the strat book to match day. Source: a coach's account of the pro practice day, https://community.skin.club/en/news/scrim-culture-in-counter-strike-how-pro-teams-improve-faster-by-golden
+**Every scrim has a purpose, every game is reviewed by the next morning, and every strat earns its place in officials.** For a professional Counter-Strike 2 team: coach, in-game leader, analyst and five players. How such a team practises, from the strat book to match day.
 
 ## The idea
 
@@ -209,6 +209,11 @@ Nine views, one past the usual eight, because Review queue stands in for Round r
 ### Sample story
 
 Palace split is in Testing with seven runs, four won: green, but not yet cleared. Other strats sit at every stage, a pocket strat in Theory, one retired. Mirage is a pick, its T side still yellow. A week ago the Mirage scrim against Kestrel was reviewed with notes; its late jungle smoke is being worked on. An open point, seen in three games, is red; one is fixed, one dropped. Last week's match is played, both maps reviewed. Yesterday's two scrims wait for review. Two more are today, two in three days; one with the team rated Avoid fell through. Tomorrow's Bo1 is ready, the Ironvale Bo3, in two days, is in Prep, and another is scheduled.
+
+## Sources
+
+- [Scrim Culture in Counter-Strike: How Pro Teams Improve Faster](https://community.skin.club/en/news/scrim-culture-in-counter-strike-how-pro-teams-improve-faster-by-golden), Maikil "Golden" Selim, Skin.Club, 2026: the pro practice day, scrims with a goal, the debrief, and recurring mistakes over one-offs.
+- [The CS Major Supplemental Rulebook](https://github.com/ValveSoftware/counter-strike_rules_and_regs/blob/main/major-supplemental-rulebook.md), Valve: the best of three map veto.
 
 ## Build it
 

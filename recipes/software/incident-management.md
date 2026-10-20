@@ -12,7 +12,7 @@ license: CC-BY-4.0
 
 *A recipe from the Fibery Process Cookbook: the process in plain words, and the model to build it in any tool.*
 
-**Declared in one step, run by one commander, told to customers on a clock, and closed only when the fixes are done.** For a SaaS engineering team with someone on call. An outage handled from the first page to the last action item, built on PagerDuty's response guide. Source: https://response.pagerduty.com
+**Declared in one step, run by one commander, told to customers on a clock, and closed only when the fixes are done.** For a SaaS engineering team with someone on call. An outage handled from the first page to the last action item, built on PagerDuty's response guide.
 
 ## The idea
 
@@ -75,7 +75,7 @@ Decide these before you set it up; each has a default if you shrug.
 | Question | Default | If not the default |
 |---|---|---|
 | Which severities get a postmortem? | SEV1 and SEV2 | More or fewer postmortems to write and review; the Postmortem needed rule creates them for the severities you name |
-| How often do customers hear from you? | Every 30 minutes on a SEV1, every hour on a SEV2 | The clock on Active incidents runs at your pace; change the minutes in Next update due. The source names no cadence; this one is a common choice |
+| How often do customers hear from you? | Every 30 minutes on a SEV1, every hour on a SEV2 | The clock on Active incidents runs at your pace; change the minutes in Next update due. The source asks for an update at least every 20 minutes in the first two hours; this lighter pace is a common choice |
 | Do you already track services, components or products in your tool? | — | Incidents land on the services you already have; link Incident to that database instead of creating Service |
 | Do you already track engineering tasks or bugs in your tool? | — | Each action item links to its ticket, so the work is tracked where engineering works; link Action item to that database |
 
@@ -188,6 +188,11 @@ None needed. The central moments are the live incident and the weekly review, an
 ### Sample story
 
 Logins failing in EU resolved two days ago, with a status update at every state and a comment timeline from 02:10 to 03:05; its postmortem, written under the seven headings, is in review, due tomorrow, with three action items. Three incidents are open: a customer facing SEV2, investigating for ninety minutes without a single update, so its first is overdue; a SEV3 identified, not customer facing; and a SEV1 monitoring, updated ten minutes ago. The log goes back two months, one false alarm included. Of older postmortems, one is closed, one reviewed with action items under way, two of them overdue, one drafting past its due date, and one skipped after a downgrade. One action item was dropped.
+
+## Sources
+
+- [PagerDuty Incident Response Documentation](https://response.pagerduty.com), PagerDuty, 2017: severity levels, a commander who coordinates rather than fixes, the roles beside them, customer updates and blameless postmortems.
+- [Example Postmortem](https://sre.google/sre-book/example-postmortem/), appendix D of Site Reliability Engineering, Google, O'Reilly Media, 2017: the postmortem's headings, what went well and where we got lucky included.
 
 ## Build it
 

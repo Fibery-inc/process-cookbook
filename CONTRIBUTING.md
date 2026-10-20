@@ -5,7 +5,7 @@ One recipe per pull request: a new recipe, or a revision of one.
 ## Write it
 
 - Follow [FORMAT.md](FORMAT.md). The easiest way is the recipe-writer skill from [Fibery-inc/skills](https://github.com/Fibery-inc/skills): ask it for one ("make a recipe for our purchase approvals") and answer its questions.
-- Write in your own words. A recipe can credit a method's originator and link one source, but never copies a source's sentences, tables or diagrams.
+- Write in your own words, from one to three published sources, and list them in the recipe's Sources. A recipe can credit a method's originator in its footer, but never copies a source's sentences, tables or diagrams.
 - Invent every example: no real people, customers or records.
 
 ## Put it in place

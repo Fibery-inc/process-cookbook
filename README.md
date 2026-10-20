@@ -29,7 +29,7 @@ Open recipes for how teams, companies and communities run their work, from Shape
 
 ## What's in a recipe
 
-The first half is for the people who run the process: the idea, one example followed through its whole life, what people look at and when, the rules that run by themselves, what must stay true and what keeps it so, and the questions to decide before setting it up. The second half, Details for building, is for the builder: the records, fields, states, formulas, views, rules and a sample story. [FORMAT.md](FORMAT.md) is the full format.
+The first half is for the people who run the process: the idea, one example followed through its whole life, what people look at and when, the rules that run by themselves, what must stay true and what keeps it so, and the questions to decide before setting it up. The second half, Details for building, is for the builder: the records, fields, states, formulas, views, rules and a sample story. Sources lists the one to three published sources the recipe was written from. [FORMAT.md](FORMAT.md) is the full format.
 
 ## Contribute
 

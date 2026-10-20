@@ -166,6 +166,12 @@ There are three, one past the usual two, because a sales team is asked three sep
 
 Kestrel Logistics is in Proposal, notes under the four headings and the proposal linked, a call due in two days. Deals from the last three months fill the other stages, at companies of every size, with their contacts. A lead from the form arrived this morning with no owner yet, another yesterday; an outbound one has sat untouched for three days. One Discovery deal has no next step date, one Proposal deal passed its close date last week: both Stale. Two wins in the last two months made their companies customers; two losses say Not now and Chose competitor. Past Mondays' reviews hold notes and numbers growing a little each week; this week's also has To challenge.
 
+## Sources
+
+- [Pipeline Management](https://holloway.com/g/founding-sales/sections/pipeline-management), Pete Kazanjy, Founding Sales, Holloway, 2022: a dated next step on every deal, and a weekly look at the whole pipeline.
+- [How to Run the Perfect Sales Pipeline Review Meeting](https://close.com/blog/sales-pipeline-review-meeting), Steli Efti, Close, 2016: the Monday review where each owner walks through their deals.
+- [Close-Losting](https://www.holloway.com/g/founding-sales/sections/close-losting), Pete Kazanjy, Founding Sales, Holloway, 2022: closing a dead deal as lost, with its reason.
+
 ## Build it
 
 In Fibery, open Claude with the Fibery plugin, attach this recipe and say "set up the sales pipeline". You'll see a one-screen design first; nothing is created until you say yes, and the build takes about ten minutes.

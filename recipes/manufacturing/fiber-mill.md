@@ -198,6 +198,12 @@ One record per farm or fiber artist that sends fiber. The description holds note
 
 Hillside spring clip arrived six weeks ago and is ninth in line, its two batches waiting; the forecast says July. Three orders are in production: one batch is spinning, one carding, and two washed this week, one of them red, under its minimum. An order went on hold four days ago over a fleece full of hay. Three orders are expected in the mail, one not yet linked to its farm. Last month eleven batches finished, one with a poor yield, and one order sits ready but unpaid. Hillside's order from last spring went home in October, and one order was cancelled before its turn.
 
+## Sources
+
+- [Custom Fiber Carding and Spinning](https://www.blackberry-ridge.com/pages/custom-fiber-carding-and-spinning), Blackberry Ridge Woolen Mill: each customer's fiber run on its own, the stages, minimums, prices and yields.
+- [Processing Prices & Info](https://thewoolmill.com/pages/scouring), The Wool Mill: a place in the production line, the skirting fee, and a call about weak or short fiber.
+- [Fiber Processing](https://www.neaoba.org/fiber-processing/), New England Alpaca Owners & Breeders Association: labelled lots and the machine stages, dehairing for alpaca included.
+
 ## Build it
 
 In Fibery, open Claude with the Fibery plugin, attach this recipe and say "set up the custom fiber mill". You'll see a one-screen design first; nothing is created until you say yes, and the build takes about ten minutes.

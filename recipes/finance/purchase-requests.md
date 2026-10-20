@@ -188,6 +188,12 @@ None needed. The central moments are a yes on a request and the Thursday payment
 
 Five weeks into the quarter, Booth at SaaS Summit is invoiced: 18,000 against the Marketing budget, its ask under What, Why and Alternatives, both signatures in its comments. Its vendor, Summit Expo Services, is verified with check notes; the next payment run pays it. Another invoiced request is red on Payment run, its vendor still new; one vendor is blocked. The policy: finance from 5,000, the executive from 25,000. A small request has waited five days for its budget owner; others sit in finance or executive review or await invoices; two are drafts. One department is over budget. Last quarter's purchases are paid; this quarter one ask was rejected with its reason, one cancelled after approval.
 
+## Sources
+
+- [Electronic Purchase Requisition/P2PO](https://www.niu.edu/procurement/electronic-purchase-requisition/index.shtml), Northern Illinois University Procurement Services: approvals that start with the budget owner, grow with the amount and start again when the amount changes.
+- [Protect your vendor master file from fraudsters](https://sao.wa.gov/the-audit-connection-blog/protect-your-vendor-master-file-fraudsters), Office of the Washington State Auditor, 2023: a new vendor's tax form, and bank changes confirmed by phone on a number already on file.
+- [Expenditure cycle definition](https://www.accountingtools.com/articles/expenditure-cycle), Steven Bragg, AccountingTools, 2026: the path from request to payment, and paying invoices in batches by their terms.
+
 ## Build it
 
 In Fibery, open Claude with the Fibery plugin, attach this recipe and say "set up purchase requests". You'll see a one-screen design first; nothing is created until you say yes, and the build takes about ten minutes.

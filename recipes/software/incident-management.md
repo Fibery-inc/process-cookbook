@@ -84,14 +84,6 @@ Decide these before you set it up; each has a default if you shrug.
 - **Other words:** "Outage", "P1 to P4" instead of SEV, "Retrospective" or "RCA" for the postmortem: rename freely.
 - **Pushed too far:** an incident for every alert makes Active incidents a noise feed; a postmortem for every *SEV3* makes the review a chore and leaves action items unowned.
 
-## For AI agents
-
-- When an incident is declared, post links to the last three incidents on the same services and their postmortems as a comment; never set the severity or move the state.
-- Draft the next customer update from the incident's latest comments when asked; never post it.
-- After resolution, draft the postmortem's Timeline from the incident's comments and status updates, marked as a draft; never write the causes or the action items.
-- Every Monday, list the postmortems past Due on that aren't *Reviewed* or *Closed*, and the overdue action items by owner. Never close a postmortem, drop an action item or resolve an incident; those are people's calls.
-- Try asking: "Which open incidents are past their next customer update?", "Draft the next status update for Logins failing in EU from its comments", "List the overdue action items by owner".
-
 ## Details for building
 
 What follows is what the process is built from, in words any tool can follow; the story above is enough to run it.

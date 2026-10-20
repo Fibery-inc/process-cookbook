@@ -87,14 +87,6 @@ Decide these before you set it up; each has a default if you shrug.
 - **Valve rotates the pool**: set the departing map's Veto stance to *Out of pool* and keep its strats, because maps come back; Overpass returned in 2025, Anubis and Cache in 2026.
 - **Pushed too far**: tagging every round turns review into data entry, so tag only book strats. More than three focus strats in a game, and none gets tested properly. A win rate on fewer than five runs is noise.
 
-## For AI agents
-
-- When asked before the morning meeting, summarize yesterday's games: scores, runs won and lost per strat, new review points, and points seen again.
-- Flag strats in *Testing* with five or more runs under a 40 percent win rate, strats in *Testing* past the bar of five runs and half won that aren't cleared yet, result scrims whose focus strats aren't *Match ready*, and scrim win rates built on fewer than three scrims.
-- Before an official, draft the prep headings in the match's Description from the opponent's Description and our past games against them, and list which of our strats they have seen. Offer veto options with the numbers; never choose.
-- Never log a run nobody tagged, clear or retire a strat, change a map's veto stance or confidence lights, or move a point to *Fixed*: those calls belong to the coach, the IGL and the players.
-- Try asking: "Summarize yesterday's scrims for the morning meeting", "Which strats in Testing are past the bar and not yet cleared for officials?", "Draft the prep for Thursday's match against Ironvale from what we know about them".
-
 ## Details for building
 
 What follows is what the process is built from, in words any tool can follow; the story above is enough to run it.

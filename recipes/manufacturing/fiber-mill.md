@@ -85,14 +85,6 @@ Decide these before you set it up; each has a default if you shrug.
 - **What teams add once it runs:** a reminder for orders on hold more than a week, a skein label template, a report of yield by fiber, and a stage clock that shows where batches wait. Each is small, and left out so the first season stays simple.
 - **Pushed too far:** a start month promised as a date becomes a broken promise every time a machine stops. Say a month, and let the line, not the calendar, decide who's next.
 
-## For AI agents
-
-- Every Monday, list the orders *On hold* for more than seven days, with the question each is waiting on, so intake can call the farm.
-- When an order moves to *In line*, draft the note intake sends the farm: its fleeces with their tag numbers and raw weights, its batches and products, and its Estimated start as a month. Never promise a day.
-- Flag finished batches whose Yield is far below what the same product usually gets, so the mill manager checks the weights before the bill goes out.
-- Never change Received on or Estimated start, and never move an order ahead in line; the line is the mill manager's.
-- Try asking: "Which orders should start in the next month, and how many pounds is that?", "Where are Hillside's fleeces now?", "Draft an arrival note for Hillside spring clip".
-
 ## Details for building
 
 What follows is what the process is built from, in words any tool can follow; the story above is enough to run it.

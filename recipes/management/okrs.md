@@ -84,14 +84,6 @@ Decide these before you set it up; each has a default if you shrug.
 - **Fortnightly check ins:** the meeting every other Monday. Stale at 14 days, the Check in reminder every other Monday. The source doesn't fix a cadence; weekly is the common choice, and monthly is where the habit dies.
 - **Other words:** "Goals", "Rocks", "Measures": rename freely. OKRs are the mechanics, not the vocabulary.
 
-## For AI agents
-
-- Before the Monday meeting, list the key results with no check in this week and ask their owners; never record a value on an owner's behalf.
-- Flag team objectives with an empty Supports, objectives with more than five key results, and key results without a Start value or a Target value, especially while a quarter is in *Planning*.
-- When asked, summarize a company objective: Average progress against Supporting progress, and the latest notes. Point at the gap; don't explain it away.
-- Never set a Score, move an objective to *Dropped* or press Close the quarter; those are people's calls.
-- Try asking: "Which key results have no check in this week?", "Summarize Grow by keeping customers: average progress against supporting progress, with the latest notes", "Which team objectives in the next quarter have an empty Supports?".
-
 ## Details for building
 
 What follows is what the process is built from, in words any tool can follow; the story above is enough to run it.

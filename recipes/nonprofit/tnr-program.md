@@ -86,14 +86,6 @@ Decide these before you set it up; each has a default if you shrug.
 - **Finish one colony before the next:** four cats from each of ten colonies leaves every colony breeding. Booking a colony's whole count over the next clinic days is a common choice, and the planner shows what each colony has left.
 - **What teams add once it runs:** a check on managed colonies every three months, a waiting list for traps, a report of outcomes by month, and a kitten count by colony in spring. Each is small, and left out so the first season stays simple.
 
-## For AI agents
-
-- Every Monday, list the coming clinic days with their open slots, and the colonies *Assessed* or *Being trapped* with the most cats left to fix, so the coordinators can plan. Never book a trapping yourself.
-- Every morning, flag cats still *Recovering* past their Return on, cats still *Trapped* after their clinic day, and traps that are overdue.
-- Draft the yearly report for funders from the group's records: cats fixed by month, females and males, and colonies managed. Never estimate a number the records don't hold.
-- Never set a cat's outcome; outcomes come from the clinic and the coordinators.
-- Try asking: "Which colonies have the most cats left to fix?", "Who holds trap 12, and since when?", "How many females did we fix this year?"
-
 ## Details for building
 
 What follows is what the process is built from, in words any tool can follow; the story above is enough to run it.

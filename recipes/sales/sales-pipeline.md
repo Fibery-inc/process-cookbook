@@ -81,14 +81,6 @@ Decide these before you set it up; each has a default if you shrug.
 - **Pushed too far:** more than six open stages makes the board a checklist and the weights fiction. A stage is a milestone the customer passed, not a task for the rep.
 - **What teams add once it runs:** quotas, and with them a forecast app that draws each month against its target line. Until the team has quotas, the Forecast report and Review history do that job.
 
-## For AI agents
-
-- Before the Monday meeting, summarize this week's Pipeline review against last week's, and add any deal in *Proposal* for more than 14 days and any deal still in *Lead* or *Discovery* with a Close date within two weeks; that date is wishful.
-- Draft follow ups from a deal's Description and comments when asked; never send them.
-- Once a month, group the lost deals by Lost reason and say what changed since the month before.
-- Never move a deal between stages, mark it *Won* or *Lost*, or change its Amount or Close date; those are the owner's calls.
-- Try asking: "Compare this week's Pipeline review with last week's", "Which deals have been in Proposal for more than 14 days?", "Draft a follow up for Kestrel Logistics from its notes".
-
 ## Details for building
 
 What follows is what the process is built from, in words any tool can follow; the story above is enough to run it.

@@ -82,14 +82,6 @@ Decide these before you set it up; each has a default if you shrug.
 - **Money:** the two dates are enough for the Shop floor; prices and payments stay in the accounting tool, with the invoice number in the description if needed.
 - **Pushed too far:** a state per bench step, fret level, nut, wiring, makes the board a checklist nobody moves. Six stages is about right; the sub-steps are headings in the description.
 
-## For AI agents
-
-- Every Monday, list the builds promised within four weeks that haven't reached *Finish*, and the parts still *Needed* or *Ordered* for builds in *Finish*.
-- Draft the stage update to the customer from the build's latest comment when asked; never send it.
-- Flag a build in *Assembly* with parts missing, and a build in *Setup* for more than 14 days with no Balance paid on.
-- Never lock a spec, move a build between stages or cancel one; those are the builder's calls.
-- Try asking: "Which builds are promised within four weeks and not yet in Finish?", "What is Heron 0142 still waiting on?", "Draft the update to Ana from the latest comment on Heron 0142".
-
 ## Details for building
 
 What follows is what the process is built from, in words any tool can follow; the story above is enough to run it.

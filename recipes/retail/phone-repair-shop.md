@@ -89,14 +89,6 @@ Decide these before you set it up; each has a default if you shrug.
 - **Other words:** "ticket", "job" or "work order" for repair; "front desk" for counter person: rename freely.
 - **Pushed too far:** a second shop needs a Shop field on Repair and on Part and a Stock list per shop, because one count can't be true for two shelves. Past ten technicians, every repair needs its steps with their own owners and times, and that's a workshop recipe, not this one.
 
-## For AI agents
-
-- Every morning, list the repairs that are Late or promised for today and not yet *Ready*, with their state and technician, so the counter person can call ahead with a new time.
-- Flag repairs that have waited in *Awaiting approval* for more than a day, for their counter person. Never quote, agree or change a price with a customer yourself; the yes belongs to the customer and the counter person.
-- Before the Monday order, list the parts that are Low stock with nothing on order, and the parts fitted most in the past four weeks. Never place, receive or cancel a part order.
-- Never repeat, copy or summarize a passcode, and never write one into a description or a comment.
-- Try asking: "Which phones are past their promise, and who has them?", "What should we order this Monday?", "Has Maya Lind's iPhone 13 been in before, and is it still under warranty?"
-
 ## Details for building
 
 What follows is what the process is built from, in words any tool can follow; the story above is enough to run it.

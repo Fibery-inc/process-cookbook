@@ -80,14 +80,6 @@ Decide these before you set it up; each has a default if you shrug.
 - **Subscriptions and renewals:** one request per renewal, the previous one linked in the Description; a Subscription database only when you want warnings before auto-renewals.
 - **Pushed too far:** a state per signature, manager, director, VP, CFO, CEO, is a relay nobody finishes; three is plenty at 200 people.
 
-## For AI agents
-
-- Every morning, list the requests waiting more than 3 days and whose turn they are; never approve, reject or cancel one.
-- Before the Monday look, summarize each department's quarter: allocated, committed, pending, left, the largest pending requests; flag a department whose committed plus pending is above its allocation, and, two weeks before the quarter ends, a department with no budget for the next one.
-- Flag an *Invoiced* request whose vendor is still *New*, and an *Approved* one older than 60 days with no invoice; ask whether it still stands.
-- Never mark a vendor *Verified*, record a payment or change the policy; those are finance's.
-- Try asking: "Which requests have waited more than three days, and on whom?", "How much room does Marketing have left this quarter?", "Which invoiced requests are waiting on an unverified vendor?"
-
 ## Details for building
 
 What follows is what the process is built from, in words any tool can follow; the story above is enough to run it.

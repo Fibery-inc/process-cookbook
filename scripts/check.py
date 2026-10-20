@@ -9,7 +9,7 @@ RECIPES = ROOT / "recipes"
 KEYS = ["title", "summary", "domain", "for", "keywords", "version", "license"]
 FOR = {"solo", "team", "company", "community"}
 SECTIONS = ["The idea", "How it runs", "What people look at", "The rules", "What must stay true",
-            "Making it yours", "For AI agents", "Details for building", "Build it"]
+            "Making it yours", "Details for building", "Build it"]
 ITALIC = "*A recipe from the Fibery Process Cookbook: the process in plain words, and the model to build it in any tool.*"
 OPENERS = {
     "The rules": "These are all the automations; everything else in the story is done by people.",

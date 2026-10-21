@@ -151,7 +151,7 @@
         "trap bank",
         "cat rescue"
       ],
-      "version": 1,
+      "version": 2,
       "path": "recipes/nonprofit/tnr-program.md",
       "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/nonprofit/tnr-program.md"
     },

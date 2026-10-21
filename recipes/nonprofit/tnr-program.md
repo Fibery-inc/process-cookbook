@@ -4,7 +4,7 @@ summary: "Trap, neuter, return for a volunteer group: colonies on a map, trappin
 domain: nonprofit
 for: community
 keywords: [tnr, trap neuter return, community cats, feral cats, colony, colony caretaker, eartip, spay neuter, trapping, clinic day, trap bank, cat rescue]
-version: 1
+version: 2
 license: CC-BY-4.0
 ---
 
@@ -20,27 +20,28 @@ Most TNR groups keep their colonies in a spreadsheet, their trappers in a phone 
 
 TNR itself is simple. Community cats, the unowned cats that live outdoors, are humanely trapped, spayed or neutered, vaccinated and eartipped: the tip of one ear is clipped flat, so anyone can see from afar that the cat is fixed. Then they go back to the place they live, where someone feeds them. No more kittens are born, and the colony settles and shrinks. Every place where cats live and are fed is a **Colony**. A colony gets its turn at a clinic as a **Trapping**, booked onto a **Clinic day** with a set number of surgery slots, and every cat a trapping brings in is a **Cat** that ends with an outcome. A few **Coordinators** plan and keep the records; the colony's **Caretaker**, the trappers and the clinic do the rest without opening the tool.
 
-In any work tool, this becomes six kinds of linked records: colonies on a map; trappings booked onto clinic days; the cats each trapping brings in, whose workflow runs from *Trapped* to *Returned*; and the volunteers and numbered traps the group calls on and lends. Coordinators plan on a custom view of the coming clinic days and their open slots, a button brings a trapping's cats back from the clinic, and each colony's share of fixed cats follows by itself. It's the group's memory of every colony and every cat, not a medical record.
+In any work tool, this becomes six kinds of linked records: colonies on a map; trappings booked onto clinic days; the cats each trapping brings in, whose workflow runs from *Trapped* to *Returned*; and the volunteers and numbered traps the group calls on and lends. Coordinators plan on a grid of the coming clinic days and their open slots, a button brings a trapping's cats back from the clinic, and a custom view on every colony draws each cat it's thought to have, eartipped or still to fix. It's the group's memory of every colony and every cat, not a medical record.
 
 ## How it runs
 
 Follow one colony, *Laundromat lot*, from a neighbor's report to the last eartip.
 
 1. **A neighbor reports cats.** Anyone can fill the **Colony report** form: where the cats are, about how many, who's reporting and how to reach them. It arrives as a colony in *Reported*: about eight cats behind a laundromat, fed every evening by a neighbor.
-2. **A coordinator assesses it.** A coordinator takes it on as its **Coordinator**, calls the reporter and visits at feeding time. They count the **Estimated cats**, eight, and the **Eartipped at start**, one cat fixed years ago. They link the neighbor who feeds the cats as the colony's caretaker. Every helper the group works with is a **Volunteer** record, with a phone and **Roles**: *Trapper*, *Caretaker* or *Driver*; new helpers sign up through the **Volunteer signup** form. The coordinator notes the **Feeding time**, six in the evening, and moves the colony to *Assessed*. A report that isn't a colony, such as a lost pet or a single tame cat, is moved to *Closed* with a **Closed reason**, and so is a second report of a colony the group already knows.
+2. **A coordinator assesses it.** A coordinator takes it on as its **Coordinator**, calls the reporter and visits at feeding time. They count the **Estimated cats**, eight, and the **Eartipped at start**, one cat fixed years ago. On the colony's page, the **Colony portrait** now draws eight cats, one with the clipped ear and seven grey: the picture every trapping fills in. They link the neighbor who feeds the cats as the colony's caretaker. Every helper the group works with is a **Volunteer** record, with a phone and **Roles**: *Trapper*, *Caretaker* or *Driver*; new helpers sign up through the **Volunteer signup** form. The coordinator notes the **Feeding time**, six in the evening, and moves the colony to *Assessed*. A report that isn't a colony, such as a lost pet or a single tame cat, is moved to *Closed* with a **Closed reason**, and so is a second report of a colony the group already knows.
 3. **A clinic offers a day.** The coordinator who works with the clinics adds each clinic day in *Planned* as a partner clinic offers it: its **Date**, the **Clinic**, and its **Slots**, how many community cats the clinic will fix that day. The Elm Street clinic offers Tuesday the 21st with twelve slots. A clinic day the clinic calls off is moved to *Cancelled*; its trappings move to another day, or to *Cancelled* when they won't happen.
-4. **The coordinators plan.** Every week they open **Clinic planner**, a custom view of the coming clinic days, each a bar of slots that fills as trappings are booked, beside the colonies waiting their turn, those with the most cats **Left to fix** first. The coordinator drags Laundromat lot onto the 21st. That creates a trapping in *Planned*, the colony's turn at that clinic day, with its **Planned cats**: four of the seven left to fix. The trapping gets the colony's coordinator as its Coordinator too. The day now has four more of its twelve slots **Booked**, and its **Open slots** drop to match. The coordinator adds two **Trappers** and the **Trap night**, Monday the 20th, and moves the colony to *Being trapped*. A day with more cats planned than slots turns red.
+4. **The coordinators plan.** Every week they open **Clinic days**, the coming clinic days with each day's trappings beneath it, and **Colony board**, where the colonies waiting their turn show their cats **Left to fix**, the most first. Under the 21st, the coordinator adds a trapping for Laundromat lot, in *Planned*: the colony's turn at that clinic day, with its **Planned cats**, four of the seven left to fix, and the coordinator as its Coordinator. The day now has four more of its twelve slots **Booked**, and its **Open slots** drop to match. The coordinator adds two **Trappers** and the **Trap night**, Monday the 20th, and moves the colony to *Being trapped*. A day with more cats planned than slots turns red.
 5. **Traps go out.** The group's traps are records too: every **Trap** is numbered, with the number painted on its side. The coordinator lends four of them, moving each to *Lent* with a trapper as its **Holder**. The **Trap lent** rule sets its **Out since** to today and its **Due back** to a week later.
 6. **The day before trap night**, the **Food reminder** rule tells the trapping's coordinator to call the caretaker: no food from the next morning, water as usual, so the cats walk into the traps hungry.
 7. **Trap night.** At feeding time the trappers catch five cats. The coordinator logs each one as a cat of the trapping, named by its coat ("orange tabby, white chest"), with its **Age**, *Adult* or *Kitten*, in *Trapped*. One of them wears an eartip already: the trappers release it on the spot, and the coordinator closes it as *Already fixed*, so it's never counted twice. The other four go to the clinic in their covered traps.
 8. **Clinic day.** The clinic spays or neuters, vaccinates and eartips each cat. When the trappers collect them, the coordinator copies each cat's **Sex** from the clinic's sheet and presses **Back from clinic** on the trapping. Its trapped cats move to *Recovering* with **Fixed on** set to today, and the trapping moves to *Done*. A kitten young enough to be tamed goes to a partner rescue as *To rescue*, and a cat the vet found too sick to save ends as *Died*. The coordinator sets outcomes like these before pressing the button, so it leaves them alone. At the end of the day the coordinator moves the clinic day to *Done*.
 9. **Recovery and return.** The cats rest in their covered traps somewhere quiet and warm. Each one shows its **Return on**, the day it can go home; a common choice is the day after surgery for males and two days after for females. On that day a trapper releases the cat where it was caught, at feeding time, and the coordinator moves it to *Returned*. The traps come back too: the coordinator moves each to *Available*, and the **Trap back** rule clears its holder and dates. A trap past its due date shows red as **Overdue**; one that never comes back is *Lost*, and one too damaged to use is *Retired*.
-10. **The colony settles.** Laundromat lot now has four **Cats fixed**, and its **Fixed share**, the share of its cats that wear an eartip, is 63 out of 100. A second trapping two weeks later brings in the last three. With every cat eartipped, the coordinator moves the colony to *Managed*. The caretaker keeps feeding, and a newcomer, reported on the form or by phone, sends the colony back to *Being trapped*. When the cats are gone or the caretaker moves away, the coordinator moves the colony to *Closed*.
+10. **The colony settles.** Laundromat lot now has four **Cats fixed**, and its **Fixed share**, the share of its cats that wear an eartip, is 63 out of 100: on its portrait, five of the eight cats wear the clipped ear and three are still grey. A second trapping two weeks later brings in the last three. With every cat eartipped, the coordinator moves the colony to *Managed*. The caretaker keeps feeding. When a newcomer turns up, reported on the form or by phone, the coordinator presses + on the portrait, which adds one to the Estimated cats, and moves the colony back to *Being trapped*. When the cats are gone or the caretaker moves away, the coordinator moves the colony to *Closed*.
 
 ## What people look at
 
 - **Every morning in trapping weeks** — **In care**: every cat trapped or recovering, with its trapping and the day it goes home, red once that day has passed. Who is in the holding space, and who goes back today.
-- **Every week** — **Clinic planner**, a custom view: the coming clinic days with their open slots, and the colonies with cats left to fix. If your tool can't draw it, **Clinic days** does the job as a grid with each day's trappings beneath it. **Colony board**: every colony in its state, with new reports to assess in *Reported*.
+- **Every week** — **Clinic days**: the coming clinic days, each with its open slots and its trappings beneath it, red when a day is overbooked. **Colony board**: every colony in its state, the most cats left to fix first, with new reports to assess in *Reported*.
+- **At a colony visit** — the **Colony portrait**, a custom view on every colony's page: one cat for each it's thought to have, eartipped or still grey, and its trappings below. If your tool can't draw it, Colony board's Fixed share and Left to fix do the job.
 - **Any time** — **Colonies**, a map of every colony colored by state, with its fixed share; **Traps** for who holds which trap and which are overdue; **Volunteers** for finding a trapper or calling a caretaker; the **Colony report** and **Volunteer signup** forms for the public and for new helpers; and the **Fixed by month** report, females and males, the number funders ask for.
 - **How to run the TNR program** — this process on one screen, kept where the group works.
 
@@ -62,10 +63,10 @@ Whatever anyone edits, adapts or corrects, these hold; each says what keeps it s
 - ★ Every cat goes home to the colony it came from. A cat belongs to one trapping and a trapping to one colony, so where to release it is never a guess. Kept by the **Trapping** relation on Cat and the **Colony** relation on Trapping; releasing it at that spot, at feeding time, is a practice.
 - ★ Every cat is counted once. A cat trapped with an eartip is closed as *Already fixed*, and only cats *Recovering* or *Returned* count as fixed. Kept by the **Cats fixed** formulas.
 - ★ Every cat ends with an outcome: *Returned*, *To rescue*, *Died* or *Already fixed*. Shown on **In care**, which lists every cat without one and turns red once a cat's Return on has passed; a cat still *Trapped* after its clinic day stays on In care until a coordinator gives it its outcome.
-- ★ No cat is trapped for a clinic day that's full: a day's trappings plan no more cats than it has slots, because a trapped cat with nowhere to go suffers for it. Shown on **Clinic planner** and **Clinic days**, where Open slots below 0 is red; moving a trapping to another day is the coordinators' call.
+- ★ No cat is trapped for a clinic day that's full: a day's trappings plan no more cats than it has slots, because a trapped cat with nowhere to go suffers for it. Shown on **Clinic days**, where Open slots below 0 is red; moving a trapping to another day is the coordinators' call.
 - Food is held back before every trap night. A practice; the **Food reminder** asks the trapping's coordinator the day before, and nothing enforces it.
 - Every lent trap has a holder and a day it's due back. Kept by **Trap lent** and **Trap back**; shown on **Traps**, where an overdue trap is red.
-- A colony's numbers follow its cats: Cats fixed adds up its trappings' fixed cats, and Fixed share adds those eartipped at the start, against the latest Estimated cats. Kept by the **Cats fixed** and **Fixed share** formulas; correcting the estimate when cats arrive, leave or die is the coordinator's practice.
+- A colony's numbers follow its cats: Cats fixed adds up its trappings' fixed cats, and Fixed share adds those eartipped at the start, against the latest Estimated cats. Kept by the **Cats fixed** and **Fixed share** formulas; correcting the estimate when cats arrive, leave or die is the coordinator's practice, one press of + or − on the **Colony portrait**.
 
 ## Making it yours
 
@@ -80,10 +81,10 @@ Decide these before you set it up; each has a default if you shrug.
 
 - **One coordinator:** drop both Coordinator fields; the Food reminder comes to you.
 - **Other words:** "ferals" for community cats, "feeder" for caretaker, "job" for trapping, "spay day" for clinic day: rename freely.
-- **Vouchers instead of clinic days:** treat each batch of vouchers from a clinic as a clinic day whose Slots is how many vouchers it holds and whose Date is when they expire. The planner then fills vouchers instead of surgery slots.
+- **Vouchers instead of clinic days:** treat each batch of vouchers from a clinic as a clinic day whose Slots is how many vouchers it holds and whose Date is when they expire. Clinic days then counts vouchers instead of surgery slots.
 - **Microchips and tests:** a Microchip field on Cat when the clinic chips cats; vaccines and test results stay in the clinic's records.
 - **Where colonies are:** where a colony's address could bring it harm, keep Colony and Volunteer for the coordinators only, apart from anyone else who opens the setup.
-- **Finish one colony before the next:** four cats from each of ten colonies leaves every colony breeding. Booking a colony's whole count over the next clinic days is a common choice, and the planner shows what each colony has left.
+- **Finish one colony before the next:** four cats from each of ten colonies leaves every colony breeding. Booking a colony's whole count over the next clinic days is a common choice, and Colony board shows what each colony has left.
 - **What teams add once it runs:** a check on managed colonies every three months, a waiting list for traps, a report of outcomes by month, and a kitten count by colony in spring. Each is small, and left out so the first season stays simple.
 
 ## Details for building
@@ -111,20 +112,20 @@ One record per place where community cats live and are fed. Its name is the plac
 | Field | Type | Why |
 |---|---|---|
 | Location | location | Where the colony is; Colonies puts it on the map |
-| Coordinator | person; inverse **Coordinated colonies** | The coordinator who knows it; Clinic planner makes them the Coordinator of the colony's trappings |
+| Coordinator | person; inverse **Coordinated colonies** | The coordinator who knows it; usually the Coordinator of its trappings too |
 | Caretaker | relation, many-to-one → Volunteer; inverse **Colonies cared for** | Who feeds it; who the coordinator calls before trap night |
 | Feeding time | text | When the caretaker feeds ("about 6 pm"); trap night follows it |
-| Estimated cats | integer | The coordinator's latest count; Fixed share and Left to fix run on it |
-| Eartipped at start | integer | Cats already eartipped at the first count; counted as fixed by Fixed share |
+| Estimated cats | integer | The coordinator's latest count; Fixed share, Left to fix and the Colony portrait run on it, and the portrait's + and − change it |
+| Eartipped at start | integer | Cats already eartipped at the first count; counted as fixed by Fixed share, and drawn unnamed on the Colony portrait |
 | Reported by | text | Name and phone of whoever reported it, from the Colony report form |
 | Closed reason | single select: Not a colony, Duplicate, Gone, Caretaker moved; no default | Why a colony was closed; set by the coordinator with *Closed* |
 
-States: Reported → Assessed → Being trapped → Managed · Closed (finished). Default: Reported. *Managed* isn't an ending: a newcomer sends the colony back to *Being trapped*. Source of truth: **Estimated cats**, set by the coordinator; Fixed share and Left to fix follow it.
+States: Reported → Assessed → Being trapped → Managed · Closed (finished). Default: Reported. *Managed* isn't an ending: a newcomer sends the colony back to *Being trapped*. Source of truth: **Estimated cats**, set by the coordinator here or on the Colony portrait; Fixed share and Left to fix follow it.
 
 Formulas:
 - **Cats fixed** — the sum of Cats fixed of its trappings, a whole number, 0 with none; on Colony board, and read by Fixed share and Left to fix.
-- **Fixed share** — Cats fixed plus Eartipped at start, as a share of Estimated cats, a whole number from 0 to 100, never above 100, 0 with no estimate; on Colony board and Colonies.
-- **Left to fix** — Estimated cats minus Cats fixed minus Eartipped at start, a whole number, never below 0, 0 with no estimate; on Colony board, and how Clinic planner orders the colonies.
+- **Fixed share** — Cats fixed plus Eartipped at start, as a share of Estimated cats, a whole number from 0 to 100, never above 100, 0 with no estimate; on Colony board, Colonies and the Colony portrait.
+- **Left to fix** — Estimated cats minus Cats fixed minus Eartipped at start, a whole number, never below 0, 0 with no estimate; on Colony board, which it sorts, and on the Colony portrait.
 
 ### Trapping
 
@@ -134,7 +135,7 @@ One colony's turn at one clinic day: how many cats it aims for, who traps, and o
 |---|---|---|
 | Colony | relation, many-to-one → Colony; inverse **Trappings** | Whose turn it is, and where its cats go home |
 | Clinic day | relation, many-to-one → Clinic day; inverse **Trappings** | Which clinic day takes its cats |
-| Coordinator | person; inverse **Coordinated trappings** | Who runs the trapping: the colony's coordinator, set by Clinic planner when it books the trapping, or picked on Clinic days; the Food reminder goes to them |
+| Coordinator | person; inverse **Coordinated trappings** | Who runs the trapping, usually the colony's coordinator, picked on Clinic days by whoever books it; the Food reminder goes to them |
 | Planned cats | integer | How many cats it aims to bring in; Booked adds them up against the day's slots |
 | Trappers | relation, many-to-many → Volunteer; inverse **Trappings worked** | The volunteers who set the traps |
 | Trap night | date | When the traps go out, usually the evening before the clinic day; the Food reminder runs on it |
@@ -159,13 +160,13 @@ Formulas:
 
 One day a partner clinic fixes community cats for the group. Its name is the clinic and the date ("Elm Street clinic, Oct 21"). The description holds the drop-off and pickup times and the clinic's rules. Comments on.
 
-Fields: Date (date; Clinic planner and Clinic days run on it); Clinic (single select: the group's partner clinics; no default); Slots (integer; how many community cats the clinic takes that day).
+Fields: Date (date; Clinic days runs on it); Clinic (single select: the group's partner clinics; no default); Slots (integer; how many community cats the clinic takes that day).
 
 States: Planned → Done (finished) · Cancelled (finished). Default: Planned.
 
 Formulas:
-- **Booked** — the sum of Planned cats of its trappings that aren't *Cancelled*, a whole number, 0 with none; on Clinic days and Clinic planner.
-- **Open slots** — Slots minus Booked, a whole number, below 0 when overbooked; on Clinic days and Clinic planner, red below 0.
+- **Booked** — the sum of Planned cats of its trappings that aren't *Cancelled*, a whole number, 0 with none; on Clinic days.
+- **Open slots** — Slots minus Booked, a whole number, below 0 when overbooked; on Clinic days, red below 0.
 
 ### Volunteer
 
@@ -190,7 +191,7 @@ Formulas:
 |---|---|---|---|---|---|---|
 | In care | list | Cat | | Trapping, Age, Sex, Fixed on, Return on, State; red when Recovering and Return on has passed | State is Trapped or Recovering | Return on asc |
 | Clinic days | grid | Clinic day | Trappings nested: Colony, Coordinator, Planned cats, Trappers, Trap night, State | Date, Clinic, Slots, Booked, Open slots; red when Open slots is below 0 | State is Planned | Date asc |
-| Colony board | board | Colony | columns State | Coordinator, Caretaker, Estimated cats, Fixed share, Left to fix | State is not Closed | |
+| Colony board | board | Colony | columns State | Coordinator, Caretaker, Estimated cats, Fixed share, Left to fix | State is not Closed | Left to fix desc |
 | Colonies | map | Colony | | name, Fixed share; color by State | State is not Closed | |
 | Traps | grid | Trap | | Kind, Holder, Out since, Due back, State; red when Overdue | State is Available or Lent | Due back asc |
 | Volunteers | grid | Volunteer | | Roles, Area, Phone, Email, Colonies cared for, Traps held | | Name asc |
@@ -200,7 +201,7 @@ Formulas:
 
 ### App
 
-**Clinic planner**, a page of its own. It shows the coming *Planned* clinic days as columns, each headed by its date, clinic and a bar of Slots filling with Booked, red past full, with its trappings beneath as cards: colony, Planned cats and trappers. Down the left side are the colonies *Assessed* or *Being trapped*, most Left to fix first. Dragging a colony onto a day creates its trapping for that day, with Planned cats the smaller of its Left to fix and the day's Open slots, and the colony's coordinator as Coordinator. Planned cats can be edited on the card; clicking a card opens the trapping. With no clinic day planned it shows "No clinic days yet. Add the next one a clinic offers." Reads: Clinic day Date, Clinic, Slots, Booked, Open slots, State; Trapping Colony, Clinic day, Planned cats, Trappers, State; Colony Name, State, Left to fix, Coordinator. Writes: new Trapping records with Colony, Clinic day, Planned cats and Coordinator; Trapping Planned cats. Fallback: the Clinic days grid.
+**Colony portrait**, a tab on every colony. It draws one cat for each of the colony's Estimated cats: first the cats the group fixed, each with a clipped ear and its name beneath; then the Eartipped at start cats, clipped and unnamed; then grey outlines for those left to fix. An *Already fixed* cat is one of the unnamed ones, never drawn twice; cats gone *To rescue* or *Died* aren't drawn. Above it, Fixed share out of 100 and Left to fix; beside it, + and − change Estimated cats by one and save, never below the cats already drawn. Below, the colony's trappings by clinic day. Clicking a named cat opens it. With no estimate it shows "No count yet: add Estimated cats." Reads: Colony Estimated cats, Eartipped at start, Cats fixed, Fixed share, Left to fix; Trapping Colony, Clinic day, Planned cats, Cats fixed, State; Clinic day Date; Cat Name, State, Trapping. Writes: Colony Estimated cats. Fallback: Colony board, with Fixed share and Left to fix.
 
 ### Reports
 

@@ -27,7 +27,7 @@ GLOSSARY = re.compile(
 )
 BUILD = re.compile(
     r'In Fibery, open Claude with the Fibery plugin, attach this recipe and say "set up [^"]+"\. '
-    r"You'll see a one-screen design first; nothing is created until you say yes, and the build takes about ten minutes\.\n\n"
+    r"Claude asks a few questions, then sets it up in about ten minutes\.\n\n"
     r"Anywhere else, give this recipe to your AI assistant and name your tool, or build it by hand from Details for building\."
 )
 CREDIT = "From the Fibery Process Cookbook (https://github.com/Fibery-inc/process-cookbook), licensed CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/): copy, adapt and build it anywhere, crediting the cookbook.*"

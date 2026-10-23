@@ -163,7 +163,7 @@ Heron 0142 is in finish with a full spec sheet, its lock comment and its custome
 
 ## Build it
 
-In Fibery, open Claude with the Fibery plugin, attach this recipe and say "set up the custom guitar shop". You'll see a one-screen design first; nothing is created until you say yes, and the build takes about ten minutes.
+In Fibery, open Claude with the Fibery plugin, attach this recipe and say "set up the custom guitar shop". Claude asks a few questions, then sets it up in about ten minutes.
 
 Anywhere else, give this recipe to your AI assistant and name your tool, or build it by hand from Details for building.
 

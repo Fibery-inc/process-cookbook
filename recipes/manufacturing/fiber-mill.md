@@ -206,7 +206,7 @@ Hillside spring clip arrived six weeks ago and is ninth in line, its two batches
 
 ## Build it
 
-In Fibery, open Claude with the Fibery plugin, attach this recipe and say "set up the custom fiber mill". You'll see a one-screen design first; nothing is created until you say yes, and the build takes about ten minutes.
+In Fibery, open Claude with the Fibery plugin, attach this recipe and say "set up the custom fiber mill". Claude asks a few questions, then sets it up in about ten minutes.
 
 Anywhere else, give this recipe to your AI assistant and name your tool, or build it by hand from Details for building.
 

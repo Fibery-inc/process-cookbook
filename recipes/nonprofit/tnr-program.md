@@ -219,7 +219,7 @@ Laundromat lot's clinic day was yesterday: four cats fixed and recovering, the t
 
 ## Build it
 
-In Fibery, open Claude with the Fibery plugin, attach this recipe and say "set up the TNR program". You'll see a one-screen design first; nothing is created until you say yes, and the build takes about ten minutes.
+In Fibery, open Claude with the Fibery plugin, attach this recipe and say "set up the TNR program". Claude asks a few questions, then sets it up in about ten minutes.
 
 Anywhere else, give this recipe to your AI assistant and name your tool, or build it by hand from Details for building.
 

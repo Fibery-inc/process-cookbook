@@ -10,10 +10,11 @@ Open recipes for how teams, companies and communities run their work, from Shape
 ## Recipes
 
 <!-- recipes:start -->
-11 recipes in 9 domains.
+12 recipes in 10 domains.
 
 | Domain | Recipes |
 |---|---|
+| [Arts](recipes/arts/) | [Film study club](recipes/arts/film-study-club.md) |
 | [Esports](recipes/esports/) | [CS2 team practice](recipes/esports/cs2-team-practice.md) |
 | [Finance](recipes/finance/) | [Purchase requests](recipes/finance/purchase-requests.md) |
 | [Management](recipes/management/) | [OKRs](recipes/management/okrs.md) |

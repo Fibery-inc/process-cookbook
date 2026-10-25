@@ -1,6 +1,30 @@
 {
   "recipes": [
     {
+      "id": "film-study-club",
+      "title": "Film study club",
+      "summary": "A film club or class for aspiring directors: seasons of films watched with one craft focus, scenes broken down shot by shot, techniques kept in a toolkit.",
+      "domain": "arts",
+      "for": "community",
+      "keywords": [
+        "film club",
+        "film study",
+        "film analysis",
+        "film society",
+        "cine club",
+        "directing",
+        "aspiring directors",
+        "scene breakdown",
+        "shot list",
+        "average shot length",
+        "film school",
+        "watchlist"
+      ],
+      "version": 1,
+      "path": "recipes/arts/film-study-club.md",
+      "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/arts/film-study-club.md"
+    },
+    {
       "id": "cs2-team-practice",
       "title": "CS2 team practice",
       "summary": "How a professional Counter-Strike 2 team practises: a strat book, scrims with a focus, reviews by the next morning, review points, map pool and match prep.",

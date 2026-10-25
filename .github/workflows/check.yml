@@ -20,3 +20,11 @@ jobs:
           pip install --quiet pyyaml
           python scripts/check.py
           python scripts/build_index.py --check
+
+      - name: Rebuild the site
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then echo "No VERCEL_DEPLOY_HOOK secret; the site keeps its last build."; exit 0; fi
+          curl -fsS -X POST "$HOOK" > /dev/null && echo "Site rebuild requested."

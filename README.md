@@ -10,7 +10,7 @@ Open recipes for how teams, companies and communities run their work, from Shape
 ## Recipes
 
 <!-- recipes:start -->
-12 recipes in 10 domains.
+13 recipes in 11 domains.
 
 | Domain | Recipes |
 |---|---|
@@ -24,6 +24,7 @@ Open recipes for how teams, companies and communities run their work, from Shape
 | [Retail](recipes/retail/) | [Phone repair shop](recipes/retail/phone-repair-shop.md) |
 | [Sales](recipes/sales/) | [Sales pipeline](recipes/sales/sales-pipeline.md) |
 | [Software](recipes/software/) | [Incident management](recipes/software/incident-management.md), [Shape Up](recipes/software/shape-up.md) |
+| [Sports](recipes/sports/) | [Grassroots rugby club](recipes/sports/rugby-club.md) |
 <!-- recipes:end -->
 
 [index.json](index.json) lists every recipe's header with a raw link that agents can fetch.

@@ -264,6 +264,32 @@
       "version": 2,
       "path": "recipes/software/shape-up.md",
       "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/software/shape-up.md"
+    },
+    {
+      "id": "rugby-club",
+      "title": "Grassroots rugby club",
+      "summary": "A grassroots men's rugby club with two XVs: members and subs, Saturday availability and selection, results, training, socials and one ledger.",
+      "domain": "sports",
+      "for": "community",
+      "keywords": [
+        "rugby club",
+        "grassroots rugby",
+        "amateur rugby",
+        "team selection",
+        "availability",
+        "team sheet",
+        "match fees",
+        "subs",
+        "club treasurer",
+        "fixtures",
+        "results",
+        "training register",
+        "socials",
+        "concussion stand down"
+      ],
+      "version": 2,
+      "path": "recipes/sports/rugby-club.md",
+      "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/sports/rugby-club.md"
     }
   ]
 }

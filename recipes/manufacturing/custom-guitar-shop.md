@@ -3,6 +3,8 @@ title: Custom guitar shop
 summary: "A small custom guitar shop's order book and floor board: inquiry, locked spec, a queue with promised months, parts counted before assembly, the shipped case."
 domain: manufacturing
 for: team
+roles: "One to five builders open the tool; customers get emails and photos at every stage, and suppliers are names on parts."
+needs: "A spec sheet each customer agrees to, a deposit before any wood is cut, and an accounting tool for invoices and payments."
 keywords: [custom guitar, luthier, guitar shop, made to order, spec sheet, order book, shop floor, build queue, parts, workshop]
 version: 2
 license: CC-BY-4.0
@@ -27,13 +29,13 @@ In any work tool, this becomes a few kinds of linked records: builds whose workf
 Follow one guitar, *Heron 0142*, from the first email to the courier.
 
 1. **An inquiry arrives.** Ana writes asking for a Heron in cherry sunburst. The builder adds her as a customer, with her email and country, and opens a build in *Inquiry*, named by model and serial, with its **Model**, *Heron*, its customer, and the wishes so far in its description under the spec sheet's headings: Body and neck, Fretboard and frets, Finish, Electronics, Hardware, Case. Email settles the pickups and the neck profile; each answer goes into the sheet.
-2. **The spec is locked.** When Ana agrees the sheet and the deposit lands, the builder enters **Deposit received on** and **Promised on**, the month the guitar is promised for, and presses **Lock the spec**, a button on the build: the build moves to *Queued* and a comment records the lock date and the promise. From here a change to the sheet is a new agreement with a new promise, written in a comment, never a silent edit.
+2. **The spec is locked.** Ana agrees the sheet and the deposit lands. The builder enters **Deposit received on** and **Promised on**, the month the guitar is promised for, and presses **Lock the spec**, a button on the build: the build moves to *Queued* and a comment records the lock date and the promise. From here a change to the sheet is a new agreement with a new promise, written in a comment, never a silent edit.
 3. **It waits its turn.** The **Order book**, a grid of every inquiry and every queued build by promised month, shows **Days to promised** for each. The shop builds two or three guitars at a time, so the builder sees when Heron 0142 starts and whether a promise is in trouble. Meanwhile the builder orders the long-lead parts, the pickups and the case that take weeks to arrive: each is a part, *Needed* until it's ordered, then *Ordered* with its supplier and the order date.
-4. **Woodwork.** The builder moves the build to *Woodwork*; the **Stage dates** rule stamps the date of the move, so the **Shop floor**, the board of every guitar on the bench by stage, shows **Days in stage**, how long each guitar has sat where it is. Body blank, neck carve, fretboard, frets. At the end the builder sends Ana photos, the first of the updates she gets at every move.
-5. **Finish.** The builder moves the build to *Finish*, the long stage: sealer, color, clear coats, then weeks of curing, and the Shop floor shows the wait honestly. Parts keep arriving, and the builder moves each to *Received*. When the last one lands, the **All parts in** rule comments on the build that assembly is clear and tells the builder.
-6. **Assembly and setup.** The builder moves the build to *Assembly* when **Parts missing**, the count of parts not yet received, is zero; moved early, it shows red on the Shop floor. Electronics, hardware, strings. Then the builder moves it to *Setup*: action and intonation, how the strings sit and how true they play up the neck, a playing test, the final photos and the balance invoice. The builder enters **Balance paid on** when the money arrives.
-7. **It ships.** The builder moves the build to *Shipped* with the carrier and the tracking link; the **On shipping** rule stamps the shipping date and leaves a comment with the tracking line, ready for the email to Ana. The guitar leaves the Shop floor and joins **Shipped guitars**, the grid of every guitar the shop has made.
-8. **Or it stops.** The builder moves an inquiry that goes quiet, or a build whose customer backs out after the lock, to *Cancelled*, with the deposit decision in a comment. A build whose promised month has passed unshipped is **Late**; the Shop floor and the Order book show it red, and the builder writes to the customer before the customer writes to them.
+4. **Woodwork.** The builder moves the build to *Woodwork*. The **Stage dates** rule stamps the date of the move, so the **Shop floor**, the board of every guitar on the bench by stage, shows **Days in stage**, how long each guitar has sat where it is. Body blank, neck carve, fretboard, frets. At the end the builder sends Ana photos, the first of the updates she gets at every move.
+5. **Finish.** The builder moves the build to *Finish*, the long stage: sealer, color, clear coats, then weeks of curing. The Shop floor shows the wait honestly. Parts keep arriving, and the builder moves each to *Received*. When the last one lands, the **All parts in** rule comments on the build that assembly is clear and tells the builder.
+6. **Assembly and setup.** The builder moves the build to *Assembly* when **Parts missing**, the count of parts not yet received, is zero. Moved early, it shows red on the Shop floor. Electronics, hardware, strings. Then the builder moves it to *Setup*: action and intonation, how the strings sit and how true they play up the neck, a playing test, the final photos and the balance invoice. The builder enters **Balance paid on** when the money arrives.
+7. **It ships.** The builder moves the build to *Shipped* with the carrier and the tracking link. The **On shipping** rule stamps the shipping date and leaves a comment with the tracking line, ready for the email to Ana. The guitar leaves the Shop floor and joins **Shipped guitars**, the grid of every guitar the shop has made.
+8. **Or it stops.** The builder moves an inquiry that goes quiet, or a build whose customer backs out after the lock, to *Cancelled*. The deposit decision goes in a comment. A build whose promised month has passed unshipped is **Late**; the Shop floor and the Order book show it red, and the builder writes to the customer before the customer writes to them.
 
 ## What people look at
 
@@ -59,8 +61,8 @@ Whatever anyone edits, adapts or corrects, these hold; each says what keeps it s
 
 - ★ Nothing is cut before the spec is locked: a build is *Queued* only with a deposit date and a promised month, and *Woodwork* comes after *Queued*. Shown on the **Order book**, where a *Queued* build missing either date has a blank beside its name. A build moved along by hand gets no lock comment, so locking means pressing **Lock the spec**; that part is a practice.
 - ★ After the lock, a change to the sheet or the promised month is a new agreement: the builder edits the sheet or Promised on and writes the change and the new promise in a comment, never a silent edit. A practice; the lock comment is the baseline, and nothing enforces it.
-- ★ Assembly starts only when every part is in. Shown by **Parts missing**, red on the Shop floor for a build in *Assembly* with a part still *Needed* or *Ordered*; the **All parts in** comment says when the way is clear.
-- A promise in trouble is seen before the customer asks. Shown by **Late**, which turns a build red on the Shop floor and the Order book once its promised month has passed unshipped.
+- ★ Assembly starts only when every part is in. Shown on the **Shop floor**, where **Parts missing** is red for a build in *Assembly* with a part still *Needed* or *Ordered*; the **All parts in** comment says when the way is clear.
+- A promise in trouble is seen before the customer asks. Shown on the **Shop floor** and the **Order book**, where **Late** turns a build red once its promised month has passed unshipped.
 - Days in stage counts from the last real move. Kept by **Stage dates**; a move entered late is corrected by editing Stage changed on, and Days in stage follows it.
 - ★ The customer hears from the builder at every stage move. A practice; Days in stage on the Shop floor shows how long since the last move, and nothing enforces the sending.
 - A *Shipped* build is never reopened: a guitar that comes back for work is a repair, not the same build, and Shipped on is the day it first left. Kept by **On shipping** for the date; the rest is a practice.
@@ -98,7 +100,7 @@ erDiagram
 
 ### Build
 
-One guitar from inquiry to shipment, named by model and serial ("Heron 0142"); the serial is the shop's order number, given at the inquiry. The description holds the spec sheet under six headings: Body and neck, Fretboard and frets, Finish, Electronics, Hardware, Case. Comments on; Lock the spec, On shipping and All parts in write there.
+One guitar from inquiry to shipment. It is named by model and serial ("Heron 0142"); the serial is the shop's order number, given at the inquiry. The description holds the spec sheet under six headings: Body and neck, Fretboard and frets, Finish, Electronics, Hardware, Case. Comments on; Lock the spec, On shipping and All parts in write there.
 
 | Field | Type | Why |
 |---|---|---|
@@ -123,7 +125,7 @@ Formulas:
 
 ### Part
 
-One pickup set, bridge, tuner set, case or wood set bought for one build. No description, no comments. Fields: Build (relation, many-to-one → Build; inverse **Parts**); Supplier (text); Ordered on (date). States: Needed → Ordered → Received (finished). Default: Needed.
+One pickup set, bridge, tuner set, case or wood set. It is bought for one build. No description, no comments. Fields: Build (relation, many-to-one → Build; inverse **Parts**); Supplier (text); Ordered on (date). States: Needed → Ordered → Received (finished). Default: Needed.
 
 ### Customer
 

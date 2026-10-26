@@ -6,7 +6,7 @@ import yaml
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 RECIPES = ROOT / "recipes"
-KEYS = ["title", "summary", "domain", "for", "keywords", "version", "license"]
+KEYS = ["title", "summary", "domain", "for", "roles", "needs", "keywords", "version", "license"]
 FOR = {"solo", "team", "company", "community"}
 SECTIONS = ["The idea", "How it runs", "What people look at", "The rules", "What must stay true",
             "Making it yours", "Details for building", "Sources", "Build it"]
@@ -33,6 +33,12 @@ BUILD = re.compile(
 CREDIT = "From the Fibery Process Cookbook (https://github.com/Fibery-inc/process-cookbook), licensed CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/): copy, adapt and build it anywhere, crediting the cookbook.*"
 TOOL_WORDS = re.compile(r"\bFibery\b|\b[Ww]orkspaces?\b|\bSpaces?\b")
 ID = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
+NOT_DATABASES = {"Views", "App", "Reports", "Sample story"}
+STEP = re.compile(r"^(\d+)\. (.*)")
+PROMISE = re.compile(r"^- (.*)")
+TITLE = re.compile(r"\*\*(.+?)\*\*(.*)", re.S)
+SENTENCE_END = re.compile(r"[.!?][\"')\]*_]*(?=\s|$)")
+KEEPER = re.compile(r"(?:^|[.!?][\"')\]*_]*\s+)(?:Kept by|Shown on|A practice)\b")
 
 
 def domains():
@@ -57,6 +63,31 @@ def sections(body):
 def subsection(text, title):
     found = re.search(rf"^### {re.escape(title)}\n(.*?)(?=^### |\Z)", text, re.M | re.S)
     return found.group(1).strip() if found else None
+
+
+def entries(text, pattern):
+    found, open_item = [], False
+    for line in text.split("\n"):
+        head = pattern.match(line)
+        if head:
+            found.append(list(head.groups()))
+            open_item = True
+        elif open_item and line.strip():
+            found[-1][-1] += " " + line.strip()
+        else:
+            open_item = False
+    return found
+
+
+def first_sentence(text):
+    text = text.strip()
+    end = SENTENCE_END.search(text)
+    return text[:end.end()] if end else text
+
+
+def words(text):
+    text = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", text)
+    return len([w for w in re.sub(r"[*_`]", "", text).split() if re.search(r"\w", w)])
 
 
 def check(path, known, errors, warnings):
@@ -92,6 +123,10 @@ def check(path, known, errors, warnings):
         err(f"it's in recipes/{path.parent.name}/ but its domain is {meta['domain']}")
     if meta.get("for") not in FOR:
         err("for must be solo, team, company or community")
+    for key in ("roles", "needs"):
+        value = meta.get(key)
+        if key in meta and (not isinstance(value, str) or not value.strip() or len(value) >= 160):
+            err(f"{key} must be one sentence under 160 characters")
     keywords = meta.get("keywords")
     if not isinstance(keywords, list) or not keywords or not all(isinstance(k, str) for k in keywords):
         err("keywords must be a list of words")
@@ -115,8 +150,29 @@ def check(path, known, errors, warnings):
         err("The rules lacks its fixed closing line")
     if "The idea" in secs and "In any work tool, this becomes" not in secs["The idea"]:
         err("The idea lacks its 'In any work tool, this becomes…' paragraph")
+    for number, step in entries(secs.get("How it runs", ""), STEP):
+        opening = TITLE.match(step)
+        if not opening or not opening.group(1).rstrip().endswith((".", "!", "?")):
+            err(f"How it runs, step {number}: it must open with a bold title that is a sentence, ending in a period")
+            continue
+        count = words(first_sentence(opening.group(2)))
+        if count >= 25:
+            warnings.append(f"{rel}: How it runs, step {number}: the first sentence after the title has {count} words;"
+                            " the format asks for under 25")
+    for (promise,) in entries(secs.get("What must stay true", ""), PROMISE):
+        promise = promise.lstrip("★ ")
+        if not KEEPER.search(promise):
+            warnings.append(f"{rel}: What must stay true: no sentence starts with Kept by, Shown on or A practice"
+                            f" in '{promise[:60]}…'")
     details = secs.get("Details for building", "")
     if details:
+        for name, content in re.findall(r"^### ([^\n]+)\n(.*?)(?=^### |\Z)", details, re.M | re.S):
+            if name.strip() in NOT_DATABASES:
+                continue
+            count = words(first_sentence(content.strip().split("\n\n")[0]))
+            if count >= 12:
+                warnings.append(f"{rel}: Details for building, {name.strip()}: the first sentence has {count} words;"
+                                " the format asks for under twelve, saying what one record is")
         if not GLOSSARY.search(details):
             err("Details for building lacks its fixed paragraph")
         if not re.search(r"```mermaid\s*\nerDiagram", details):

@@ -3,6 +3,8 @@ title: Purchase requests
 summary: "Purchase requests for a company of about 200: more signatures as the amount grows, vendors checked by finance, each department's quarter at a glance."
 domain: finance
 for: company
+roles: "Anyone may ask; budget owners, finance and one executive sign, finance pays, and vendors never open the tool."
+needs: "Departments with one budget owner each, a budget per department every quarter, and an accounting system for invoices and payments."
 keywords: [purchase requests, purchasing, procurement, approvals, purchase order, budget, spend, vendor verification, payment run, invoices]
 version: 1
 license: CC-BY-4.0
@@ -26,11 +28,11 @@ In any work tool, this becomes a few kinds of linked records: requests whose wor
 
 Follow one request, *Booth at SaaS Summit*, from the ask to the paid invoice.
 
-1. **Someone asks.** Dana in marketing fills in the **New request** form: a name, her department and its budget for the quarter, the **Amount**, 18,000, a **Needed by** date, and the ask under What, Why and Alternatives in the Description. She is its **Requester**, the one who asked and who will place the order. From the policy's thresholds she sets its **Tier**, how many signatures the amount needs, *One signature*, *Two signatures* or *Three signatures*: 18,000 is two signatures. She adds the vendor, Summit Expo Services, with its website and contact email; a new vendor starts in *New*. The form submits into *Submitted*; a request started by hand waits in *Draft* until its requester moves it on.
+1. **Someone asks.** Dana in marketing fills in the **New request** form. She enters a name, her department and its budget for the quarter, the **Amount**, 18,000, a **Needed by** date, and the ask under What, Why and Alternatives in the Description. She is its **Requester**, the one who asked and who will place the order. From the policy's thresholds she sets its **Tier**, how many signatures the amount needs, *One signature*, *Two signatures* or *Three signatures*: 18,000 is two signatures. She adds the vendor, Summit Expo Services, with its website and contact email; a new vendor starts in *New*. The form submits into *Submitted*; a request started by hand waits in *Draft* until its requester moves it on.
 2. **The rule routes it.** The **Route for approval** rule makes Marketing's budget owner its **Approver**, whose turn it is, and notes the day it was submitted.
-3. **The budget owner decides.** The head of marketing, Marketing's budget owner, opens **Awaiting my approval**: the requests whose turn is hers, each with its **Room left**, what the quarter would have left after a yes, red when negative. She presses **Approve**, which comments who approved and when. At two signatures, she then moves the request to *Finance review* and makes the policy's **Finance approver** its approver. A no is a move to *Rejected* by the approver, with the reason in a comment.
+3. **The budget owner decides.** The head of marketing, Marketing's budget owner, opens **Awaiting my approval**: the requests whose turn is hers. Each shows its **Room left**, what the quarter would have left after a yes, red when negative. She presses **Approve**, which comments who approved and when. At two signatures, she then moves the request to *Finance review* and makes the policy's **Finance approver** its approver. A no is a move to *Rejected* by the approver, with the reason in a comment.
 4. **Finance signs.** The head of finance, the finance approver, presses Approve and moves the request to *Approved*; Approve has stamped the date on it. Three signatures would have passed through *Executive review* and the policy's **Executive approver** first, handed on the same way. The 18,000 stops waiting and joins Marketing's **Committed**, the total the quarter has said yes to, and the quarter's room shrinks by the same; **This quarter** shows it, one row per department.
-5. **Finance checks the vendor.** In **Vendors to verify**, finance collects the vendor's tax form and ticks **Tax form received**, confirms the bank details by phone, on a number it already had, and enters **Bank details verified on**. With both set, finance presses **Verify vendor**, which moves the vendor to *Verified* with a comment; a blank in either says the check isn't done. A vendor finance won't work with goes to *Blocked*.
+5. **Finance checks the vendor.** In **Vendors to verify**, finance collects the vendor's tax form and ticks **Tax form received**. It confirms the bank details by phone, on a number it already had, and enters **Bank details verified on**. With both set, finance presses **Verify vendor**, which moves the vendor to *Verified* with a comment; a blank in either says the check isn't done. A vendor finance won't work with goes to *Blocked*.
 6. **The invoice arrives and gets paid.** Dana places the order; the approved request is the purchase order, the written yes the vendor can rely on. When the invoice comes, finance enters **Due on** and moves the request to *Invoiced*. On Thursday, in **Payment run**, the week's payments in one sitting, finance pays and presses **Record payment**, which stamps the paid date and moves the request to *Paid*, with a comment for the payment reference. A request whose vendor is still *New* is red there, and waits for the check.
 7. **Or it stops.** A request no longer needed is moved to *Cancelled* by its requester or the budget owner, and its amount leaves Committed the same moment. A request waiting for a signature shows its **Days waiting**, red past 3 days, and from then on the **Approval reminder** nudges its approver every weekday morning until it moves.
 
@@ -63,7 +65,7 @@ Whatever anyone edits, adapts or corrects, these hold; each says what keeps it s
 - ★ A request counts against the quarter it was submitted in, and as committed from the last signature, not from the invoice or the payment. The requester links it to the department's budget for the quarter, which the form asks for: a practice. Kept by **Committed**, which adds up only *Approved*, *Invoiced* and *Paid* requests, so a request cancelled after approval leaves it the same moment.
 - ★ No vendor is paid before finance has checked it. Shown on **Payment run**, where a request whose vendor isn't *Verified* is red, and on **Vendors to verify**, where a missing tax form or bank check is a blank; finance pays nothing red and verifies no vendor with a blank: a practice. A vendor whose bank details change goes back to *New* and is checked again, however the news arrived: a practice.
 - A paid, rejected or cancelled request is never reopened; the same purchase asked again is a new request, so the history of what was declined stays honest. A practice.
-- Nothing waits unseen. Shown by **Days waiting**, red past 3 days on Awaiting my approval and Open requests; the **Approval reminder** asks the approver every weekday morning, and whether they act is theirs.
+- Nothing waits unseen. Shown on **Awaiting my approval** and **Open requests**, where **Days waiting** is red past 3 days; the **Approval reminder** asks the approver every weekday morning, and whether they act is theirs.
 
 ## Making it yours
 
@@ -99,7 +101,7 @@ erDiagram
 
 ### Request
 
-One purchase, from the ask to the paid invoice; its public id serves as the purchase order number. The Description holds the ask under What, Why, Alternatives. Comments on; Approve and Record payment write there.
+One purchase, from the ask to the paid invoice. Its public id serves as the purchase order number. The Description holds the ask under What, Why, Alternatives. Comments on; Approve and Record payment write there.
 
 | Field | Type | Why |
 |---|---|---|
@@ -124,7 +126,7 @@ Formulas:
 
 ### Budget
 
-One department's money for one quarter, named by both ("Marketing Q4 2026"); finance adds them before each quarter. Description off, comments off.
+One department's money for one quarter. It is named by both ("Marketing Q4 2026"); finance adds them before each quarter. Description off, comments off.
 
 | Field | Type | Why |
 |---|---|---|

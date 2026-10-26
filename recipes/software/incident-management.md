@@ -3,6 +3,8 @@ title: Incident management
 summary: "Incident response for a SaaS engineering team: severities, one commander, customer updates on a clock, blameless postmortems, action items chased to done."
 domain: software
 for: team
+roles: "The engineering team opens the tool, the on call first; customers only ever see the status page."
+needs: "Someone on call, alerts that page them, a public status page, and half an hour each week to review postmortems."
 keywords: [incident management, incident response, outage, on call, severity, incident commander, postmortem, status page, action items, pagerduty]
 version: 2
 license: CC-BY-4.0
@@ -27,13 +29,13 @@ In any work tool, this becomes a few kinds of linked records: incidents whose wo
 Follow one incident, *Logins failing in EU*, from the page to the closed postmortem.
 
 1. **The on call declares.** At 02:10 the login error rate alarms. The on call opens the **Declare incident** form, names the incident and picks the **Severity**, how bad it is: *SEV1*, the product down or data at risk, on a scale that ends at *SEV4*, no customer impact. They tick **Customer facing**, customers can see it, link the **Services** affected, parts of the product that break on their own, here Auth and Web app, and write a one-line summary. The incident starts in *Investigating*.
-2. **A commander takes charge.** The **On declaration** rule has already stamped when the incident was declared, which counts as its start until someone knows better, and made the on call the Commander. On a *SEV1* or *SEV2* a second engineer takes over as Commander, with a comment, so the on call can debug. The **Responders**, everyone working on it, are listed on the incident; the internal timeline is its comments.
-3. **Customers hear from you.** Within minutes the commander posts the first status update, the message as it goes out on the status page: what customers see, not what the team suspects. The incident shows **Last customer update**, when the newest one went out, and **Next update due**, thirty minutes later on a *SEV1*, an hour on a *SEV2*. On **Active incidents**, the board of every open incident, a card past its due time turns red, and the commander posts again.
+2. **A commander takes charge.** The **On declaration** rule has already made the on call the Commander. It has also stamped when the incident was declared, which counts as its start until someone knows better. On a *SEV1* or *SEV2* a second engineer takes over as Commander, with a comment, so the on call can debug. The **Responders**, everyone working on it, are listed on the incident; the internal timeline is its comments.
+3. **Customers hear from you.** Within minutes the commander posts the first status update, the message as it goes out on the status page. It says what customers see, not what the team suspects. The incident shows **Last customer update**, when the newest one went out, and **Next update due**, thirty minutes later on a *SEV1*, an hour on a *SEV2*. On **Active incidents**, the board of every open incident, a card past its due time turns red, and the commander posts again.
 4. **The cause is found.** A config push broke token signing. The commander moves the incident to *Identified* and posts an update. The responders roll the push back, and the commander moves the incident to *Monitoring* while the team watches the error rate; another update says logins are recovering.
 5. **It's resolved.** At 03:05 the commander moves the incident to *Resolved* and posts the last update. The **On resolution** rule stamps when it was resolved, and for a *SEV1* or *SEV2* the **Postmortem needed** rule creates the Postmortem in *Drafting*, with the commander as its **Owner**, who writes it. Its **Due on**, the date its review must have happened by, is three days out for a *SEV1*, seven for a *SEV2*. **Duration**, how long it lasted, shows 55 minutes. An incident that turns out to be nothing is moved to *Not an incident* by the commander; declaring it was still right.
 6. **The postmortem is written, blamelessly.** The owner fills its Description under seven headings: Summary, Impact, Timeline, Contributing causes, What went well, What went wrong, Where we got lucky. No names in the causes: what let a wrong config reach production unchecked, not who pushed it. Each fix worth doing becomes an action item, one piece of follow-up work with exactly one Owner and a Due on; fewer that get done beat many that don't. The owner moves the postmortem to *In review*.
-7. **The review.** Every week the team holds the **Postmortem review**, a thirty-minute meeting over **Postmortems to review**, the list of what's drafting or waiting: it reads each postmortem in review, challenges the timeline and the causes, and agrees the action items with their owners and dates. The owner then moves the postmortem to *Reviewed*.
-8. **Actions get done.** An action item starts *Open*; its owner moves it to *In progress* when work starts and to *Done* when it's finished, or to *Dropped* with a comment. Owners see their work in **My action items**; the team sees all of it in **Open action items**, every unfinished action by postmortem, red when **Overdue**, past its date and not finished. Every Monday the **Action chase** reminds the owner of every overdue action item.
+7. **The review.** Every week the team holds the **Postmortem review**, a thirty-minute meeting over **Postmortems to review**, the list of what's drafting or waiting. It reads each postmortem in review, challenges the timeline and the causes, and agrees the action items with their owners and dates. The owner then moves the postmortem to *Reviewed*.
+8. **Actions get done.** An action item starts *Open*; its owner moves it to *In progress* when work starts and to *Done* when it's finished. Or the owner moves it to *Dropped* with a comment. Owners see their work in **My action items**; the team sees all of it in **Open action items**, every unfinished action by postmortem, red when **Overdue**, past its date and not finished. Every Monday the **Action chase** reminds the owner of every overdue action item.
 9. **The postmortem closes.** When the postmortem's **Open actions**, how many are still unfinished, reaches zero, the **Actions done** rule moves it to *Closed*. A postmortem nobody needed is moved to *Skipped* by its owner, with a comment. Three months later, when logins wobble again, the team opens the **Incident log**, every resolved incident with its postmortem, and finds this one.
 
 ## What people look at
@@ -62,10 +64,10 @@ No automations in your tool? Then a person does each of these at the same moment
 Whatever anyone edits, adapts or corrects, these hold; each says what keeps it so.
 
 - ★ Every incident has a Severity and one Commander from the moment it's declared. Kept by the **Declare incident** form, which won't submit without a Severity, and by **On declaration**, which makes whoever declared the incident its Commander; Commander holds one person, so a hand-over replaces one name with another, with a comment, and an incident never has two commanders or none.
-- ★ While an incident is open and customer facing, customers hear from the team every 30 minutes on a *SEV1* and every hour on a *SEV2*. Shown by **Next update due** on Active incidents: the card turns red once the time is past. Posting the update, and copying it in as it goes out, is the commander's; a status update copied in late counts from when it was entered.
+- ★ While an incident is open and customer facing, customers hear from the team every 30 minutes on a *SEV1* and every hour on a *SEV2*. Shown on **Active incidents**, where **Next update due** turns the card red once the time is past. Posting the update, and copying it in as it goes out, is the commander's; a status update copied in late counts from when it was entered.
 - A *SEV1* or *SEV2* resolves into exactly one postmortem. Kept by **Postmortem needed**, which creates it only when the incident has none: an incident reopened and resolved again gets its Resolved at stamped again and keeps the postmortem it has. An incident downgraded after that keeps it too, moved to *Skipped* with a comment; that part is a practice.
 - ★ A postmortem is *Closed* only after its review, with every action item *Done* or *Dropped*. Kept by **Actions done**, which closes it the moment the last one finishes; nobody drags it there sooner, a practice. An action item reopened after the close doesn't reopen the postmortem; it stays on My action items until it's done. A postmortem emptied by moving its last action item elsewhere isn't closed by the rule; its owner closes it.
-- ★ Every action item has one owner and a due date, and is chased while it's overdue. The owner and the date are a practice, agreed at the Postmortem review; the chasing is kept by **Action chase**, which asks the owner every Monday, and by **Overdue**, which turns the action item red on Open action items and My action items.
+- ★ Every action item has one owner and a due date, and is chased while it's overdue. Kept by **Action chase**, which asks the owner every Monday, and by **Overdue**, which turns the action item red on Open action items and My action items; the owner and the date are a practice, agreed at the Postmortem review.
 - Every declaration stays in the log, the false alarms included. A practice: an incident that turns out to be nothing is moved to *Not an incident*, never deleted, and the **Incident log** shows it beside the real ones.
 
 ## Making it yours
@@ -102,7 +104,7 @@ erDiagram
 
 ### Incident
 
-One record per incident, named by what customers would notice ("Logins failing in EU"). The Description holds what's known and the working notes; the comments are the internal timeline. Comments on; Postmortem needed writes there. Its postmortem comes through the inverse **Postmortem**.
+One record per incident. It is named by what customers would notice ("Logins failing in EU"). The Description holds what's known and the working notes; the comments are the internal timeline. Comments on; Postmortem needed writes there. Its postmortem comes through the inverse **Postmortem**.
 
 | Field | Type | Why |
 |---|---|---|
@@ -125,11 +127,11 @@ Formulas:
 
 ### Status update
 
-One message to customers, copied in as it goes out, so its creation time is when it was posted; one copied in late counts from when it was entered. The name is the first line, the Description the full text. Comments off. Fields: Incident (relation, many-to-one → Incident; inverse **Status updates**). No states.
+One message to customers, copied in as it goes out. So its creation time is when it was posted; one copied in late counts from when it was entered. The name is the first line, the Description the full text. Comments off. Fields: Incident (relation, many-to-one → Incident; inverse **Status updates**). No states.
 
 ### Postmortem
 
-One per incident that needs one; Postmortem needed creates it for a *SEV1* or *SEV2*, a person for anything else. The Description holds the writeup under seven headings: Summary, Impact, Timeline, Contributing causes, What went well, What went wrong, Where we got lucky; the action items are linked records, not a heading. Comments on.
+One per incident that needs one. Postmortem needed creates it for a *SEV1* or *SEV2*, a person for anything else. The Description holds the writeup under seven headings: Summary, Impact, Timeline, Contributing causes, What went well, What went wrong, Where we got lucky; the action items are linked records, not a heading. Comments on.
 
 | Field | Type | Why |
 |---|---|---|
@@ -144,7 +146,7 @@ Formulas:
 
 ### Action item
 
-One piece of follow-up work from a postmortem, with one owner and one date. The Description holds what to do and why; the work itself may live in the engineering tracker, linked when the team has one. Comments on.
+One piece of follow-up work from a postmortem. It has one owner and one date. The Description holds what to do and why; the work itself may live in the engineering tracker, linked when the team has one. Comments on.
 
 | Field | Type | Why |
 |---|---|---|

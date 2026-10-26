@@ -3,6 +3,8 @@ title: Sales pipeline
 summary: "A B2B sales pipeline for a small SaaS team: deals from lead to won or lost, a dated next step on every open one, a weighted forecast and a Monday review."
 domain: sales
 for: team
+roles: "Everyone who sells opens the tool and the sales lead runs the Monday review; buyers are company and contact records."
+needs: "A product sold to other companies, inbound or outbound leads, and a team that can meet every Monday."
 keywords: [sales pipeline, crm, deals, leads, b2b sales, saas sales, forecast, win rate, lost reasons, weekly pipeline review]
 version: 1
 license: CC-BY-4.0
@@ -26,14 +28,14 @@ In any work tool, this becomes a few kinds of linked records: deals whose workfl
 
 Follow one deal, *Kestrel Logistics*, from the first reply to the signature.
 
-1. **A lead appears.** An inbound lead arrives through the **New inbound lead** form on the website, as a Deal in *Lead* with Source *Inbound*, and the rep who answers it becomes its Owner. An outbound lead is created by its Owner when a cold email gets a reply, with Source *Outbound*. Kestrel is outbound: Dana, their head of operations, answered Maya's second email. Maya creates the deal, links the Company, with its website and size, adds Dana as a Contact, sets herself as Owner, and replies the same day.
+1. **A lead appears.** An inbound lead arrives through the **New inbound lead** form on the website, as a Deal in *Lead* with Source *Inbound*. The rep who answers it becomes its Owner. An outbound lead is created by its Owner when a cold email gets a reply, with Source *Outbound*. Kestrel is outbound: Dana, their head of operations, answered Maya's second email. Maya creates the deal, links the Company, with its website and size, adds Dana as a Contact, sets herself as Owner, and replies the same day.
 2. **Discovery.** Maya books a call and moves the deal to *Discovery*, with **Next step** "Discovery call" and the day it's due. The call qualifies the deal: pain, who decides, when, what they pay today; the notes go in the Description under its Discovery heading. Fit confirmed, she enters the **Amount**, the expected annual value, which each stage discounts into a **Weighted amount** for the forecast, and a **Close date**, her honest guess, and books the demo. No fit, or no answer after three tries: *Lost*, with the reason, *No fit* or *Went quiet*.
 3. **Demo.** With the demo booked, Maya moves the deal to *Demo*. The **Stage dates** rule stamps **Stage changed on** at every move, and **Days in stage** counts from it. The demo is for the people who decide, so Dana brings her finance lead, whom Maya adds as a second Contact.
-4. **Proposal.** Maya sends the plan, price and terms, links the proposal in the Description under its Proposal heading, moves the deal to *Proposal* and updates the Amount to the proposed figure. Next step: "Follow up with Dana", due Tuesday.
-5. **No deal without a next step.** An open deal whose **Next step date**, the day its next step is due, is empty or past, or whose Close date has passed, is **Stale**. It shows red on **Pipeline**, the board of every open deal by stage, and on **My deals**, the owner's own list. The owner writes the next step, moves the close date, or admits it's lost.
-6. **Monday: the pipeline review.** At 08:00 the **Review prep** rule creates this week's Pipeline review, and before the meeting the **Sales lead**, who runs it, fills the review in: five numbers, how many deals are open, their value in full and weighted by stage, what was won and what was lost in the last seven days, and the stale deals listed under To challenge in its Description. At the meeting they open **Pipeline by owner**, open deals by stage with a row per owner, and each owner walks their row: what moved, what's next and when, whether amount and close date still hold. Stale deals get a next step or go to *Lost*. Kestrel, ten days unanswered: Maya will call the finance lead on Wednesday.
+4. **Proposal.** Maya sends the plan, price and terms, and links the proposal in the Description under its Proposal heading. She moves the deal to *Proposal* and updates the Amount to the proposed figure. Next step: "Follow up with Dana", due Tuesday.
+5. **No deal without a next step.** An open deal is **Stale** when its **Next step date**, the day its next step is due, is empty or past. So is one whose Close date has passed. It shows red on **Pipeline**, the board of every open deal by stage, and on **My deals**, the owner's own list. The owner writes the next step, moves the close date, or admits it's lost.
+6. **Monday: the pipeline review.** At 08:00 the **Review prep** rule creates this week's Pipeline review. Before the meeting the **Sales lead**, who runs it, fills the review in: five numbers, how many deals are open, their value in full and weighted by stage, what was won and what was lost in the last seven days, and the stale deals listed under To challenge in its Description. At the meeting they open **Pipeline by owner**, open deals by stage with a row per owner, and each owner walks their row: what moved, what's next and when, whether amount and close date still hold. Stale deals get a next step or go to *Lost*. Kestrel, ten days unanswered: Maya will call the finance lead on Wednesday.
 7. **Won.** Signed. Maya moves the deal to *Won*; the **On closing** rule sets Close date to today, so the forecast and the win rate run on real dates. The company's **Won deals**, how many of its deals were won, becomes 1: a customer now.
-8. **Or lost.** The owner can move a deal to *Lost* from any stage, with its **Lost reason**: *No fit*, *Not now*, *Price*, *Missing feature*, *Chose competitor* or *Went quiet*; when it's missing, the **Lost needs a reason** rule asks the owner for it. Lost deals stay; **Won and lost**, every closed deal with its reason, and the reports learn from them.
+8. **Or lost.** The owner can move a deal to *Lost* from any stage, with its **Lost reason**. The reason is *No fit*, *Not now*, *Price*, *Missing feature*, *Chose competitor* or *Went quiet*; when it's missing, the **Lost needs a reason** rule asks the owner for it. Lost deals stay; **Won and lost**, every closed deal with its reason, and the reports learn from them.
 
 ## What people look at
 
@@ -58,7 +60,7 @@ No automations in your tool? Then a person does each of these at the same moment
 Whatever anyone edits, adapts or corrects, these hold; each says what keeps it so.
 
 - One opportunity is one deal, from the first conversation to *Won* or *Lost*, and every open deal is on the Pipeline board. A practice; the board hides nothing but *Won* and *Lost*, so every deal that exists is walked on Monday.
-- ★ Every open deal has a next step with a date, and neither that date nor its close date has passed. Shown by **Stale**, the formula that turns the deal red on Pipeline, My deals and Pipeline by owner; the Sales lead lists every Stale deal under To challenge before Monday's meeting. A deal reopened from *Won* or *Lost* is Stale at once, because On closing left its Close date in the past, until its owner sets new dates.
+- ★ Every open deal has a next step with a date, and neither that date nor its close date has passed. Shown on **Pipeline**, **My deals** and **Pipeline by owner**, where the **Stale** formula turns the deal red; the Sales lead lists every Stale deal under To challenge before Monday's meeting. A deal reopened from *Won* or *Lost* is Stale at once, because On closing left its Close date in the past, until its owner sets new dates.
 - Past *Discovery*, a deal carries an Amount and a Close date, the owner's honest numbers. A practice; the Monday walk asks every owner whether amount and close date still hold, and an empty Amount is plain on every Pipeline card.
 - ★ Every lost deal says why. A practice; the **Lost needs a reason** rule asks the owner the moment a deal is *Lost* without a reason, and nothing refuses the move.
 - A closed deal's Close date is the day it closed, not the guess. Kept by **On closing**, which sets it on *Won* or *Lost*; the guess is not kept, so how far the forecast drifted is read from Review history, week by week.
@@ -99,7 +101,7 @@ erDiagram
 
 ### Deal
 
-One opportunity to sell to one company, named by the company, with the plan or product added when a company has several ("Kestrel Logistics", "Kestrel Logistics expansion"). The Description holds the notes under four headings: Discovery, Demo, Proposal, Decision. Comments on.
+One opportunity to sell to one company. It is named by the company, with the plan or product added when a company has several ("Kestrel Logistics", "Kestrel Logistics expansion"). The Description holds the notes under four headings: Discovery, Demo, Proposal, Decision. Comments on.
 
 | Field | Type | Why |
 |---|---|---|
@@ -134,7 +136,7 @@ One person at a company. Description off, comments off. Fields: Company (relatio
 
 ### Pipeline review
 
-One record per weekly meeting, named by its week ("Week of 5 October"). The Description holds To challenge, the Stale deals the Sales lead lists before the meeting, one line each with owner, stage and days in stage, then the notes and commitments people write at the meeting. Comments off. Fields: Date (date; set by Review prep); Open deals (integer); Pipeline value (money); Weighted value (money); Won last week (money); Lost last week (money). The five numbers are written by the Sales lead before the meeting; all six show on Review history. No states. Source of truth: the numbers are a snapshot the Sales lead writes on Monday before the meeting and are not edited after; the live figures are on Pipeline and in the Forecast report.
+One record per weekly meeting. It is named by its week ("Week of 5 October"). The Description holds To challenge, the Stale deals the Sales lead lists before the meeting, one line each with owner, stage and days in stage, then the notes and commitments people write at the meeting. Comments off. Fields: Date (date; set by Review prep); Open deals (integer); Pipeline value (money); Weighted value (money); Won last week (money); Lost last week (money). The five numbers are written by the Sales lead before the meeting; all six show on Review history. No states. Source of truth: the numbers are a snapshot the Sales lead writes on Monday before the meeting and are not edited after; the live figures are on Pipeline and in the Forecast report.
 
 ### Views
 

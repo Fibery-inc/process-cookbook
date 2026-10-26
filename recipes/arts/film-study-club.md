@@ -3,6 +3,8 @@ title: Film study club
 summary: "A film club or class for aspiring directors: seasons of films watched with one craft focus, scenes broken down shot by shot, techniques kept in a toolkit."
 domain: arts
 for: community
+roles: "Two or three organizers open the tool; members join, suggest films, send notes and hand in breakdowns through forms."
+needs: "A fixed weekly evening, members who can watch each film at home beforehand, and a screen to play a scene on at the meeting."
 keywords: [film club, film study, film analysis, film society, cine club, directing, aspiring directors, scene breakdown, shot list, average shot length, film school, watchlist]
 version: 1
 license: CC-BY-4.0
@@ -27,14 +29,14 @@ In any work tool, this becomes six kinds of linked records: seasons, films whose
 Follow one film, *The Last Tram*, from a member's suggestion to the club's toolkit.
 
 1. **Someone joins, someone suggests.** People join through the **Join the club** form and become **Member** records, *Active* from the start; most never open the tool. One member suggests *The Last Tram* through the **Suggest a film** form, with its director, its year and one line on **Why watch it**: "a tram stop at night, four minutes, and nothing happens". It lands on the **Watchlist** in *Proposed*.
-2. **The programmer plans a season.** The **Programmer**, the organizer who plans the club's seasons (in a class, the teacher), sets up *Suspense* with its **Big question**, "How do directors make us wait?", and its **Dates**, six weeks starting next month. The season is *Planned* until its first meeting. The programmer picks six films from the Watchlist and links each to the season; the **Added to season** rule moves each to *Programmed*, off the watchlist. The programmer gives each a **Meeting date**, the evening the club discusses it. Suggestions are where the choice starts, not a vote: a film the programmer won't show moves to *Passed*, with a line why in its description, so whoever suggested it hears back.
+2. **The programmer plans a season.** The **Programmer**, the organizer who plans the club's seasons (in a class, the teacher), sets up *Suspense*. Its **Big question** is "How do directors make us wait?", and its **Dates** are six weeks starting next month. The season is *Planned* until its first meeting. The programmer picks six films from the Watchlist and links each to the season; the **Added to season** rule moves each to *Programmed*, off the watchlist. The programmer gives each a **Meeting date**, the evening the club discusses it. Suggestions are where the choice starts, not a vote: a film the programmer won't show moves to *Passed*, with a line why in its description, so whoever suggested it hears back.
 3. **The host prepares the evening.** Each film has a **Host**, the organizer who runs its meeting; often one person hosts a whole season. Two weeks ahead, the host gives *The Last Tram* its focus, *Sound*, and asks a member to be its **Presenter**, the one who will break down a scene. To choose, the host opens **Members**: every active member with their **Times presented** and **Days since note**, so presenting goes round and nobody drifts off unnoticed. Then the host sends members the **Program**, every season not yet done with its films, meeting dates, focuses and presenters, and **Where to watch** each film.
 4. **Everyone watches for the focus.** In the week before the meeting, members watch the film, twice if they can: once as an audience, once for the focus alone. Each sends a note through the **Send a note** form: the **Minute** of one moment, what they noticed there in one sentence, which becomes the note's name, and one **Question** for the group. One note on *The Last Tram*, at minute 41: "The bell rings a full shot before we see the tram." Its question: "Would it be as tense if we saw the tram first?"
-5. **The presenter takes one scene apart.** The presenter picks the tram stop and breaks it down shot by shot: one line per shot with its size, how much of the frame a person fills, from extreme long shot to extreme close-up; its angle; its movement; its length in seconds; and what it shows. A paragraph follows on what the director chose and what else they could have done. The presenter hands it in through the **Submit a breakdown** form with its **Scene start**, the minute it begins, its **Scene length** in seconds and its number of **Shots**. The breakdown's **Average shot length**, the scene's seconds divided by its shots, says how fast it's cut: 252 seconds in 9 shots is 28 seconds a shot, slow for a thriller, and that's the point.
-6. **Three days out**, if no breakdown has come in, the **Breakdown check** rule reminds the host, who checks in with the presenter. A film is **Not ready**, red on the Program, when it's a week out with no focus or no presenter, three days out with no breakdown, or past its meeting date and still *Programmed*.
+5. **The presenter takes one scene apart.** The presenter picks the tram stop and breaks it down shot by shot. One line per shot with its size, how much of the frame a person fills, from extreme long shot to extreme close-up; its angle; its movement; its length in seconds; and what it shows. A paragraph follows on what the director chose and what else they could have done. The presenter hands it in through the **Submit a breakdown** form with its **Scene start**, the minute it begins, its **Scene length** in seconds and its number of **Shots**. The breakdown's **Average shot length**, the scene's seconds divided by its shots, says how fast it's cut: 252 seconds in 9 shots is 28 seconds a shot, slow for a thriller, and that's the point.
+6. **A missing breakdown is chased.** Three days out, if no breakdown has come in, the **Breakdown check** rule reminds the host, who checks in with the presenter. A film is **Not ready**, red on the Program, when it's a week out with no focus or no presenter, three days out with no breakdown, or past its meeting date and still *Programmed*.
 7. **The meeting.** The host opens **Next meeting**: every note for the coming meeting, in film order. The presenter plays the scene and walks the group through it shot by shot, the breakdown on screen. Then the group goes through the notes from the earliest minute to the latest; each member says what they saw and asks their question. When the group agrees it has seen a move worth stealing, the host names it on the **Toolkit**, the club's techniques by **Craft**, and links it to the film. *Sound before picture* goes in under *Sound*, new; *Empty frame first*, already seen in two films, now counts three in its **Times seen**.
-8. **After the meeting**, the host writes the evening's takeaways in the film's description and moves it to *Discussed*. A meeting that can't happen gets a new date from the host. When a breakdown never comes, the meeting runs on the notes alone, and the film stays without one for good.
-9. **The season ends.** The programmer moved *Suspense* to *Running* at its first meeting; after its last, they move it to *Done* and write the club's answer to its big question in its description. The **Season ends** rule sends every film of it still *Programmed* back to *Proposed* and off the season, to wait on the Watchlist for another one. The **Cutting pace** report puts the average shot length of every scene the club has broken down side by side, colored by season: the difference between the patient films and the restless ones, in seconds.
+8. **The takeaways are written down.** After the meeting, the host writes the evening's takeaways in the film's description and moves it to *Discussed*. A meeting that can't happen gets a new date from the host. When a breakdown never comes, the meeting runs on the notes alone, and the film stays without one for good.
+9. **The season ends.** After its last meeting, the programmer moves *Suspense* to *Done* and writes the club's answer to its big question in its description. They moved it to *Running* at its first. The **Season ends** rule sends every film of it still *Programmed* back to *Proposed* and off the season, to wait on the Watchlist for another one. The **Cutting pace** report puts the average shot length of every scene the club has broken down side by side, colored by season: the difference between the patient films and the restless ones, in seconds.
 10. **Members come and go.** When a member stops coming, the host moves them to *Left* and never deletes them, so their notes and breakdowns keep their name.
 
 ## What people look at
@@ -58,7 +60,7 @@ No automations in your tool? Then a person does each of these at the same moment
 
 Whatever anyone edits, adapts or corrects, these hold; each says what keeps it so.
 
-- ★ Every film is watched for one thing. A programmed film has one focus, known to members a week before its meeting, and the notes and the talk stay on it. Shown by **Not ready**, red on the **Program** for a film a week out with no focus or no presenter; keeping the talk on the focus is a practice, the host's.
+- ★ Every film is watched for one thing. A programmed film has one focus, known to members a week before its meeting, and the notes and the talk stay on it. Shown on the **Program**, where **Not ready** is red for a film a week out with no focus or no presenter; keeping the talk on the focus is a practice, the host's.
 - ★ Every meeting takes one scene apart, shot by shot, with its shot list, its scene length and its shots. Kept by **Breakdown check**, which reminds the host three days ahead; shown by **Not ready**, red until the breakdown is in. A meeting held without one leaves its film with none.
 - ★ The toolkit holds what the club has seen, not what it has read about: every technique links to the films where the group saw it. Shown on the **Toolkit**, where a technique seen in no film is red.
 - One move, one name. Before adding a technique, the host looks for it on the Toolkit; a second name for the same move is merged into the first, its films moved over. A practice.
@@ -109,7 +111,7 @@ erDiagram
 
 ### Film
 
-One record per film suggested to the club, programmed or discussed; its name is the film's title. The description holds why it was suggested and, after its meeting, the evening's takeaways. Comments on.
+One record per film suggested to the club, programmed or discussed. Its name is the film's title. The description holds why it was suggested and, after its meeting, the evening's takeaways. Comments on.
 
 | Field | Type | Why |
 |---|---|---|
@@ -132,7 +134,7 @@ Formulas:
 
 ### Note
 
-One member's note on one film: one moment, what they saw there, one question. Its name is what they noticed, in one sentence; the description holds anything longer. Comments off.
+One member's note on one film. It holds one moment, what they saw there, one question. Its name is what they noticed, in one sentence; the description holds anything longer. Comments off.
 
 | Field | Type | Why |
 |---|---|---|
@@ -143,7 +145,7 @@ One member's note on one film: one moment, what they saw there, one question. It
 
 ### Breakdown
 
-One scene of one film, taken apart shot by shot by one member; its name is the scene's ("The tram stop"). The description holds the shot list, one line per shot: its number; its size, from extreme long shot through long, medium and close-up to extreme close-up; its angle, high, eye level, low or tilted; its movement, still, pan, tilt, tracking, crane, handheld or zoom; its length in seconds; and what it shows. Then a paragraph on what the director chose and what else they could have done. Comments on.
+One scene of one film, taken apart shot by shot. One member makes it; its name is the scene's ("The tram stop"). The description holds the shot list, one line per shot: its number; its size, from extreme long shot through long, medium and close-up to extreme close-up; its angle, high, eye level, low or tilted; its movement, still, pan, tilt, tracking, crane, handheld or zoom; its length in seconds; and what it shows. Then a paragraph on what the director chose and what else they could have done. Comments on.
 
 | Field | Type | Why |
 |---|---|---|
@@ -161,7 +163,7 @@ Formulas:
 
 ### Technique
 
-A directing choice the club has named; its name is the club's name for it ("Sound before picture"). The description holds what it does, when it fails, and the minute where it shows in each film. Comments on.
+A directing choice the club has named. Its name is the club's name for it ("Sound before picture"). The description holds what it does, when it fails, and the minute where it shows in each film. Comments on.
 
 | Field | Type | Why |
 |---|---|---|
@@ -175,7 +177,7 @@ Formulas:
 
 ### Season
 
-Four to eight weeks of meetings on one director, movement or craft; its name says what it's about ("Suspense"). The description holds why the club chose it and, once it's done, the club's answer to its big question. Comments on.
+Four to eight weekly meetings on one director, movement or craft. Its name says what it's about ("Suspense"). The description holds why the club chose it and, once it's done, the club's answer to its big question. Comments on.
 
 | Field | Type | Why |
 |---|---|---|
@@ -187,7 +189,7 @@ States: Planned → Running → Done (finished). Default: Planned.
 
 ### Member
 
-One person in the club, who joins through the Join the club form and may never open the tool; its name is the member's name. No description. Comments off.
+One person in the club. They join through the Join the club form and may never open the tool; its name is the member's name. No description. Comments off.
 
 | Field | Type | Why |
 |---|---|---|

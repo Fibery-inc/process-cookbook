@@ -3,6 +3,8 @@ title: OKRs
 summary: "Quarterly OKRs for a company of several teams: objectives on one tree, key results that compute their progress, a weekly check in, a scored quarter."
 domain: management
 for: company
+roles: "Leaders and team leads set objectives, each key result owner checks in every Monday, and the whole company can read the tree."
+needs: "Several teams with a lead each, a leadership group, and numbers such as churn or revenue that can be read every week."
 keywords: [okrs, objectives and key results, john doerr, measure what matters, goals, key results, quarterly goals, check in, scoring, alignment]
 version: 1
 license: CC-BY-4.0
@@ -26,13 +28,13 @@ In any work tool, this becomes a few kinds of linked records: objectives whose w
 
 Follow one team objective, *Stop churn before it starts*, through a quarter.
 
-1. **Leadership drafts the company objectives.** Four to six weeks before the quarter, the leaders open the next quarter, in *Planning*, and write three company objectives in *Draft*, their **Level**, company or team, set to *Company*. One is *Grow by keeping customers*, owned by the CEO. Its **Kind** is *Aspirational*: a score of 70 of 100 at the end is a good quarter; a must-do is *Committed*, and under 100 needs an explanation. Its key result is *Net revenue retention from 98% to 110%*.
+1. **Leadership drafts the company objectives.** Four to six weeks before the quarter, the leaders open the next quarter, in *Planning*, and write three company objectives in *Draft*. Their **Level**, company or team, is set to *Company*. One is *Grow by keeping customers*, owned by the CEO. Its **Kind** is *Aspirational*: a score of 70 of 100 at the end is a good quarter; a must-do is *Committed*, and under 100 needs an explanation. Its key result is *Net revenue retention from 98% to 110%*.
 2. **Teams draft theirs.** Two weeks before the quarter the company objectives are shared. The Customer Success lead adds *Stop churn before it starts*: Level *Team*, Team Customer Success, herself as Owner, why it matters in the Description, and **Supports**, the company objective hers rolls up to, set to *Grow by keeping customers*. That link is the roll up: on **Company OKRs**, the list of the whole tree, her objective sits under the company one. She adds three key results, *Monthly churn from 3.0% to 1.5%* among them, each with a **Start value**, where the number stands now, a **Target value**, where it should stand at the end, and an Owner. The CEO sends one draft back, "Ship the health score": a task isn't a key result; the number it would move is.
-3. **The quarter starts.** The CEO moves the quarter to *Active*, and the **Quarter starts** rule moves every *Draft* objective in it to *Active*; they appear on **This week**, the list the Monday meeting runs on. An objective added after this is moved to *Active* by its owner.
+3. **The quarter starts.** The CEO moves the quarter to *Active*, and the **Quarter starts** rule moves every *Draft* objective in it to *Active*. They appear on **This week**, the list the Monday meeting runs on. An objective added after this is moved to *Active* by its owner.
 4. **Monday, every week.** At 09:00 the **Check in reminder** asks every key result owner for this week's number. Each owner opens the **Check in sheet**, an app with one row per key result they own, and records a check in for each: this week's number as the **New value**, a **Health**, *On track*, *At risk* or *Off track*, and a note on what moved and what's in the way.
-5. **The team meets.** The **Record check in** rule copies the new number and the health onto the key result, so a key result always shows its latest check in. Then the team meets with This week open: every key result with its **Progress**, how far the number has come from start to target, 0 to 100, computed, never claimed. A key result with no check in for 7 days shows **Stale**, in red; the meeting asks why.
+5. **The team meets.** The **Record check in** rule copies the new number and the health onto the key result. So a key result always shows its latest check in. Then the team meets with This week open: every key result with its **Progress**, how far the number has come from start to target, 0 to 100, computed, never claimed. A key result with no check in for 7 days shows **Stale**, in red; the meeting asks why.
 6. **Week six: a number stalls.** Churn is 2.8%. The owner marks it *At risk*; the note says the health score has to land first. That's the conversation, written down where the next one can find it. An objective that stops making sense is moved to *Dropped* by its owner, with a comment saying why.
-7. **The company reads the tree.** On Company OKRs the CEO sees *Grow by keeping customers* at **Average progress** 30, the average of its own key results on a scale of 0 to 100, while its **Supporting progress**, the average of the active team objectives under it, is 60: the teams deliver, retention hasn't followed. That gap is the leadership meeting's question.
+7. **The company reads the tree.** On Company OKRs the CEO sees *Grow by keeping customers* at **Average progress** 30 out of 100, the average of its own key results. Its **Supporting progress**, the average of the active team objectives under it, is 60: the teams deliver, retention hasn't followed. That gap is the leadership meeting's question.
 8. **The last week: scoring.** The CEO moves the quarter to *Scoring*. Each key result owner sets its **Score**, 0 to 100, from Progress plus judgement: churn reached 1.9%, Progress 73, scored 70. Each objective owner writes the reflection in the Description. Each objective's **Average score**, the average of its key results' scores, appears on the **Scorecard**, the grid of the quarter's objectives, highest first.
 9. **The quarter closes.** The CEO opens the Scorecard: a key result still without a Score is red there, and the quarter isn't closed until none is. Then they press **Close the quarter**, a button on the quarter: every active objective becomes *Scored* and the quarter *Closed*. *Stop churn before it starts* ends at 63, a good aspirational quarter. The next one is already in *Planning*.
 
@@ -64,7 +66,7 @@ Whatever anyone edits, adapts or corrects, these hold; each says what keeps it s
 - ★ Progress is computed, never claimed: a key result moves from a Start value to a Target value, and its Progress is how far the Current value has come. Kept by **Progress**, a formula; a key result with no Start value or Target value shows 0, and the Next quarter grid shows the blanks while the quarter is in *Planning*.
 - The latest check in is the truth about a key result: Current value, Health and Last check in come from it. Kept by **Record check in**, which copies every new check in onto its key result; so a check in entered late for an earlier week is entered before this week's, a practice, and a corrected number is a new check in dated today, not an edit of the old one. A value entered on the key result by hand holds until the next check in.
 - ★ Every team objective supports one company objective. Shown on **Next quarter**, which shows a team objective with an empty Supports while the quarter is in *Planning*; Quarter starts activates it anyway, so the planning meeting fixes the blank, not a rule.
-- ★ Every key result in an active objective gets a check in every week. Shown by **Stale**, which turns a key result red on This week and My key results after 7 days without one; the **Check in reminder** asks every Monday, and the meeting asks why.
+- ★ Every key result in an active objective gets a check in every week. Shown on **This week** and **My key results**, where **Stale** turns a key result red after 7 days without one; the **Check in reminder** asks every Monday, and the meeting asks why.
 - ★ A quarter closes only when every key result of every active objective in it has a Score. Shown on the **Scorecard**, where a key result without a Score is red; **Close the quarter** checks nothing, so pressing it only when nothing is red is a practice, like the reflection in each objective's Description. Once closed, a score corrected later changes Average score on the Scorecard and nothing else; the quarter stays *Closed* and its objectives *Scored*.
 - Progress follows the links: a key result moved to another objective, or a team objective moved under another company objective, takes its numbers with it, and both sides recompute. Kept by **Average progress** and **Supporting progress**, which read the links, not a copy.
 - A dropped objective asks for nothing more, and counts for nothing: its key results leave This week, get no reminder, never show Stale and are not scored, and it drops out of its company objective's Supporting progress. Kept by the **Check in reminder**, **Stale**, **Close the quarter** and **Supporting progress**, which look only at *Active* objectives. Dropping is the owner's call, with a comment saying why; a practice.
@@ -123,7 +125,7 @@ Formulas:
 
 ### Key Result
 
-One measurable result of one objective: a number that should move from Start value to Target value by the end of the quarter. The Description holds how it's measured. Comments on.
+One measurable result of one objective. It is a number that should move from Start value to Target value by the end of the quarter. The Description holds how it's measured. Comments on.
 
 | Field | Type | Why |
 |---|---|---|
@@ -152,7 +154,7 @@ Thirteen weeks with a hard end. The Description holds the quarter's theme and, o
 
 ### Team
 
-Only when the company doesn't track its teams already: Name, Description off. Its objectives come through the inverse **Objectives**.
+One team in the company. Only when the company doesn't track its teams already: Name, Description off. Its objectives come through the inverse **Objectives**.
 
 ### Views
 

@@ -3,6 +3,8 @@ title: Phone repair shop
 summary: "A walk-in phone repair shop of three to six: every phone from counter to bench and back, an agreed price, parts stock that counts itself, warranty comebacks."
 domain: retail
 for: team
+roles: "The three to six people at the counter and the bench open the tool; customers get a claim slip and hear by text, call or email."
+needs: "Numbered tags for phones, a shelf of parts counted once at the start, and written terms for warranty and uncollected phones."
 keywords: [phone repair, repair shop, phone repair point, mobile repair, screen replacement, battery replacement, walk in repairs, repair tags, parts stock, warranty returns]
 version: 2
 license: CC-BY-4.0
@@ -30,7 +32,7 @@ Follow one repair, *1042 iPhone 13*, from the counter to the bench and back, and
 2. **The morning look.** Every morning the technicians open the **Bench**, every phone in the shop by state with a row per technician, and split what's *Queued*. A phone past its Promised by is **Late** and red there, so the promises at risk are the first thing anyone sees. The technician who takes 1042 puts their name on it and moves it to *In repair*; from then on it's on **My repairs**, their own list.
 3. **The price changes.** Under the screen the technician finds a swollen battery that has to go too. They raise the Price to 175, write why in a comment and move the repair to *Awaiting approval*. It appears on **My calls**, the counter person's list of customers to call.
 4. **The customer says yes.** The counter person texts Maya, she agrees, and they write her yes in a comment. A screen is on the shelf, but **Stock**, the list of every part the shop keeps, shows the iPhone 13 battery at 0 **In stock**. Nobody types that number: it's the part's **Base count**, how many were on the shelf when it was first counted, plus every piece that has arrived since, less every piece fitted. So the technician adds a part order for one battery, *To order*, linked to 1042, and moves the repair to *Waiting for parts*. The counter person moves Promised by to three days out and texts Maya the new time.
-5. **The owner orders.** The owner opens **Parts on order**, every part order by state with a row per **Supplier**, places the battery order and moves it to *Ordered*, typing its **Expected on**, the day the supplier promises: two days out. An order past that day turns red there, **Overdue**, and the owner chases it; one the supplier can't fill is *Cancelled* and ordered elsewhere. It's Monday, so the owner also goes down Stock: a part whose In stock has fallen to its **Reorder at**, the count at which to buy more, is **Low stock** and red, and **On order** says how many are already coming. The iPhone 13 screens are down to two, so a second part order goes to the same supplier, its **Quantity** five.
+5. **The owner orders.** The owner opens **Parts on order**, every part order by state with a row per **Supplier**, and places the battery order. They move it to *Ordered*, typing its **Expected on**, the day the supplier promises: two days out. An order past that day turns red there, **Overdue**, and the owner chases it; one the supplier can't fill is *Cancelled* and ordered elsewhere. It's Monday, so the owner also goes down Stock: a part whose In stock has fallen to its **Reorder at**, the count at which to buy more, is **Low stock** and red, and **On order** says how many are already coming. The iPhone 13 screens are down to two, so a second part order goes to the same supplier, its **Quantity** five.
 6. **The part arrives.** Two days later the counter person unpacks the delivery and moves both part orders to *Received*. In stock goes up by what arrived, and the **Part arrived** rule moves 1042 back to *Queued*, where its technician finds it on My repairs.
 7. **The repair is done.** The technician fits the screen and the battery and adds both to the repair's **Parts used**, which takes them off In stock. They test the phone against the checklist in its description: touch, display, cameras, speakers, charging, buttons and unlock. Then they move it to *Ready*. The **On ready** rule sets **Ready on** to today, clears **Customer told**, the tick that says the customer knows, and asks the counter person to call.
 8. **The customer collects.** The counter person texts Maya and ticks Customer told. When she comes in, **Ready to collect**, the phones waiting for their customers, shows 1042 and its **To pay**, 155: the price less the deposit. She pays at the till and gets her phone back, and the counter person moves the repair to *Collected*. The **On collection** rule sets **Collected on** to today, and **Forget the passcode** empties the passcode. The phone is **Under warranty** for 90 days from that day.
@@ -66,9 +68,9 @@ Whatever anyone edits, adapts or corrects, these hold; each says what keeps it s
 - ★ The customer agrees every price before the work it pays for: a price raised on the bench waits in *Awaiting approval* until the counter person has the customer's yes, written in a comment. Shown on **My calls**, where every repair awaiting approval stays until someone calls; writing the yes down is a practice.
 - ★ A passcode lives only as long as the repair: on the repair while the phone is in the shop, gone the moment it leaves. Kept by **Forget the passcode**; never writing it on the tag or in a comment is a practice.
 - ★ A comeback under warranty is a new repair, linked to the first, free and back with the technician who did the work; the first repair is never reopened. Kept by **Warranty return** for the price and the technician, and shown by **Under warranty** on Check in and the Customers grid; linking instead of reopening is a practice, and Comebacks counts only what was linked.
-- A promise in trouble is seen before the customer asks: a phone past its Promised by and not yet *Ready* is red on the Bench and My repairs. Shown by **Late**; calling with a new time before the old one passes is the counter person's practice.
+- A promise in trouble is seen before the customer asks. Shown on the **Bench** and **My repairs**, where **Late** turns a phone red once it's past its Promised by and not yet *Ready*; calling with a new time before the old one passes is the counter person's practice.
 - In stock is what's on the shelf: arrivals add, fitted parts subtract, and nobody types the count. Kept by the **In stock** formula. A piece broken in fitting, a second piece of one part in one repair, or a difference found at the monthly count is corrected by changing Base count, with a comment saying why: a practice.
-- A phone nobody collects is chased, then let go by the shop's terms: red on Ready to collect from 30 days, and *Unclaimed* only by the owner's hand, from 90 days. Shown by **Days waiting**; the calls and the decision are practices.
+- A phone nobody collects is chased, then let go by the shop's terms: *Unclaimed* only by the owner's hand, from 90 days. Shown on **Ready to collect**, where **Days waiting** turns a phone red from 30 days; the calls and the decision are practices.
 
 ## Making it yours
 
@@ -108,7 +110,7 @@ erDiagram
 
 ### Repair
 
-One phone brought in for one job, from the counter back to the customer, named by its tag number and the device: "1042 iPhone 13". The description holds five headings: Fault, in the customer's words; Device, the IMEI or serial number and the color; Condition, the marks found at check-in, each with a picture in Photos; Left with us, the SIM, case, charger or memory card; Test, the checklist the technician goes through before *Ready*. Comments on; every new price and the customer's answer go there. Its fifteen fields are one more than a main database usually needs: the check-in photos get a field of their own, so a form can ask for them.
+One phone brought in for one job. It runs from the counter back to the customer and is named by its tag number and the device: "1042 iPhone 13". The description holds five headings: Fault, in the customer's words; Device, the IMEI or serial number and the color; Condition, the marks found at check-in, each with a picture in Photos; Left with us, the SIM, case, charger or memory card; Test, the checklist the technician goes through before *Ready*. Comments on; every new price and the customer's answer go there. Its fifteen fields are one more than a main database usually needs: the check-in photos get a field of their own, so a form can ask for them.
 
 | Field | Type | Why |
 |---|---|---|
@@ -138,7 +140,7 @@ Formulas:
 
 ### Customer
 
-A person who brings phones in, named by first and last name. The description holds what the counter should know, such as a business that pays by invoice. Comments off.
+A person who brings phones in. Its name is their first and last name. The description holds what the counter should know, such as a business that pays by invoice. Comments off.
 
 | Field | Type | Why |
 |---|---|---|
@@ -150,7 +152,7 @@ No states. Their repairs come through the inverse Repairs.
 
 ### Part
 
-One part the shop keeps on the shelf, named by the model it fits and what it is: "iPhone 13 battery". The description holds the quality grade and the supplier's part number. Comments on; every change to Base count gets one.
+One part the shop keeps on the shelf. It is named by the model it fits and what it is: "iPhone 13 battery". The description holds the quality grade and the supplier's part number. Comments on; every change to Base count gets one.
 
 | Field | Type | Why |
 |---|---|---|
@@ -167,7 +169,7 @@ Formulas:
 
 ### Part order
 
-One order of one part from one supplier, named by the quantity and the part: "5 iPhone 13 screens". The description holds the supplier's order number. Comments off.
+One order of one part from one supplier. It is named by the quantity and the part: "5 iPhone 13 screens". The description holds the supplier's order number. Comments off.
 
 | Field | Type | Why |
 |---|---|---|

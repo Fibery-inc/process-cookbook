@@ -68,6 +68,28 @@
       "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/finance/purchase-requests.md"
     },
     {
+      "id": "game-design-docs",
+      "title": "Game design docs",
+      "summary": "Living design docs for a small indie team: pillars, a one page doc per feature, a weekly review, and prototypes that validate the concept.",
+      "domain": "gamedev",
+      "for": "team",
+      "keywords": [
+        "game design document",
+        "gdd",
+        "validation",
+        "one page design",
+        "design pillars",
+        "proof of concept",
+        "prototype",
+        "indie game",
+        "design review",
+        "feature doc"
+      ],
+      "version": 1,
+      "path": "recipes/gamedev/game-design-docs.md",
+      "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/gamedev/game-design-docs.md"
+    },
+    {
       "id": "okrs",
       "title": "OKRs",
       "summary": "Quarterly OKRs for a company of several teams: objectives on one tree, key results that compute their progress, a weekly check in, a scored quarter.",

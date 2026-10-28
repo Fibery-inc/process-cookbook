@@ -2,8 +2,9 @@
 
 # Finance
 
-1 recipe.
+2 recipes.
 
 | Recipe | For | What it is |
 |---|---|---|
 | [Purchase requests](purchase-requests.md) | company | Purchase requests for a company of about 200: more signatures as the amount grows, vendors checked by finance, each department's quarter at a glance. |
+| [Venture fund](venture-fund.md) | team | A small seed venture fund: every deal from first deck to decision with blind partner votes, and every portfolio company reporting each quarter. |

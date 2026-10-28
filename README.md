@@ -10,14 +10,15 @@ Open recipes for how teams, companies and communities run their work, from Shape
 ## Recipes
 
 <!-- recipes:start -->
-14 recipes in 12 domains.
+15 recipes in 12 domains.
 
 | Domain | Recipes |
 |---|---|
 | [Arts](recipes/arts/) | [Film study club](recipes/arts/film-study-club.md) |
 | [Compliance](recipes/compliance/) | [SOC 2 compliance](recipes/compliance/soc-2-compliance.md) |
 | [Esports](recipes/esports/) | [CS2 team practice](recipes/esports/cs2-team-practice.md) |
-| [Finance](recipes/finance/) | [Purchase requests](recipes/finance/purchase-requests.md) |
+| [Finance](recipes/finance/) | [Purchase requests](recipes/finance/purchase-requests.md), [Venture fund](recipes/finance/venture-fund.md) |
+| [Gamedev](recipes/gamedev/) | [Game design docs](recipes/gamedev/game-design-docs.md) |
 | [Management](recipes/management/) | [OKRs](recipes/management/okrs.md) |
 | [Manufacturing](recipes/manufacturing/) | [Custom fiber mill](recipes/manufacturing/fiber-mill.md), [Custom guitar shop](recipes/manufacturing/custom-guitar-shop.md) |
 | [Marketing](recipes/marketing/) | [Content calendar](recipes/marketing/content-calendar.md) |

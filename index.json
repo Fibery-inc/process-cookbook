@@ -113,6 +113,29 @@
       "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/esports/cs2-team-practice.md"
     },
     {
+      "id": "tech-conference",
+      "title": "Tech conference",
+      "summary": "Run an annual multi-track tech conference: proposals reviewed into a program, speakers confirmed, talks on a clash-free schedule, plus sponsors and sign-ups.",
+      "domain": "events",
+      "for": "community",
+      "keywords": [
+        "tech conference",
+        "it conference",
+        "call for proposals",
+        "cfp",
+        "call for papers",
+        "speakers",
+        "program committee",
+        "schedule",
+        "tracks",
+        "sponsors",
+        "registration"
+      ],
+      "version": 1,
+      "path": "recipes/events/tech-conference.md",
+      "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/events/tech-conference.md"
+    },
+    {
       "id": "purchase-requests",
       "title": "Purchase requests",
       "summary": "Purchase requests for a company of about 200: more signatures as the amount grows, vendors checked by finance, each department's quarter at a glance.",

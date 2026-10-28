@@ -16,13 +16,14 @@ Open recipes for how teams, companies and communities run their work, from Shape
 ## Recipes
 
 <!-- recipes:start -->
-18 recipes in 13 domains.
+19 recipes in 14 domains.
 
 | Domain | Recipes |
 |---|---|
 | [Arts](recipes/arts/) | [Film study club](recipes/arts/film-study-club.md) |
 | [Compliance](recipes/compliance/) | [DORA compliance](recipes/compliance/dora-compliance.md), [NIS2 compliance](recipes/compliance/nis2-compliance.md), [SOC 2 compliance](recipes/compliance/soc-2-compliance.md) |
 | [Esports](recipes/esports/) | [CS2 team practice](recipes/esports/cs2-team-practice.md) |
+| [Events](recipes/events/) | [Tech conference](recipes/events/tech-conference.md) |
 | [Finance](recipes/finance/) | [Purchase requests](recipes/finance/purchase-requests.md), [Venture fund](recipes/finance/venture-fund.md) |
 | [Gamedev](recipes/gamedev/) | [Game design docs](recipes/gamedev/game-design-docs.md) |
 | [Management](recipes/management/) | [OKRs](recipes/management/okrs.md) |

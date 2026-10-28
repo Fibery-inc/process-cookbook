@@ -25,6 +25,28 @@
       "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/arts/film-study-club.md"
     },
     {
+      "id": "soc-2-compliance",
+      "title": "SOC 2 compliance",
+      "summary": "SOC 2 Type II readiness for a company: controls mapped to the Trust Services Criteria, evidence kept fresh and gaps closed before the audit window.",
+      "domain": "compliance",
+      "for": "company",
+      "keywords": [
+        "soc 2",
+        "soc2",
+        "type ii",
+        "trust services criteria",
+        "audit readiness",
+        "evidence",
+        "controls",
+        "findings",
+        "risk register",
+        "vendor review"
+      ],
+      "version": 1,
+      "path": "recipes/compliance/soc-2-compliance.md",
+      "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/compliance/soc-2-compliance.md"
+    },
+    {
       "id": "cs2-team-practice",
       "title": "CS2 team practice",
       "summary": "How a professional Counter-Strike 2 team practises: a strat book, scrims with a focus, reviews by the next morning, review points, map pool and match prep.",

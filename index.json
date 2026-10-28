@@ -25,6 +25,29 @@
       "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/arts/film-study-club.md"
     },
     {
+      "id": "dora-compliance",
+      "title": "DORA compliance",
+      "summary": "DORA for an EU financial entity: critical functions and ICT providers in one register, tested on a cadence, and the major-incident clock never missed.",
+      "domain": "compliance",
+      "for": "company",
+      "keywords": [
+        "dora",
+        "digital operational resilience act",
+        "regulation eu 2022/2554",
+        "ict risk",
+        "incident reporting",
+        "register of information",
+        "ict third party risk",
+        "resilience testing",
+        "tlpt",
+        "critical functions",
+        "financial entities"
+      ],
+      "version": 1,
+      "path": "recipes/compliance/dora-compliance.md",
+      "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/compliance/dora-compliance.md"
+    },
+    {
       "id": "nis2-compliance",
       "title": "NIS2 compliance",
       "summary": "NIS2 for an EU essential or important entity: ten risk-management measures kept effective and approved, and its 24h/72h/1-month incident clock never missed.",

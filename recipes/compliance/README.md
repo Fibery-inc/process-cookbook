@@ -2,8 +2,9 @@
 
 # Compliance
 
-1 recipe.
+2 recipes.
 
 | Recipe | For | What it is |
 |---|---|---|
+| [NIS2 compliance](nis2-compliance.md) | company | NIS2 for an EU essential or important entity: ten risk-management measures kept effective and approved, and its 24h/72h/1-month incident clock never missed. |
 | [SOC 2 compliance](soc-2-compliance.md) | company | SOC 2 Type II readiness for a company: controls mapped to the Trust Services Criteria, evidence kept fresh and gaps closed before the audit window. |

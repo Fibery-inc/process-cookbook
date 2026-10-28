@@ -25,6 +25,28 @@
       "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/arts/film-study-club.md"
     },
     {
+      "id": "nis2-compliance",
+      "title": "NIS2 compliance",
+      "summary": "NIS2 for an EU essential or important entity: ten risk-management measures kept effective and approved, and its 24h/72h/1-month incident clock never missed.",
+      "domain": "compliance",
+      "for": "company",
+      "keywords": [
+        "nis2",
+        "nis 2",
+        "directive eu 2022/2555",
+        "cybersecurity",
+        "incident reporting",
+        "essential entities",
+        "important entities",
+        "risk management measures",
+        "supply chain security",
+        "24 72 hours"
+      ],
+      "version": 1,
+      "path": "recipes/compliance/nis2-compliance.md",
+      "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/compliance/nis2-compliance.md"
+    },
+    {
       "id": "soc-2-compliance",
       "title": "SOC 2 compliance",
       "summary": "SOC 2 Type II readiness for a company: controls mapped to the Trust Services Criteria, evidence kept fresh and gaps closed before the audit window.",

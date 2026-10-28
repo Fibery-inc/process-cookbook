@@ -68,6 +68,30 @@
       "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/finance/purchase-requests.md"
     },
     {
+      "id": "venture-fund",
+      "title": "Venture fund",
+      "summary": "A small seed venture fund: every deal from first deck to decision with blind partner votes, and every portfolio company reporting each quarter.",
+      "domain": "finance",
+      "for": "team",
+      "keywords": [
+        "venture capital",
+        "vc fund",
+        "deal flow",
+        "pipeline",
+        "investment committee",
+        "due diligence",
+        "investment memo",
+        "portfolio monitoring",
+        "founder updates",
+        "seed fund",
+        "partner votes",
+        "deployment"
+      ],
+      "version": 1,
+      "path": "recipes/finance/venture-fund.md",
+      "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/finance/venture-fund.md"
+    },
+    {
       "id": "game-design-docs",
       "title": "Game design docs",
       "summary": "Living design docs for a small indie team: pillars, a one page doc per feature, a weekly review, and prototypes that validate the concept.",

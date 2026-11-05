@@ -20,7 +20,7 @@ license: CC-BY-4.0
 
 Most companies run training from a slide folder, a spreadsheet of who did what, and a reminder someone forgets to send. So nobody can say who has done this year's security training, a new hire's onboarding stalls without anyone noticing, and an assignment waits weeks for feedback. The fix is to treat learning as work with owners and dates. A **Course** is built from **Modules**, sections in order, and each module from **Lessons**: a reading, an assignment or a quiz. One person taking one course is an **Enrollment**, with a due date when the course is required and a progress figure everyone can see. A quiz is a set of **Questions**, each with its **Answer options**, taken inside the course and scored the moment the learner finishes, with no outside quiz tool. Assignments and quiz attempts come in as **Submissions**; an **Instructor** reviews the assignments. Courses group into **Learning paths**, such as onboarding for every new hire. A **Learning manager** assigns training and answers for who is trained, and everyone in the company is a **Learner**.
 
-In any work tool, this becomes courses with their modules and lessons, enrollments whose workflow runs from *Assigned* to *Completed*, and submissions that move from *Submitted* to *Accepted*. Learners live in their own list of open enrollments and a course player that walks them through the lessons and runs the quizzes; the learning manager lives in a board of people against required courses. Formulas score every quiz from the learner's answers. Rules turn a missed date into an overdue enrollment, close an enrollment once everything is done, and open a renewal before a certification runs out. It's a record of who learned what and when, not a place to host video.
+In any work tool, this becomes courses with their modules and lessons, enrollments whose workflow runs from *Assigned* to *Completed*, and submissions that move from *Submitted* to *Accepted*. Learners live in one app and nothing else: their courses, each lesson on screen in order, quizzes and hand-ins, with no records, lists or forms to find. The learning manager lives in a board of people against required courses. Formulas score every quiz from the learner's answers. Rules turn a missed date into an overdue enrollment, close an enrollment once everything is done, and open a renewal before a certification runs out. It's a record of who learned what and when, not a place to host video.
 
 ## How it runs
 
@@ -29,9 +29,9 @@ Follow one enrollment: a new hire taking *Security basics*, a required course th
 1. **A course is written.** An instructor builds a course from modules and lessons, then publishes it. *Security basics* starts in *Draft*, the course's first state. Its **Instructors**, the people who own it, add three modules in order. Each lesson has a **Kind**: *Reading* for content to go through, *Assignment* for work an instructor reviews, *Quiz* for a knowledge check with a **Pass mark**, the score from 0 to 100 needed to pass. The lesson's content lives in its description, with any video linked. A colleague reads it in *In review*, and the instructor moves it to *Published*. The course gets **Valid for months**, here 12, because the company asks everyone to retake it yearly. Then the learning manager adds the course to a learning path, so everyone knows what a role must take: here *Onboarding*, the path every new hire takes, beside two other courses.
 2. **The instructor writes the quizzes.** Before the course is published, each quiz lesson gets its questions and answer options, with the right ones marked. *Security basics* has a short quiz after each module and a *Final test*, a quiz lesson in its own last module that checks the whole course. Each question has a **Question kind**, *Single choice* or *Multiple choice*, its answer options with **Correct** ticked on the right ones, and an **Explanation** the learner sees after answering. The instructor builds them in the **Quiz builder**, where a broken question is red: fewer than two options, no correct option, or a single choice question with more than one. A quiz is **Quiz ready** when it has a pass mark, at least one question and no broken ones, and the course shows **Quizzes not ready**, how many of its quizzes aren't. The instructor publishes only at 0.
 3. **Someone is assigned.** The learning manager creates an enrollment for the new hire through the **New enrollment** form. It names the **Learner**, the course, **Required** because it is mandatory, a **Due date** three weeks out, and **Assigned by**, the learning manager. It starts in *Assigned* and appears in the learner's **My learning**. For the rest of the path, the manager adds one enrollment per course.
-4. **The learner works through the lessons.** The learner opens the enrollment and ticks each reading done in the **Course player**. Each tick adds the reading to **Lessons done**. The enrollment's **Progress** is the share of the course's lessons done, from 0 to 100: a reading counts when it is ticked, an assignment or a quiz only once it has an accepted submission, so a failed quiz never moves it. The first tick moves the enrollment to *In progress* through the **Started** rule.
-5. **The learner takes a quiz.** The learner answers a quiz in the Course player, and it is scored the moment they finish. Each attempt is one submission, in *Answering* while the learner is still on it. Each answer is a **Response**, the options the learner chose for one question, and a response is **Right** when the chosen options are exactly the correct ones. The attempt's **Score** is the share of the quiz's questions answered right, from 0 to 100; a question skipped or answered twice counts as wrong. While the attempt is *Answering*, the score is only a running count and decides nothing. The attempt ends when the learner presses Finish: the Course player stamps the score as **Final score** and the attempt ends *Accepted* when it is **Passed**, its final score reaching the pass mark, or *Not passed*, and then the learner tries again with a new attempt. If a response is changed afterwards, the score no longer matches the final score, and the attempt shows **Changed after finish** in the instructor's review queue.
-6. **An assignment is handed in and reviewed.** The learner sends assignment work through the **Submit work** form, and an instructor reviews it. It comes with files or a link and starts in *Submitted*. The instructor opens the **Review queue**, takes the oldest submission and moves it to *In review*. They write feedback as a comment and move it to *Accepted* or back to *Needs changes*, and the learner resubmits on the same submission. The **Review done** rule tells the learner the result, for a quiz attempt as for an assignment.
+4. **The learner works through the lessons.** The learner opens **My learning**, the one app learners use, and reads the course lesson by lesson. They see their open courses with progress and due date, press Continue, and read each lesson on screen. Next marks a reading done. Each reading done is added to **Lessons done**. The enrollment's **Progress** is the share of the course's lessons done, from 0 to 100: a reading counts when it is ticked, an assignment or a quiz only once it has an accepted submission, so a failed quiz never moves it. The first reading done moves the enrollment to *In progress* through the **Started** rule.
+5. **The learner takes a quiz.** The learner answers a quiz in My learning, and it is scored the moment they finish. Each attempt is one submission, in *Answering* while the learner is still on it. Each answer is a **Response**, the options the learner chose for one question, and a response is **Right** when the chosen options are exactly the correct ones. The attempt's **Score** is the share of the quiz's questions answered right, from 0 to 100; a question skipped or answered twice counts as wrong. While the attempt is *Answering*, the score is only a running count and decides nothing. The attempt ends when the learner presses Finish: My learning stamps the score as **Final score** and the attempt ends *Accepted* when it is **Passed**, its final score reaching the pass mark, or *Not passed*, and then the learner tries again with a new attempt. If a response is changed afterwards, the score no longer matches the final score, and the attempt shows **Changed after finish** in the instructor's review queue.
+6. **An assignment is handed in and reviewed.** The learner hands in assignment work in My learning, and an instructor reviews it. They attach files or a link right on the lesson's screen, and the submission starts in *Submitted*; the instructor's feedback shows on the same screen. The instructor opens the **Review queue**, takes the oldest submission and moves it to *In review*. They write feedback as a comment and move it to *Accepted* or back to *Needs changes*, and the learner resubmits on the same submission. The **Review done** rule tells the learner the result, for a quiz attempt as for an assignment.
 7. **The course is completed.** Once every reading is ticked and every assignment and quiz accepted, Progress reaches 100 and the enrollment closes by itself. The **On completion** rule moves the enrollment to *Completed* and stamps **Completed on**. **Valid until** follows from it: twelve months later for *Security basics*. The learner leaves a **Rating** from 1 to 5 and a line of **Feedback**, which instructors read when they revise the course.
 8. **Or it runs late, or is dropped.** A required enrollment past its due date turns *Overdue*, and both the learner and the person who assigned it hear about it. The **Due date passed** rule does this every morning. The enrollment still completes as above once the work is done. When a learner leaves the company or the training no longer applies, the learning manager moves it to *Dropped*.
 9. **The learning manager reviews compliance.** Every Monday the learning manager opens **Compliance**: every person against every required course. Overdue cards are red, certifications about to expire are amber, and the manager follows up with the people and their leads.
@@ -39,10 +39,10 @@ Follow one enrollment: a new hire taking *Security basics*, a required course th
 
 ## What people look at
 
-- **Every morning** — learners open **My learning**: what they're enrolled in, how far along, and what's due first. Instructors open the **Review queue**: which submissions wait, oldest first.
-- **While learning** — the **Course player**, a custom view on every enrollment: the course's lessons in order, each with its content and a done tick, the state of each assignment, and every quiz to take right there, one question at a time, with the score and explanations at the end. If your tool can't draw it, the learner ticks Lessons done on the enrollment, reads the lessons in **Course outline**, and answers a quiz through the **Answer** form, one response per question.
+- **Every day, learners** — **My learning**, a custom view and the only thing a learner ever opens: their courses, then one course lesson by lesson, quizzes and hand-ins in place. If your tool can't draw it, learners use a plain list of their enrollments, the **Submit work** form and the **Answer** form instead.
+- **Every morning, instructors** — the **Review queue**: which submissions wait, oldest first.
 - **Every Monday** — the learning manager opens **Compliance**: who has done which required course, who is late, whose certification runs out soon.
-- **Any time** — **Course outline**, every course with its modules, lessons and learning paths, its completion rate and rating, for instructors who maintain courses; the **Quiz builder**, every quiz with its questions and answer options, where instructors write and fix quizzes; **New enrollment** and **Submit work**, forms; and the **Completions by month** report for how much training actually got done.
+- **Any time** — **Course outline**, every course with its modules, lessons and learning paths, its completion rate and rating, for instructors who maintain courses; the **Quiz builder**, every quiz with its questions and answer options, where instructors write and fix quizzes; **New enrollment**, a form; and the **Completions by month** report for how much training actually got done.
 - **How to run the learning program** — this process on one screen, kept where the company works.
 
 ## The rules
@@ -65,8 +65,8 @@ Whatever anyone edits, adapts or corrects, these hold; each says what keeps it s
 - ★ Required training has a due date, and a missed one is seen. Kept by **Due date passed**, which turns the enrollment *Overdue* and tells the learner and whoever assigned it; shown on **Compliance**, where a required enrollment with no due date is red too.
 - ★ A certification expires on its own schedule, never on someone's memory. Kept by the **Valid until** formula, computed from Completed on and the course's Valid for months, and by **Renewal due**, which opens the next enrollment thirty days ahead.
 - ★ Past training is history. A renewal is a new enrollment, and the old one stays *Completed* with its date, so the company can always show who was trained when. Kept by **Renewal due**, which creates a new record instead of reopening the old one; reopening a completed enrollment by hand is a practice not to follow.
-- A quiz result comes from the learner's answers, never typed, and is fixed at Finish. Every attempt keeps its own responses, and a failed attempt ends *Not passed* while the next one is a new submission. Kept by the **Right** and **Score** formulas and the Course player, which stamps Final score and creates a new attempt each time; shown on the **Review queue**, where an attempt whose responses changed after Finish appears with Changed after finish.
-- Every submission gets an answer, written as a comment, within days. Shown on the **Review queue**, sorted oldest first.
+- A quiz result comes from the learner's answers, never typed, and is fixed at Finish. Every attempt keeps its own responses, and a failed attempt ends *Not passed* while the next one is a new submission. Kept by the **Right** and **Score** formulas and My learning, which stamps Final score and creates a new attempt each time; shown on the **Review queue**, where an attempt whose responses changed after Finish appears with Changed after finish.
+- ★ A learner never has to find their way: everything they do, from reading to quizzes and hand-ins, happens in My learning, and nothing in it is for instructors or managers. Kept by **My learning**, which shows only the learner's own enrollments and opens no record pages; every view for instructors and managers is placed where learners don't start.
 - A course is published only with working quizzes, and changes carefully once it is. Shown on **Course outline**, where a course with Quizzes not ready above 0 is red, and on the **Quiz builder**, where the broken question is red; publishing at 0 is a practice. A new lesson lowers the Progress of everyone mid-course, and changing which answer option is correct re-scores every past attempt. So small fixes are edits to wording; a changed quiz is a new quiz lesson, and a rewrite is a new course, with the old one moved to *Archived*. A practice.
 
 ## Making it yours
@@ -85,7 +85,7 @@ Decide these before you set it up; each has a default if you shrug.
 - **External learners** (customers, partners, students) who never open the tool: a Learner database of records instead of a person field, with enrollments and submissions coming in through forms. The course player and My learning go away; learners get their lessons by link.
 - **Live sessions** (workshops, webinars): a Session database linked to Lesson, with date, place and an Attended field per learner, once the course needs more than a reading list.
 - **Open questions**, where the learner writes an answer: make it an assignment lesson an instructor reviews. Choice questions are what the tool can score on its own.
-- **A question bank**, where the final test draws questions from every lesson's quiz: a Question can link to several quiz lessons instead of one. Random picks per attempt and a limit on attempts belong to the Course player.
+- **A question bank**, where the final test draws questions from every lesson's quiz: a Question can link to several quiz lessons instead of one. Random picks per attempt and a limit on attempts belong to My learning.
 - **Locked answers:** where your tool can limit who edits a record, let learners create responses but not change them; Changed after finish then only catches mistakes, not second tries.
 - **Prerequisites:** a Requires relation from Course to Course, shown on Course outline. Enforcing the order is a practice; nothing stops an enrollment.
 - **Hardest questions**, the share of responses that are right per question, or **average quiz score per course**, a second report, or an Expired flag for certifications nobody renewed: what teams add once the program runs.
@@ -143,7 +143,7 @@ One section of a course, in order. No description.
 | Field | Type | Why |
 |---|---|---|
 | Course | relation, many-to-one → Course; inverse **Modules** | The course it belongs to |
-| Order | integer | Its place in the course; the Course player and Course outline sort by it |
+| Order | integer | Its place in the course; My learning and Course outline sort by it |
 
 ### Lesson
 
@@ -152,15 +152,15 @@ One step of a module: a reading, assignment or quiz. The description holds the l
 | Field | Type | Why |
 |---|---|---|
 | Module | relation, many-to-one → Module; inverse **Lessons** | The module it belongs to |
-| Order | integer | Its place in the module; the Course player and Course outline sort by it |
-| Kind | single select: Reading, Assignment, Quiz; default Reading | Assignments and quizzes count toward Progress only through an accepted submission; the Course player ticks readings only |
+| Order | integer | Its place in the module; My learning and Course outline sort by it |
+| Kind | single select: Reading, Assignment, Quiz; default Reading | Assignments and quizzes count toward Progress only through an accepted submission; My learning ticks readings only |
 | Pass mark | integer, 0 to 100; default 80 | The score a quiz needs; read by Passed on Submission; empty for readings and assignments |
-| Minutes | integer | Rough time for the lesson; on the Course player |
+| Minutes | integer | Rough time for the lesson; on My learning |
 | Link | url | The video or the material the lesson points to |
 | Files | files | Slides, handouts and templates |
 
 Formulas:
-- **Quiz ready** — yes when the lesson is a *Quiz* with a Pass mark, at least one question and no question with Question problem; no otherwise, and yes for readings and assignments; on the Quiz builder, read by Quizzes not ready and the Course player.
+- **Quiz ready** — yes when the lesson is a *Quiz* with a Pass mark, at least one question and no question with Question problem; no otherwise, and yes for readings and assignments; on the Quiz builder, read by Quizzes not ready and My learning.
 
 ### Question
 
@@ -169,9 +169,9 @@ One question of a quiz lesson. The description holds the question itself, with a
 | Field | Type | Why |
 |---|---|---|
 | Lesson | relation, many-to-one → Lesson; inverse **Questions** | The quiz it belongs to; read by Score |
-| Order | integer | Its place in the quiz; the Course player and Quiz builder sort by it |
-| Question kind | single select: Single choice, Multiple choice; default Single choice | Whether the Course player offers one pick or several |
-| Explanation | rich text | Why the right answer is right; the Course player shows it after the attempt |
+| Order | integer | Its place in the quiz; My learning and Quiz builder sort by it |
+| Question kind | single select: Single choice, Multiple choice; default Single choice | Whether My learning offers one pick or several |
+| Explanation | rich text | Why the right answer is right; My learning shows it after the attempt |
 
 Formulas:
 - **Question problem** — yes when the question has fewer than two answer options, none marked Correct, or is *Single choice* with more than one marked Correct; no otherwise; red on the Quiz builder, read by Quiz ready.
@@ -183,7 +183,7 @@ One possible answer to a question. No description.
 | Field | Type | Why |
 |---|---|---|
 | Question | relation, many-to-one → Question; inverse **Answer options** | The question it answers |
-| Order | integer | Its place among the options; the Course player shows them in this order |
+| Order | integer | Its place among the options; My learning shows them in this order |
 | Correct | checkbox | Marks a right answer; read by Right on Response |
 
 ### Learning path
@@ -203,7 +203,7 @@ One person taking one course. Named "<learner> — <course>". Comments on.
 | Required | checkbox | Mandatory training; Compliance shows only these |
 | Due date | date | When it must be done; read by Due date passed |
 | Assigned by | person; inverse **Enrollments assigned** | Who assigned it; told when it's overdue, and copied to a renewal |
-| Lessons done | relation, many-to-many → Lesson; inverse **Done in** | Readings ticked by the learner in the Course player; read by Progress, which ignores any assignment or quiz added here, and by Started |
+| Lessons done | relation, many-to-many → Lesson; inverse **Done in** | Readings ticked by the learner in My learning; read by Progress, which ignores any assignment or quiz added here, and by Started |
 | Completed on | date | Stamped by On completion; read by Valid until and the Completions by month report |
 | Rating | integer, 1 to 5 | The learner's verdict on the course; read by Average rating |
 | Feedback | text | One line for the instructors, read on the course's enrollments when they revise it |
@@ -226,15 +226,15 @@ One hand-in of an assignment, or one quiz attempt. Named "<learner> — <lesson>
 | Lesson | relation, many-to-one → Lesson; inverse **Submissions** | The assignment or quiz it answers |
 | Learner | person; inverse **My submissions** | Who handed it in; Review done notifies them |
 | Submitted on | date; default today | Sorts the Review queue, oldest first |
-| Final score | integer, 0 to 100 | Score at the moment of Finish, stamped by the Course player and never edited by people; read by Passed and Changed after finish |
+| Final score | integer, 0 to 100 | Score at the moment of Finish, stamped by My learning and never edited by people; read by Passed and Changed after finish |
 | Files | files | The work itself |
 | Link | url | The work, when it lives elsewhere |
 
-States: Answering → Submitted → In review → Needs changes → Accepted (finished) · Not passed (finished). Default: Submitted. *Answering* is a quiz attempt still open in the Course player; when the learner finishes, the Course player moves it to *Accepted* when Passed is yes and to *Not passed* otherwise, so a quiz attempt never waits for review. An assignment in *Needs changes* moves back to *Submitted* when the learner resubmits. Source of truth for a quiz: Final score, stamped from Score at Finish; Score keeps following the responses, and Changed after finish shows when the two part.
+States: Answering → Submitted → In review → Needs changes → Accepted (finished) · Not passed (finished). Default: Submitted. *Answering* is a quiz attempt still open in My learning; when the learner finishes, My learning moves it to *Accepted* when Passed is yes and to *Not passed* otherwise, so a quiz attempt never waits for review. An assignment in *Needs changes* moves back to *Submitted* when the learner resubmits. Source of truth for a quiz: Final score, stamped from Score at Finish; Score keeps following the responses, and Changed after finish shows when the two part.
 
 Formulas:
-- **Score** — the share of its lesson's questions that have exactly one response in this submission and that response is Right, a whole number from 0 to 100, 0 when the lesson has no questions; responses to questions of another lesson don't count. On the Course player, stamped into Final score at Finish.
-- **Passed** — yes when its lesson is a *Quiz* and Final score is at least the lesson's Pass mark, no otherwise, and no with no final score or no pass mark; read by the Course player at Finish.
+- **Score** — the share of its lesson's questions that have exactly one response in this submission and that response is Right, a whole number from 0 to 100, 0 when the lesson has no questions; responses to questions of another lesson don't count. On My learning, stamped into Final score at Finish.
+- **Passed** — yes when its lesson is a *Quiz* and Final score is at least the lesson's Pass mark, no otherwise, and no with no final score or no pass mark; read by My learning at Finish.
 - **Changed after finish** — yes when the submission has a Final score and Score is no longer equal to it, no otherwise; on the Review queue.
 
 ### Response
@@ -256,20 +256,19 @@ Twelve formulas, past the usual eight, because quizzes are scored and checked by
 
 | View | Type | Of | Grouping | Shows | Filter | Sort |
 |---|---|---|---|---|---|---|
-| My learning | list | Enrollment | | Course, State, Progress, Due date | Learner is me; State is not Completed or Dropped | Due date asc |
+| My learning | app | | | see App | | |
 | Review queue | list | Submission | | Lesson, Learner, Submitted on, State, Final score, Changed after finish; red when Changed after finish | State is Submitted or In review, or Changed after finish is yes | Submitted on asc |
-| Course player | app | Enrollment | | see App | | |
 | Compliance | board | Enrollment | columns Course, rows Learner | State, Progress, Due date, Valid until; red when Overdue, or Completed with Progress under 100, or with no due date; amber when Expiring soon | Required is checked; State is not Dropped; Renewed by is empty | |
 | Course outline | grid | Course | Modules nested: Order; Lessons nested: Order, Kind, Minutes, Pass mark | State, Instructors, Learning paths, Hours, Valid for months, Quizzes not ready, Completion rate, Average rating; red when Quizzes not ready is above 0 | State is not Archived | |
 | Quiz builder | grid | Lesson | Questions nested: Order, Question kind, Explanation, Question problem, red when Question problem; Answer options nested: Order, Correct | Module, Pass mark, Quiz ready; red when Quiz ready is no | Kind is Quiz | |
 | New enrollment | form | Enrollment | | Learner (required), Course (required, Published only), Required, Due date, Assigned by (default: me) | | |
-| Submit work | form | Submission | | Enrollment (required), Lesson (required), Learner (default: me), Files, Link, Description | | |
-| Answer | form | Response | | Submission (required), Question (required), Chosen options (required) | | |
+| Submit work (fallback) | form | Submission | | Enrollment (required), Lesson (required), Learner (default: me), Files, Link, Description | | |
+| Answer (fallback) | form | Response | | Submission (required), Question (required), Chosen options (required) | | |
 | How to run the learning program | document | | | the process on one screen, linking to this recipe | | |
 
 ### App
 
-**Course player**, a tab on every enrollment. It shows the course's modules and lessons in Order, each with its Kind, Minutes, content, Link and Files. A reading has a done tick. An assignment shows the state of the learner's latest submission, with a button that opens Submit work for this enrollment and lesson. A quiz runs inline: Start creates a submission in *Answering*, each question shows with its options, one pick or several by its kind, and each answer becomes a response. Finish warns about skipped questions, then stamps Score into Final score, moves the attempt to *Accepted* or *Not passed* by Passed, and shows which questions were right with their explanations; it never ticks a quiz in Lessons done. Once finished, the attempt is read-only in the player; Try again starts a new attempt, and only a Quiz ready quiz can be started. Progress and Due date sit at the top. It **reads** Course, Modules, Lessons (Order, Kind, Minutes, Link, Files, Pass mark, description), Questions, Answer options (without showing Correct before the end), Lessons done, Submissions (Lesson, State, Score, Passed) and Progress, and **writes** Lessons done (readings only), Submission (Enrollment, Lesson, Learner, Submitted on, Final score, State) and Response (Submission, Question, Chosen options). Fallback: the learner ticks readings in Lessons done, reads lessons in Course outline, and answers a quiz through the Answer form on a submission they create in *Submitted*. The instructor checks it in the Review queue, types Final score from Score, and moves it to *Accepted* or *Not passed* by Passed; Right and Score already ignore options and questions that don't belong. It earns its place because taking a quiz one question at a time, and seeing one person's progress against a shared outline, is something no plain view does; the scoring itself stays in formulas, so the app only collects answers.
+**My learning**, a page of its own and the first thing a learner sees; never a tab on a record. It is the learner's whole experience, three screens with no other buttons. **Home**: the learner's own open enrollments as cards, each with course, Progress, Due date and a Continue button; finished ones fold below. **Course**: the lessons in Order, grouped by module, the current one open on screen with its content, Link and Files; Next marks a reading done and moves on, and the learner never opens a record page. An assignment lesson has the hand-in on the same screen (files or a link, then Hand in), with its state and the instructor's comments shown under it. **Quiz**: Start creates a submission in *Answering*, questions come one at a time, one pick or several by their kind, each answer a response; Finish warns about skipped questions, stamps Score into Final score, moves the attempt to *Accepted* or *Not passed* by Passed, and shows which were right with explanations; Try again starts a new attempt, and only a Quiz ready quiz can be started. It **reads** the learner's Enrollments, Course, Modules, Lessons (Order, Kind, Minutes, Link, Files, Pass mark, description), Questions, Answer options (Correct only after Finish), Lessons done, Submissions (Lesson, State, Score, Passed, comments) and Progress, and **writes** Lessons done (readings only), Submission (Enrollment, Lesson, Learner, Submitted on, Files, Link, Final score, State) and Response (Submission, Question, Chosen options). Fallback: a list of the learner's open enrollments, readings ticked in Lessons done, Submit work for hand-ins and the Answer form for quizzes, which an instructor then closes by Passed. It earns its place because a learner needs one calm place to learn, and lists, record pages and forms are built for the people who run the program; the scoring itself stays in formulas, so the app only shows and collects.
 
 ### Reports
 

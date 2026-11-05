@@ -204,6 +204,35 @@
       "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/gamedev/game-design-docs.md"
     },
     {
+      "id": "learning-management",
+      "title": "Learning management",
+      "summary": "Company training in one place: courses of lessons, quizzes scored in the tool, reviewed assignments, required training with due dates and renewals.",
+      "domain": "hr",
+      "for": "company",
+      "keywords": [
+        "lms",
+        "learning management",
+        "training",
+        "courses",
+        "lessons",
+        "quizzes",
+        "quiz builder",
+        "knowledge check",
+        "final test",
+        "assignments",
+        "compliance training",
+        "mandatory training",
+        "certification",
+        "recertification",
+        "onboarding",
+        "learning paths",
+        "employee training"
+      ],
+      "version": 1,
+      "path": "recipes/hr/learning-management.md",
+      "raw": "https://raw.githubusercontent.com/Fibery-inc/process-cookbook/main/recipes/hr/learning-management.md"
+    },
+    {
       "id": "okrs",
       "title": "OKRs",
       "summary": "Quarterly OKRs for a company of several teams: objectives on one tree, key results that compute their progress, a weekly check in, a scored quarter.",
